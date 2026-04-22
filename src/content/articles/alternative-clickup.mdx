@@ -57,12 +57,15 @@ Bonne nouvelle : il existe des alternatives pour chacun de ces profils.
 ## Tableau récapitulatif des 5 alternatives
 
 <ComparisonTable
-  tools={[
-    { name: "Notion", plan: "Plus", pricePerMonth: "10 €", features: { docs: true, kanban: true, gantt: false, automation: "limité", support: "Email" } },
-    { name: "Asana", plan: "Starter", pricePerMonth: "13,49 €", features: { docs: false, kanban: true, gantt: true, automation: "Rules", support: "Chat" } },
-    { name: "Monday.com", plan: "Standard", pricePerMonth: "12 €", features: { docs: false, kanban: true, gantt: true, automation: "250/mois", support: "24/7" } },
-    { name: "Linear", plan: "Standard", pricePerMonth: "8 $", features: { docs: true, kanban: true, gantt: "Cycles", automation: "Limité", support: "Community" } },
-    { name: "Height", plan: "Team", pricePerMonth: "8,50 $", features: { docs: true, kanban: true, gantt: false, automation: "AI native", support: "Chat" } }
+  headers={["Critère", "Notion", "Asana", "Monday.com", "Linear", "Height"]}
+  rows={[
+    ["Plan", "Plus", "Starter", "Standard", "Standard", "Team"],
+    ["Prix/mois", "10 €", "13,49 €", "12 €", "8 $", "8,50 $"],
+    ["Docs", "✅", "❌", "❌", "✅", "✅"],
+    ["Kanban", "✅", "✅", "✅", "✅", "✅"],
+    ["Gantt", "❌", "✅", "✅", "Cycles", "❌"],
+    ["Automation", "limité", "Rules", "250/mois", "Limité", "AI native"],
+    ["Support", "Email", "Chat", "24/7", "Community", "Chat"]
   ]}
   caption="Prix par utilisateur et par mois, facturation annuelle, TVA hors. Données avril 2026."
 />
@@ -205,12 +208,15 @@ Linear n'a pas encore de programme d'affiliation public — vous pouvez visiter 
 ## Tableau récapitulatif : forces et faiblesses
 
 <ComparisonTable
-  tools={[
-    { name: "Notion", plan: "Plus", pricePerMonth: "10 €", features: { docs: "Best-in-class", kanban: true, budget: false, dev: false, design: "5/5" } },
-    { name: "Asana", plan: "Starter", pricePerMonth: "13,49 €", features: { docs: false, kanban: true, budget: "Starter+", dev: false, design: "4/5" } },
-    { name: "Monday", plan: "Standard", pricePerMonth: "12 €", features: { docs: "Basique", kanban: true, budget: "Natif", dev: false, design: "5/5" } },
-    { name: "Linear", plan: "Standard", pricePerMonth: "8 $", features: { docs: "Correct", kanban: true, budget: false, dev: "5/5", design: "5/5" } },
-    { name: "Height", plan: "Team", pricePerMonth: "8,50 $", features: { docs: "Correct", kanban: true, budget: false, dev: "4/5", design: "4/5" } }
+  headers={["Critère", "Notion", "Asana", "Monday", "Linear", "Height"]}
+  rows={[
+    ["Plan", "Plus", "Starter", "Standard", "Standard", "Team"],
+    ["Prix/mois", "10 €", "13,49 €", "12 €", "8 $", "8,50 $"],
+    ["Docs", "Best-in-class", "❌", "Basique", "Correct", "Correct"],
+    ["Kanban", "✅", "✅", "✅", "✅", "✅"],
+    ["Budget", "❌", "Starter+", "Natif", "❌", "❌"],
+    ["Dev", "❌", "❌", "❌", "5/5", "4/5"],
+    ["Design", "5/5", "4/5", "5/5", "5/5", "4/5"]
   ]}
   caption="Comparatif qualitatif — forces relatives. Les notes design/dev sont indicatives."
 />

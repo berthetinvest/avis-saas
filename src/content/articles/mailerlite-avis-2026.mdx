@@ -65,10 +65,15 @@ Pour un solopreneur ou un créateur qui démarre, c'est suffisant pour 6 à 18 m
 ## Plans payants : la grille 2026
 
 <ComparisonTable
-  tools={[
-    { name: "MailerLite Free", plan: "Free", pricePerMonth: "0 $", features: { abonnes: "1 000", emails: "12 000/mois", automation: "basique", abEtest: false, support: "Email" } },
-    { name: "MailerLite Growing Business", plan: "Growing", pricePerMonth: "15 $ (1k abonnés)", features: { abonnes: "1k à 100k+", emails: "illimité", automation: "multi-déclencheurs", abEtest: true, support: "Chat + Email" } },
-    { name: "MailerLite Advanced", plan: "Advanced", pricePerMonth: "28 $ (1k abonnés)", features: { abonnes: "1k à 100k+", emails: "illimité", automation: "avancée", abEtest: "Avancé", support: "Chat + Email" } }
+  headers={["Critère", "MailerLite Free", "MailerLite Growing Business", "MailerLite Advanced"]}
+  rows={[
+    ["Plan", "Free", "Growing", "Advanced"],
+    ["Prix/mois", "0 $", "15 $ (1k abonnés)", "28 $ (1k abonnés)"],
+    ["Abonnés", "1 000", "1k à 100k+", "1k à 100k+"],
+    ["Emails/mois", "12 000", "illimité", "illimité"],
+    ["Automation", "basique", "multi-déclencheurs", "avancée"],
+    ["A/B Test", "❌", "✅", "Avancé"],
+    ["Support", "Email", "Chat + Email", "Chat + Email"]
   ]}
   caption="Prix en USD pour 1 000 abonnés, avril 2026. Tarifs progressifs selon volume."
 />
@@ -155,11 +160,15 @@ Les templates inclus sont corrects mais datés. Les templates "premium" sont pay
 ## Comparaison rapide avec les concurrents
 
 <ComparisonTable
-  tools={[
-    { name: "MailerLite", plan: "Growing 1k", pricePerMonth: "15 $", features: { ux: "Excellent", deliverabilite: "Top 3", automation: "Bon", multicanal: false, support: "Anglais" } },
-    { name: "Brevo", plan: "Starter 5k", pricePerMonth: "9 €", features: { ux: "Correct", deliverabilite: "Top 5", automation: "Bon", multicanal: "SMS/WhatsApp", support: "FR" } },
-    { name: "Mailchimp", plan: "Essentials 500", pricePerMonth: "11 $", features: { ux: "Bon", deliverabilite: "Correct", automation: "Basique", multicanal: "Partiel", support: "Anglais" } },
-    { name: "ActiveCampaign", plan: "Plus 1k", pricePerMonth: "49 $", features: { ux: "Bon", deliverabilite: "Top 1", automation: "Excellent", multicanal: "Partiel", support: "Anglais" } }
+  headers={["Critère", "MailerLite", "Brevo", "Mailchimp", "ActiveCampaign"]}
+  rows={[
+    ["Plan", "Growing 1k", "Starter 5k", "Essentials 500", "Plus 1k"],
+    ["Prix/mois", "15 $", "9 €", "11 $", "49 $"],
+    ["UX", "Excellent", "Correct", "Bon", "Bon"],
+    ["Délivrabilité", "Top 3", "Top 5", "Correct", "Top 1"],
+    ["Automation", "Bon", "Bon", "Basique", "Excellent"],
+    ["Multicanal", "❌", "SMS/WhatsApp", "Partiel", "Partiel"],
+    ["Support", "Anglais", "FR", "Anglais", "Anglais"]
   ]}
   caption="Comparatif à ~1 000 abonnés, avril 2026. Prix indicatifs pouvant varier selon offres promotionnelles."
 />

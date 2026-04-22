@@ -49,14 +49,15 @@ Créé en 2008 par un co-fondateur de Facebook. Asana est plus sobre, plus liné
 ## Tableau récapitulatif
 
 <ComparisonTable
-  tools={[
-    { name: "Monday Free", plan: "Free", pricePerMonth: "0 €", features: { utilisateurs: "2", vues: "Kanban", gantt: false, automation: false, dashboards: false } },
-    { name: "Monday Basic", plan: "Basic", pricePerMonth: "9 €", features: { utilisateurs: "illimité", vues: "Kanban+", gantt: false, automation: false, dashboards: "1 tableau" } },
-    { name: "Monday Standard", plan: "Standard", pricePerMonth: "12 €", features: { utilisateurs: "illimité", vues: "Toutes", gantt: true, automation: "250/mois", dashboards: "5 tableaux" } },
-    { name: "Monday Pro", plan: "Pro", pricePerMonth: "20 €", features: { utilisateurs: "illimité", vues: "Toutes", gantt: true, automation: "25 000/mois", dashboards: "10 tableaux" } },
-    { name: "Asana Free", plan: "Personal", pricePerMonth: "0 €", features: { utilisateurs: "10", vues: "Liste/Kanban", gantt: false, automation: false, dashboards: false } },
-    { name: "Asana Starter", plan: "Starter", pricePerMonth: "13,49 €", features: { utilisateurs: "500", vues: "Toutes", gantt: true, automation: "250/mois", dashboards: "basique" } },
-    { name: "Asana Advanced", plan: "Advanced", pricePerMonth: "30,49 €", features: { utilisateurs: "500", vues: "Toutes", gantt: true, automation: "25 000/mois", dashboards: "avancé" } }
+  headers={["Critère", "Monday Free", "Monday Basic", "Monday Standard", "Monday Pro", "Asana Free", "Asana Starter", "Asana Advanced"]}
+  rows={[
+    ["Plan", "Free", "Basic", "Standard", "Pro", "Personal", "Starter", "Advanced"],
+    ["Prix/mois", "0 €", "9 €", "12 €", "20 €", "0 €", "13,49 €", "30,49 €"],
+    ["Utilisateurs", "2", "illimité", "illimité", "illimité", "10", "500", "500"],
+    ["Vues", "Kanban", "Kanban+", "Toutes", "Toutes", "Liste/Kanban", "Toutes", "Toutes"],
+    ["Gantt", "❌", "❌", "✅", "✅", "❌", "✅", "✅"],
+    ["Automation", "❌", "❌", "250/mois", "25 000/mois", "❌", "250/mois", "25 000/mois"],
+    ["Dashboards", "❌", "1 tableau", "5 tableaux", "10 tableaux", "❌", "basique", "avancé"]
   ]}
   caption="Prix par utilisateur/mois, facturation annuelle, avril 2026."
 />
@@ -143,10 +144,12 @@ Asana est plus utilisé dans les équipes produit/tech américaines et européen
 ## Prix comparé sur 3 scénarios
 
 <ComparisonTable
-  tools={[
-    { name: "Équipe 5 personnes", plan: "Budget mensuel", pricePerMonth: "Monday Standard 60 €", features: { monday: "60 €", asana: "68 €", differenceAnnuelle: "+96 €/an pour Asana" } },
-    { name: "Équipe 20 personnes", plan: "Budget mensuel", pricePerMonth: "Monday Standard 240 €", features: { monday: "240 €", asana: "270 €", differenceAnnuelle: "+360 €/an pour Asana" } },
-    { name: "Équipe 50 personnes", plan: "Budget mensuel", pricePerMonth: "Monday Pro 1 000 €", features: { monday: "1 000 €", asana: "1 525 €", differenceAnnuelle: "+6 300 €/an pour Asana Advanced" } }
+  headers={["Critère", "Équipe 5 personnes", "Équipe 20 personnes", "Équipe 50 personnes"]}
+  rows={[
+    ["Plan", "Budget mensuel", "Budget mensuel", "Budget mensuel"],
+    ["Monday", "60 €", "240 €", "1 000 €"],
+    ["Asana", "68 €", "270 €", "1 525 €"],
+    ["Différence annuelle", "+96 €/an pour Asana", "+360 €/an pour Asana", "+6 300 €/an pour Asana Advanced"]
   ]}
   caption="Budgets comparés en facturation annuelle, avril 2026. Asana devient significativement plus cher au-delà du plan Starter."
 />

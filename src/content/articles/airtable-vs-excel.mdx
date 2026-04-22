@@ -83,9 +83,16 @@ Si aucun de ces 4 signaux ne résonne : **restez sur Excel**. C'est moins cher, 
 ## Tableau comparatif
 
 <ComparisonTable
-  tools={[
-    { name: "Excel (Microsoft 365 Business Basic)", plan: "Business Basic", pricePerMonth: "6 €", features: { collab: "Correct", relations: false, vues: "1 seule", api: "Limité", automation: "Power Automate (payant)", volumeMax: "1M lignes" } },
-    { name: "Airtable Team", plan: "Team", pricePerMonth: "24 $", features: { collab: "Excellent", relations: "Oui natif", vues: "Illimitées", api: "Excellent", automation: "25 000/mois natif", volumeMax: "50k records/base" } }
+  headers={["Critère", "Excel (Microsoft 365 Business Basic)", "Airtable Team"]}
+  rows={[
+    ["Plan", "Business Basic", "Team"],
+    ["Prix/mois", "6 €", "24 $"],
+    ["Collaboration", "Correct", "Excellent"],
+    ["Relations entre tables", "❌", "Oui natif"],
+    ["Vues", "1 seule", "Illimitées"],
+    ["API", "Limité", "Excellent"],
+    ["Automation", "Power Automate (payant)", "25 000/mois natif"],
+    ["Volume max", "1 M lignes", "50 k records/base"]
   ]}
   caption="Comparatif fonctionnel Excel vs Airtable, avril 2026."
 />

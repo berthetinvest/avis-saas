@@ -49,9 +49,15 @@ Lancé en 2015 à Paris. **PayFit est une plateforme SaaS de paie** en autogér�
 ## Le grand tableau de comparaison
 
 <ComparisonTable
-  tools={[
-    { name: "Silae", plan: "via expert-comptable", pricePerMonth: "~10-15 €/bulletin", features: { autogere: false, casComplexe: "Excellent", uxModerne: false, sirhIntegre: "Limité", scale: "TPE à grand groupe" } },
-    { name: "PayFit", plan: "Base", pricePerMonth: "~15-25 €/salarié", features: { autogere: true, casComplexe: "Bon", uxModerne: true, sirhIntegre: "Oui", scale: "1 à 80 salariés" } }
+  headers={["Critère", "Silae", "PayFit"]}
+  rows={[
+    ["Plan", "via expert-comptable", "Base"],
+    ["Prix/mois", "~10-15 €/bulletin", "~15-25 €/salarié"],
+    ["Autogéré", "❌", "✅"],
+    ["Cas complexe", "Excellent", "Bon"],
+    ["UX moderne", "❌", "✅"],
+    ["SIRH intégré", "Limité", "Oui"],
+    ["Scale", "TPE à grand groupe", "1 à 80 salariés"]
   ]}
   caption="Comparatif haut niveau Silae vs PayFit, avril 2026."
 />

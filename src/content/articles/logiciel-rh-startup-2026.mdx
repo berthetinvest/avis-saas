@@ -49,12 +49,15 @@ Le coût caché de l'absence d'outil RH dans une startup se lit en trois dimensi
 ## Tableau comparatif des 5 SIRH startup
 
 <ComparisonTable
-  tools={[
-    { name: "PayFit", plan: "Base", pricePerMonth: "~18 €/salarié", features: { paie: "Excellent", conges: true, onboarding: true, recrutement: "Plus", conformiteFR: "Best" } },
-    { name: "Factorial", plan: "Business", pricePerMonth: "~8 €/salarié", features: { paie: "France/Espagne", conges: true, onboarding: true, recrutement: true, conformiteFR: "Bon" } },
-    { name: "Personio", plan: "Essential", pricePerMonth: "~10 €/salarié", features: { paie: "via partenaire", conges: true, onboarding: true, recrutement: "Excellent", conformiteFR: "Correct" } },
-    { name: "Lucca", plan: "modulaire", pricePerMonth: "2,5-6 €/module/salarié", features: { paie: "non (intégré Silae)", conges: true, onboarding: true, recrutement: true, conformiteFR: "Best" } },
-    { name: "BambooHR", plan: "Core", pricePerMonth: "~9 $/salarié", features: { paie: "US uniquement", conges: true, onboarding: "Excellent", recrutement: true, conformiteFR: "Faible" } }
+  headers={["Critère", "PayFit", "Factorial", "Personio", "Lucca", "BambooHR"]}
+  rows={[
+    ["Plan", "Base", "Business", "Essential", "modulaire", "Core"],
+    ["Prix/mois", "~18 €/salarié", "~8 €/salarié", "~10 €/salarié", "2,5-6 €/module/salarié", "~9 $/salarié"],
+    ["Paie", "Excellent", "France/Espagne", "via partenaire", "non (intégré Silae)", "US uniquement"],
+    ["Congés", "✅", "✅", "✅", "✅", "✅"],
+    ["Onboarding", "✅", "✅", "✅", "✅", "Excellent"],
+    ["Recrutement", "Plus", "✅", "Excellent", "✅", "✅"],
+    ["Conformité FR", "Best", "Bon", "Correct", "Best", "Faible"]
   ]}
   caption="Prix indicatifs 2026 pour une startup 20 salariés. Les vrais devis peuvent varier ±30 %."
 />

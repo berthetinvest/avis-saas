@@ -60,12 +60,15 @@ Asana est sobre, parfois "terne". Pour une équipe client-facing qui a besoin de
 ## Tableau récapitulatif des 5 alternatives
 
 <ComparisonTable
-  tools={[
-    { name: "Monday.com", plan: "Standard", pricePerMonth: "12 €", features: { gantt: true, docs: false, automation: "250/mois", visibilite: "Excellent", free: "2 users" } },
-    { name: "ClickUp", plan: "Business", pricePerMonth: "12 $", features: { gantt: true, docs: true, automation: "illimité", visibilite: "Bon", free: "illimité" } },
-    { name: "Notion", plan: "Plus", pricePerMonth: "10 €", features: { gantt: "Timeline", docs: "Best-in-class", automation: "limité", visibilite: "Faible", free: "solo" } },
-    { name: "Trello", plan: "Standard", pricePerMonth: "5 $", features: { gantt: false, docs: false, automation: "Butler", visibilite: "Moyen", free: "10 tableaux" } },
-    { name: "Linear", plan: "Standard", pricePerMonth: "8 $", features: { gantt: "Cycles", docs: "Correct", automation: "limité", visibilite: "Excellent (tech)", free: "250 issues" } }
+  headers={["Critère", "Monday.com", "ClickUp", "Notion", "Trello", "Linear"]}
+  rows={[
+    ["Plan", "Standard", "Business", "Plus", "Standard", "Standard"],
+    ["Prix/mois", "12 €", "12 $", "10 €", "5 $", "8 $"],
+    ["Gantt", "✅", "✅", "Timeline", "❌", "Cycles"],
+    ["Docs", "❌", "✅", "Best-in-class", "❌", "Correct"],
+    ["Automation", "250/mois", "illimité", "limité", "Butler", "limité"],
+    ["Visibilité", "Excellent", "Bon", "Faible", "Moyen", "Excellent (tech)"],
+    ["Free", "2 users", "illimité", "solo", "10 tableaux", "250 issues"]
   ]}
   caption="Prix par utilisateur/mois, facturation annuelle, avril 2026."
 />
@@ -211,13 +214,14 @@ Linear n'a pas encore de programme d'affiliation public — visitez [linear.app]
 ## Prix annuel comparé (équipe 15 personnes)
 
 <ComparisonTable
-  tools={[
-    { name: "Asana Starter", plan: "Starter", pricePerMonth: "13,49 €", features: { budgetAnnuel: "2 428 €", gantt: true, automation: "250/mois", visibilite: "Bon" } },
-    { name: "Monday Standard", plan: "Standard", pricePerMonth: "12 €", features: { budgetAnnuel: "2 160 €", gantt: true, automation: "250/mois", visibilite: "Excellent" } },
-    { name: "ClickUp Business", plan: "Business", pricePerMonth: "12 $", features: { budgetAnnuel: "~2 160 $", gantt: true, automation: "illimité", visibilite: "Bon" } },
-    { name: "Notion Plus", plan: "Plus", pricePerMonth: "10 €", features: { budgetAnnuel: "1 800 €", gantt: "Timeline", automation: "limité", visibilite: "Moyen" } },
-    { name: "Trello Standard", plan: "Standard", pricePerMonth: "5 $", features: { budgetAnnuel: "~900 $", gantt: false, automation: "Butler", visibilite: "Moyen" } },
-    { name: "Linear Standard", plan: "Standard", pricePerMonth: "8 $", features: { budgetAnnuel: "~1 440 $", gantt: "Cycles", automation: "limité", visibilite: "Excellent (tech)" } }
+  headers={["Critère", "Asana Starter", "Monday Standard", "ClickUp Business", "Notion Plus", "Trello Standard", "Linear Standard"]}
+  rows={[
+    ["Plan", "Starter", "Standard", "Business", "Plus", "Standard", "Standard"],
+    ["Prix/mois", "13,49 €", "12 €", "12 $", "10 €", "5 $", "8 $"],
+    ["Budget annuel", "2 428 €", "2 160 €", "~2 160 $", "1 800 €", "~900 $", "~1 440 $"],
+    ["Gantt", "✅", "✅", "✅", "Timeline", "❌", "Cycles"],
+    ["Automation", "250/mois", "250/mois", "illimité", "limité", "Butler", "limité"],
+    ["Visibilité", "Bon", "Excellent", "Bon", "Moyen", "Moyen", "Excellent (tech)"]
   ]}
   caption="Budget annuel simulé pour 15 personnes, facturation annuelle. Monday et Notion sont les moins chers à fonctionnalités équivalentes."
 />

@@ -49,9 +49,15 @@ Créé en 2013 à San Francisco. Notion est **un outil de documentation avec des
 ## Comparaison visuelle rapide
 
 <ComparisonTable
-  tools={[
-    { name: "Airtable", plan: "Team", pricePerMonth: "24 $", features: { records: "50 000/base", relations: "Excellent", doc: "Faible", vues: "6 natives", api: "Excellente" } },
-    { name: "Notion", plan: "Plus", pricePerMonth: "10 €", features: { records: "illimité", relations: "Correct", doc: "Best-in-class", vues: "6 natives", api: "Correcte" } }
+  headers={["Critère", "Airtable", "Notion"]}
+  rows={[
+    ["Plan", "Team", "Plus"],
+    ["Prix/mois", "24 $", "10 €"],
+    ["Records", "50 000/base", "illimité"],
+    ["Relations entre tables", "Excellent", "Correct"],
+    ["Doc", "Faible", "Best-in-class"],
+    ["Vues", "6 natives", "6 natives"],
+    ["API", "Excellente", "Correcte"]
   ]}
   caption="Comparatif au plan équivalent pour équipe. Données avril 2026."
 />
@@ -115,13 +121,15 @@ Un nouveau collaborateur comprend Notion en 1h. Airtable demande qu'on lui expli
 ## Prix : la grille officielle 2026
 
 <ComparisonTable
-  tools={[
-    { name: "Airtable Free", plan: "Free", pricePerMonth: "0 $", features: { records: "1 200", utilisateurs: "5", views: "6", automations: "100/mois", apiCalls: "1 000/mois" } },
-    { name: "Airtable Team", plan: "Team", pricePerMonth: "24 $", features: { records: "50 000", utilisateurs: "illimité", views: "illimité", automations: "25 000/mois", apiCalls: "100 000/mois" } },
-    { name: "Airtable Business", plan: "Business", pricePerMonth: "54 $", features: { records: "125 000", utilisateurs: "illimité", views: "illimité", automations: "100 000/mois", apiCalls: "illimité" } },
-    { name: "Notion Free", plan: "Free", pricePerMonth: "0 €", features: { records: "illimité", utilisateurs: "10 guests", views: "illimité", automations: "limité", apiCalls: "limité" } },
-    { name: "Notion Plus", plan: "Plus", pricePerMonth: "10 €", features: { records: "illimité", utilisateurs: "illimité", views: "illimité", automations: "oui", apiCalls: "oui" } },
-    { name: "Notion Business", plan: "Business", pricePerMonth: "15 €", features: { records: "illimité", utilisateurs: "illimité", views: "illimité", automations: "avancé", apiCalls: "SAML SSO" } }
+  headers={["Critère", "Airtable Free", "Airtable Team", "Airtable Business", "Notion Free", "Notion Plus", "Notion Business"]}
+  rows={[
+    ["Plan", "Free", "Team", "Business", "Free", "Plus", "Business"],
+    ["Prix/mois", "0 $", "24 $", "54 $", "0 €", "10 €", "15 €"],
+    ["Records", "1 200", "50 000", "125 000", "illimité", "illimité", "illimité"],
+    ["Utilisateurs", "5", "illimité", "illimité", "10 guests", "illimité", "illimité"],
+    ["Vues", "6", "illimité", "illimité", "illimité", "illimité", "illimité"],
+    ["Automations", "100/mois", "25 000/mois", "100 000/mois", "limité", "oui", "avancé"],
+    ["API Calls", "1 000/mois", "100 000/mois", "illimité", "limité", "oui", "SAML SSO"]
   ]}
   caption="Prix par utilisateur/mois, facturation annuelle, avril 2026."
 />
