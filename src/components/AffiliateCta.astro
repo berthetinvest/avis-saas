@@ -1,0 +1,41 @@
+---
+import { getAffiliateUrl, getAffiliate, affiliateLinkAttrs } from '@utils/affiliate';
+
+/**
+ * CTA vers un outil SaaS — gère automatiquement :
+ * - la résolution du lien (affilié si actif, brut sinon)
+ * - les attributs rel/target appropriés
+ * - un petit indicateur "partenaire" si lien monétisé (obligation transparence)
+ */
+export interface Props {
+  /** Clé affiliate (voir /src/data/affiliates.ts) */
+  affiliateKey: string;
+  /** Texte du CTA — par défaut "Essayer [Nom]" */
+  label?: string;
+  /** Style visuel */
+  variant?: 'primary' | 'secondary' | 'inline';
+}
+
+const { affiliateKey, label, variant = 'primary' } = Astro.props;
+const entry = getAffiliate(affiliateKey);
+const url = getAffiliateUrl(affiliateKey);
+const attrs = affiliateLinkAttrs(affiliateKey);
+
+const displayLabel = label || (entry ? `Essayer ${entry.productName}` : 'Essayer l\'outil');
+
+const classes = {
+  primary:
+    'inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-dark transition-colors',
+  secondary:
+    'inline-flex items-center gap-2 rounded-md border border-ink-300 bg-white px-5 py-3 text-sm font-semibold text-ink-900 hover:border-accent hover:text-accent transition-colors',
+  inline:
+    'inline-flex items-center gap-1 font-semibold text-accent hover:text-accent-dark underline',
+};
+---
+
+<a href={url} class={classes[variant]} {...attrs}>
+  {displayLabel}
+  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M7 17L17 7M17 7H8M17 7V16" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>

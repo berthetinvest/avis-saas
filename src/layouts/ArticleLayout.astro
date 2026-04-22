@@ -1,0 +1,102 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AffiliateDisclosure from '@components/AffiliateDisclosure.astro';
+import SchemaArticle from '@components/SchemaArticle.astro';
+import SchemaFaq from '@components/SchemaFaq.astro';
+import SchemaBreadcrumb from '@components/SchemaBreadcrumb.astro';
+import NewsletterEmbed from '@components/NewsletterEmbed.astro';
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props;
+const { title, description, publishedAt, updatedAt, author, category, faq, cover } = article.data;
+
+const categoryLabels: Record<string, string> = {
+  'marketing-email': 'Marketing & Email',
+  'rh-paie': 'RH & Paie',
+  'gestion-projet': 'Gestion de projet',
+  'guides-generaux': 'Guides',
+};
+
+const categoryLabel = categoryLabels[category];
+const dateLabel = publishedAt.toLocaleDateString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+const updatedLabel = updatedAt
+  ? updatedAt.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+  : null;
+
+const ogImage = cover ? cover.src : undefined;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage={ogImage}
+  publishedTime={publishedAt.toISOString()}
+  modifiedTime={updatedAt?.toISOString()}
+  author={author}
+>
+  <SchemaArticle
+    slot="head-extras"
+    title={title}
+    description={description}
+    publishedAt={publishedAt}
+    updatedAt={updatedAt}
+    author={author}
+    image={ogImage}
+    slug={article.slug}
+  />
+  <SchemaBreadcrumb
+    slot="head-extras"
+    items={[
+      { name: 'Accueil', url: '/' },
+      { name: categoryLabel, url: `/categories/${category}` },
+      { name: title, url: `/articles/${article.slug}` },
+    ]}
+  />
+  {faq && <SchemaFaq slot="head-extras" faq={faq} />}
+
+  <article class="mx-auto max-w-article px-4 py-10 md:px-6 md:py-16">
+    <nav aria-label="Fil d'ariane" class="mb-6 text-xs text-ink-500">
+      <ol class="flex flex-wrap items-center gap-1">
+        <li><a href="/" class="hover:text-accent">Accueil</a></li>
+        <li>›</li>
+        <li><a href={`/categories/${category}`} class="hover:text-accent">{categoryLabel}</a></li>
+      </ol>
+    </nav>
+
+    <header class="mb-8">
+      <p class="text-xs font-bold uppercase tracking-wider text-accent">{categoryLabel}</p>
+      <h1 class="mt-3 font-serif text-4xl font-bold leading-tight text-ink-900 md:text-5xl">
+        {title}
+      </h1>
+      <p class="mt-4 text-lg text-ink-600">{description}</p>
+      <div class="mt-5 flex flex-wrap items-center gap-3 text-sm text-ink-500">
+        <span>Par <span class="font-medium text-ink-700">{author}</span></span>
+        <span>·</span>
+        <time datetime={publishedAt.toISOString()}>{dateLabel}</time>
+        {updatedLabel && (
+          <>
+            <span>·</span>
+            <span>Mis à jour le {updatedLabel}</span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <AffiliateDisclosure />
+
+    <div class="prose prose-lg">
+      <slot />
+    </div>
+
+    <NewsletterEmbed />
+  </article>
+</BaseLayout>

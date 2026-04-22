@@ -1,0 +1,35 @@
+---
+title: "Exemple d'article (non publié)"
+description: "Cet article sert de gabarit pour illustrer la structure attendue. Il est en draft — il ne sera ni rendu ni indexé."
+category: "guides-generaux"
+tags: ["exemple"]
+publishedAt: 2026-01-01
+author: "Mathieu Berthet"
+draft: true
+faq:
+  - question: "Est-ce que cet article est publié ?"
+    answer: "Non, il est en draft."
+---
+
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+## Introduction
+
+Lorem ipsum dolor sit amet. Cet article est un exemple technique — il ne
+sera jamais rendu tant que `draft: true`.
+
+## Tableau comparatif
+
+<ComparisonTable
+  headers={["Outil", "Prix de départ", "Essai gratuit", "Cible"]}
+  rows={[
+    ["Outil A", "9 €/mois", "30 jours", "TPE"],
+    ["Outil B", "29 €/mois", "14 jours", "PME"],
+    ["Outil C", "Gratuit", "—", "Solo"]
+  ]}
+/>
+
+## CTA
+
+<AffiliateCta affiliateKey="brevo" />

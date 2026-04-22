@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Désindexer la page de recherche interne si elle existe (évite duplicate content)
+Disallow: /search?
+
+# Sitemap — URL absolue obligatoire
+Sitemap: https://avis-saas.fr/sitemap-index.xml

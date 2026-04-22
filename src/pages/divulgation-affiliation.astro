@@ -1,0 +1,93 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+---
+
+<PageLayout
+  title="Divulgation d'affiliation"
+  description={`Notre politique de transparence sur les liens d'affiliation présents sur ${siteName}. Comment nous gagnons de l'argent et comment cela influe (ou pas) sur nos avis.`}
+>
+  <h1>Divulgation d'affiliation</h1>
+
+  <p class="lead">
+    On croit à la transparence totale. Voici comment {siteName} gagne de
+    l'argent, et pourquoi ça ne change rien à l'honnêteté de nos avis.
+  </p>
+
+  <h2>Qu'est-ce que l'affiliation ?</h2>
+  <p>
+    L'affiliation est un système de rémunération à la performance : quand un
+    lecteur clique sur l'un de nos liens et souscrit à un outil, l'éditeur de
+    cet outil nous reverse une commission. Cette commission est versée
+    <strong>par l'éditeur, pas par vous</strong> : vous ne payez jamais plus
+    cher en passant par nos liens qu'en allant directement sur le site de
+    l'outil.
+  </p>
+
+  <h2>Comment identifier un lien affilié ?</h2>
+  <p>
+    Conformément à nos obligations légales (article L. 121-1 du Code de la
+    consommation) et aux recommandations de l'ARPP, tous les articles
+    contenant des liens affiliés affichent un bandeau de divulgation en haut
+    de la page. Les liens affiliés portent l'attribut HTML
+    <code>rel="sponsored"</code> comme recommandé par Google.
+  </p>
+
+  <h2>Pourquoi faites-vous de l'affiliation ?</h2>
+  <p>
+    Parce qu'il faut bien vivre, et parce que c'est le modèle qui aligne le
+    mieux notre intérêt et le vôtre : on ne gagne de l'argent que quand vous
+    trouvez un outil qui vous convient et que vous choisissez de l'utiliser.
+    Pas de bannières publicitaires. Pas de contenu sponsorisé. Pas d'articles
+    commandés par des marques.
+  </p>
+
+  <h2>Nos engagements éditoriaux</h2>
+  <ul>
+    <li>
+      <strong>Zéro article sponsorisé.</strong> Aucun éditeur ne peut acheter
+      un article, une place dans un classement, ou un avis positif. Nous
+      refusons systématiquement.
+    </li>
+    <li>
+      <strong>Le classement éditorial ne dépend jamais du taux de commission.</strong>
+      Si un outil moins rémunérateur est meilleur pour un cas d'usage donné,
+      nous le recommandons en priorité.
+    </li>
+    <li>
+      <strong>Nous testons les outils.</strong> Nous ne faisons pas que compiler
+      les fiches produits. Chaque outil recommandé a été essayé, au minimum
+      pendant son essai gratuit.
+    </li>
+    <li>
+      <strong>Nous critiquons ce qui est critiquable.</strong> Même chez des
+      partenaires rémunérateurs. Un outil cher, incomplet ou mal traduit,
+      nous le disons — c'est la seule façon de garder votre confiance.
+    </li>
+    <li>
+      <strong>Les prix sont vérifiés à la date de publication indiquée.</strong>
+      Si vous constatez un tarif erroné, signalez-le via la page <a href="/contact">contact</a>,
+      nous corrigeons rapidement.
+    </li>
+  </ul>
+
+  <h2>Programmes auxquels nous participons</h2>
+  <p>
+    À titre indicatif, nous participons ou prévoyons de participer aux
+    programmes d'affiliation de : Brevo, Mailchimp, ActiveCampaign, PayFit,
+    Personio, Factorial, Notion, ClickUp, Asana, monday.com, Airtable, ainsi
+    qu'à des réseaux agrégateurs comme Awin, Impact et Partnerstack.
+    Cette liste évolue dans le temps.
+  </p>
+
+  <h2>Vous avez un doute ?</h2>
+  <p>
+    Si vous pensez qu'un de nos avis est biaisé, écrivez-nous via la page
+    <a href="/contact">contact</a>. Nous lisons tout, nous répondons, et nous
+    corrigeons quand nous nous trompons.
+  </p>
+
+  <p class="text-sm text-ink-500">
+    <em>Dernière mise à jour : à compléter lors du premier déploiement.</em>
+  </p>
+</PageLayout>

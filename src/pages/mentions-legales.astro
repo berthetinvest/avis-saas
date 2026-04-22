@@ -1,0 +1,83 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+const domain = (import.meta.env.PUBLIC_SITE_URL || 'https://avis-saas.fr').replace(/^https?:\/\//, '');
+---
+
+<PageLayout
+  title="Mentions légales"
+  description={`Mentions légales du site ${siteName} conformément à la loi pour la confiance dans l'économie numérique (LCEN).`}
+>
+  <h1>Mentions légales</h1>
+
+  <p>
+    Conformément aux dispositions de l'article 6-III-1 de la loi n° 2004-575 du
+    21 juin 2004 pour la confiance dans l'économie numérique (LCEN), nous portons
+    à la connaissance des utilisateurs du site les informations suivantes.
+  </p>
+
+  <h2>Éditeur du site</h2>
+  <p>
+    <strong>Site :</strong> {siteName} ({domain})<br />
+    <strong>Éditeur :</strong> {'Mathieu Berthet'}<br />
+    <strong>Statut :</strong> {'Personne physique - édition non professionnelle'} <em>(ex. auto-entrepreneur, SAS, etc.)</em><br />
+    <strong>Adresse :</strong> {'[Votre commune, France - à compléter]'}<br />
+    <strong>SIRET :</strong> {'Non applicable (éditeur personne physique non professionnelle)'}<br />
+    <strong>E-mail :</strong> {'contact@avis-saas.fr'}<br />
+    <strong>Directeur de la publication :</strong> {'Mathieu Berthet'}
+  </p>
+
+  <h2>Hébergeur</h2>
+  <p>
+    <strong>Vercel Inc.</strong><br />
+    440 N Barranca Ave #4133<br />
+    Covina, CA 91723 — États-Unis<br />
+    Site : <a href="https://vercel.com" rel="noopener">vercel.com</a>
+  </p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>
+    L'ensemble des contenus publiés sur {siteName} (textes, graphismes, logos,
+    icônes, images, sons, logiciels) est la propriété exclusive de l'éditeur ou
+    de ses partenaires et est protégé par le Code de la propriété intellectuelle.
+    Toute reproduction, représentation, modification, publication, adaptation,
+    totale ou partielle, quel qu'en soit le moyen ou le procédé, est interdite
+    sans autorisation écrite préalable.
+  </p>
+
+  <h2>Liens hypertextes</h2>
+  <p>
+    Le site peut contenir des liens vers d'autres sites, y compris des liens
+    d'affiliation (voir notre <a href="/divulgation-affiliation">politique
+    de divulgation</a>). {siteName} n'exerce aucun contrôle sur le contenu de
+    ces sites tiers et ne saurait être tenu pour responsable de leur contenu
+    ou de leur politique de confidentialité.
+  </p>
+
+  <h2>Responsabilité éditoriale</h2>
+  <p>
+    Nous nous efforçons de tenir nos contenus à jour et exacts, notamment
+    concernant les tarifs et fonctionnalités des outils présentés. Ces
+    informations sont vérifiées à la date de publication indiquée dans chaque
+    article et peuvent évoluer par la suite. L'utilisateur est invité à vérifier
+    les informations directement sur le site de l'éditeur avant toute décision
+    d'achat. {siteName} ne peut être tenu responsable d'éventuelles erreurs ou
+    omissions.
+  </p>
+
+  <h2>Droit applicable</h2>
+  <p>
+    Les présentes mentions légales sont régies par le droit français. En cas de
+    litige, compétence est attribuée aux tribunaux français.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Pour toute question, utilisez la <a href="/contact">page contact</a> ou
+    écrivez directement à {'contact@avis-saas.fr'}.
+  </p>
+
+  <p class="text-sm text-ink-500">
+    <em>Dernière mise à jour : à compléter lors du premier déploiement.</em>
+  </p>
+</PageLayout>

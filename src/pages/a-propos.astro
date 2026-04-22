@@ -1,0 +1,85 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+const authorName = import.meta.env.PUBLIC_AUTHOR_NAME || 'Mathieu Berthet';
+---
+
+<PageLayout
+  title={`À propos de ${siteName}`}
+  description={`Qui écrit ${siteName}, pourquoi, et comment. Notre mission : aider les TPE et PME françaises à choisir les bons outils SaaS, sans baratin.`}
+>
+  <h1>À propos</h1>
+
+  <p class="lead">
+    {siteName} est un média indépendant qui teste et compare les outils SaaS B2B
+    utilisés par les TPE et PME françaises. Notre mission : vous faire
+    économiser des heures de recherche et éviter les erreurs de choix qui
+    coûtent cher.
+  </p>
+
+  <h2>Pourquoi ce site ?</h2>
+  <p>
+    Parce que choisir un outil SaaS quand on dirige une petite structure, c'est
+    un casse-tête. Les éditeurs se présentent tous comme "la meilleure
+    solution", les comparateurs existants sont souvent de simples annuaires
+    payants, et il est difficile d'obtenir un avis honnête, écrit par quelqu'un
+    qui a vraiment utilisé les produits.
+  </p>
+  <p>
+    On écrit ce qu'on aurait voulu lire en tant que dirigeants de petites
+    entreprises : des tests réels, des comparatifs structurés, des prix à jour,
+    des verdicts assumés — et des critiques quand elles sont méritées.
+  </p>
+
+  <h2>Qui écrit ?</h2>
+  <p>
+    Les articles sont écrits par <strong>{authorName}</strong>. Pour nous
+    contacter, proposer un sujet ou signaler une erreur, la <a href="/contact">page contact</a>
+    est là pour ça.
+  </p>
+
+  <h2>Notre méthodologie</h2>
+  <ol>
+    <li>
+      <strong>Sélection des outils.</strong> Nous partons toujours d'un besoin
+      (ex : "la meilleure solution de paie pour 5-20 salariés en France") et
+      nous listons tous les outils pertinents, pas seulement ceux qui nous
+      rémunèrent.
+    </li>
+    <li>
+      <strong>Test en conditions réelles.</strong> Inscription, configuration,
+      utilisation pendant au moins quelques heures. Quand c'est possible,
+      utilisation prolongée sur un cas réel.
+    </li>
+    <li>
+      <strong>Vérification des tarifs.</strong> Les prix affichés sont vérifiés
+      directement sur le site de l'éditeur à la date de publication indiquée
+      dans l'article. Nous mettons à jour les articles régulièrement.
+    </li>
+    <li>
+      <strong>Avis tranché.</strong> Nous ne publions jamais un article
+      "tout est bien, tout est pareil". Chaque comparatif se termine par un
+      verdict : qui gagne, pour qui, pourquoi.
+    </li>
+    <li>
+      <strong>Liens affiliés transparents.</strong> Voir notre
+      <a href="/divulgation-affiliation">politique d'affiliation</a>.
+    </li>
+  </ol>
+
+  <h2>Vous pouvez compter sur nous pour</h2>
+  <ul>
+    <li>Ne jamais publier un article sponsorisé sans le mentionner clairement</li>
+    <li>Corriger rapidement toute erreur signalée</li>
+    <li>Garder nos tests à jour (nouvelle version, évolution tarifaire)</li>
+    <li>Répondre à vos questions si vous nous écrivez</li>
+  </ul>
+
+  <h2>Envie de bosser ensemble ?</h2>
+  <p>
+    Si vous éditez un outil SaaS pertinent pour notre audience et que vous
+    souhaitez qu'on le teste, écrivez-nous via la <a href="/contact">page
+    contact</a>. Important : nous ne monnayons jamais une note positive, mais
+    nous sommes heureux de tester tout outil sérieux.
+  </p>
+</PageLayout>

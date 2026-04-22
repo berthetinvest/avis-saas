@@ -1,0 +1,52 @@
+---
+/**
+ * JSON-LD schema.org/Article.
+ * À injecter sur chaque page article pour aider Google à comprendre la structure.
+ */
+export interface Props {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  updatedAt?: Date;
+  author: string;
+  authorUrl?: string;
+  image?: string;
+  slug: string;
+}
+
+const { title, description, publishedAt, updatedAt, author, authorUrl, image, slug } = Astro.props;
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://avis-saas.fr';
+const articleUrl = `${siteUrl}/articles/${slug}`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: image || `${siteUrl}/og-default.png`,
+  datePublished: publishedAt.toISOString(),
+  dateModified: (updatedAt || publishedAt).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: author,
+    ...(authorUrl && { url: authorUrl }),
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/logo.png`,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': articleUrl,
+  },
+  inLanguage: 'fr-FR',
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

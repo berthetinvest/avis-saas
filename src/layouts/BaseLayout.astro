@@ -1,0 +1,77 @@
+---
+import Seo from '@components/Seo.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import '@/styles/globals.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  ogType,
+  noindex,
+  publishedTime,
+  modifiedTime,
+  author,
+} = Astro.props;
+
+const ga4Id = import.meta.env.PUBLIC_GA4_ID;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <Seo
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogImage={ogImage}
+      ogType={ogType}
+      noindex={noindex}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+      author={author}
+    />
+
+    {ga4Id && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
+        <script is:inline define:vars={{ ga4Id }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', ga4Id, {
+            anonymize_ip: true,
+          });
+        </script>
+      </>
+    )}
+
+    <slot name="head-extras" />
+  </head>
+  <body class="min-h-screen bg-white font-sans text-ink-900 antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-ink-900 focus:px-3 focus:py-2 focus:text-white">
+      Aller au contenu principal
+    </a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

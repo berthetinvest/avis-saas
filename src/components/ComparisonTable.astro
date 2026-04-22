@@ -1,0 +1,47 @@
+---
+/**
+ * Tableau comparatif générique.
+ * Usage dans un MDX :
+ *   <ComparisonTable
+ *     headers={['Outil', 'Prix', 'Essai', 'Cible']}
+ *     rows={[
+ *       ['Brevo', '9 €/mois', '✓ Gratuit', 'TPE/PME'],
+ *       ...
+ *     ]}
+ *   />
+ */
+export interface Props {
+  headers: string[];
+  rows: (string | number)[][];
+  caption?: string;
+  highlightFirstCol?: boolean;
+}
+
+const { headers, rows, caption, highlightFirstCol = true } = Astro.props;
+---
+
+<div class="my-8 overflow-x-auto rounded-md border border-ink-200">
+  <table class="w-full text-sm">
+    {caption && <caption class="sr-only">{caption}</caption>}
+    <thead class="bg-ink-50">
+      <tr>
+        {headers.map((h) => (
+          <th class="px-4 py-3 text-left font-semibold text-ink-900 border-b border-ink-200">
+            {h}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr class="border-b border-ink-100 last:border-b-0 hover:bg-ink-50/40">
+          {row.map((cell, i) => (
+            <td class={`px-4 py-3 ${i === 0 && highlightFirstCol ? 'font-semibold text-ink-900' : 'text-ink-700'}`}>
+              {cell}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

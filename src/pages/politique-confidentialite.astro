@@ -1,0 +1,128 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+---
+
+<PageLayout
+  title="Politique de confidentialité"
+  description={`Politique de confidentialité et traitement des données personnelles sur ${siteName}, conformément au RGPD.`}
+>
+  <h1>Politique de confidentialité</h1>
+
+  <p>
+    Le respect de votre vie privée est essentiel. Cette politique vous explique
+    quelles données nous collectons, pourquoi, comment et pendant combien de
+    temps — conformément au Règlement général sur la protection des données
+    (RGPD, règlement UE 2016/679) et à la loi Informatique et Libertés modifiée.
+  </p>
+
+  <h2>Responsable de traitement</h2>
+  <p>
+    Le responsable de traitement des données est l'éditeur du site, identifié
+    dans les <a href="/mentions-legales">mentions légales</a>.
+  </p>
+
+  <h2>Données collectées</h2>
+
+  <h3>Données collectées automatiquement (navigation)</h3>
+  <p>
+    Lors de votre visite, les services d'analyse d'audience peuvent collecter :
+  </p>
+  <ul>
+    <li>Adresse IP (anonymisée avant stockage)</li>
+    <li>Type de navigateur et système d'exploitation</li>
+    <li>Pages consultées, durée de visite, source de trafic</li>
+    <li>Pays / région approximative (géolocalisation IP)</li>
+  </ul>
+  <p>
+    <strong>Base légale :</strong> intérêt légitime à mesurer l'audience, avec
+    votre consentement pour les cookies non strictement nécessaires (art. 82
+    Loi Informatique et Libertés).
+  </p>
+
+  <h3>Données fournies volontairement</h3>
+  <p>
+    Si vous vous inscrivez à la newsletter, nous collectons votre adresse e-mail
+    (obligatoire) et éventuellement votre prénom. Ces données sont traitées par
+    notre prestataire d'emailing (Beehiiv, hébergé aux États-Unis, sous clauses
+    contractuelles types). Vous pouvez vous désinscrire à tout moment via le
+    lien présent en bas de chaque e-mail.
+  </p>
+  <p>
+    Si vous utilisez le formulaire de contact, votre e-mail et le contenu de
+    votre message sont collectés uniquement pour vous répondre.
+  </p>
+
+  <h2>Cookies et traceurs</h2>
+  <p>
+    Le site utilise les cookies suivants :
+  </p>
+  <ul>
+    <li>
+      <strong>Cookies strictement nécessaires</strong> : exemptés de consentement
+      (sécurité, préférences d'affichage).
+    </li>
+    <li>
+      <strong>Cookies de mesure d'audience (Google Analytics 4)</strong> :
+      soumis à votre consentement. Les données sont anonymisées et conservées
+      14 mois maximum.
+    </li>
+    <li>
+      <strong>Cookies de réseaux sociaux</strong> : uniquement si vous cliquez
+      sur un bouton de partage.
+    </li>
+  </ul>
+  <p>
+    Vous pouvez gérer vos préférences de cookies à tout moment via le bandeau
+    de consentement en bas de page, ou directement dans les paramètres de votre
+    navigateur.
+  </p>
+
+  <h2>Liens d'affiliation</h2>
+  <p>
+    Le site contient des liens d'affiliation. Lorsque vous cliquez sur un de ces
+    liens, un cookie tiers (du partenaire) peut être déposé pour suivre votre
+    éventuelle souscription. Ces cookies ne sont déposés qu'au moment où vous
+    cliquez volontairement sur le lien. Voir notre
+    <a href="/divulgation-affiliation">politique de divulgation d'affiliation</a>.
+  </p>
+
+  <h2>Durée de conservation</h2>
+  <ul>
+    <li>Données de navigation (GA4) : 14 mois</li>
+    <li>Adresses e-mail newsletter : jusqu'à votre désinscription</li>
+    <li>Messages du formulaire de contact : 3 ans après le dernier échange</li>
+  </ul>
+
+  <h2>Vos droits</h2>
+  <p>
+    Conformément au RGPD, vous disposez des droits suivants :
+  </p>
+  <ul>
+    <li><strong>Droit d'accès</strong> à vos données personnelles</li>
+    <li><strong>Droit de rectification</strong> des données inexactes</li>
+    <li><strong>Droit à l'effacement</strong> (droit à l'oubli)</li>
+    <li><strong>Droit à la limitation</strong> du traitement</li>
+    <li><strong>Droit à la portabilité</strong> de vos données</li>
+    <li><strong>Droit d'opposition</strong> au traitement</li>
+    <li><strong>Droit de retirer votre consentement</strong> à tout moment</li>
+    <li><strong>Droit d'introduire une réclamation</strong> auprès de la
+    CNIL : <a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a></li>
+  </ul>
+  <p>
+    Pour exercer ces droits, écrivez à {'contact@avis-saas.fr'} en précisant votre
+    demande. Nous vous répondrons dans un délai maximum d'un mois.
+  </p>
+
+  <h2>Transferts hors UE</h2>
+  <p>
+    Certains de nos prestataires sont hébergés hors Union européenne (Vercel,
+    Google Analytics, Beehiiv — États-Unis). Ces transferts sont encadrés par
+    les clauses contractuelles types de la Commission européenne ou par le
+    Data Privacy Framework.
+  </p>
+
+  <p class="text-sm text-ink-500">
+    <em>Dernière mise à jour : à compléter lors du premier déploiement.</em>
+  </p>
+</PageLayout>

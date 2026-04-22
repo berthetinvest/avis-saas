@@ -1,0 +1,25 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Page introuvable (404)"
+  description="La page que vous cherchez n'existe pas ou a été déplacée."
+  noindex={true}
+>
+  <h1>Page introuvable</h1>
+  <p>
+    La page que vous cherchez n'existe pas, a été renommée, ou est partie en
+    vacances sans laisser d'adresse.
+  </p>
+  <p>
+    Quelques liens utiles pour rebondir :
+  </p>
+  <ul>
+    <li><a href="/">La page d'accueil</a></li>
+    <li><a href="/articles">Tous nos articles</a></li>
+    <li><a href="/categories/marketing-email">Marketing &amp; Email</a></li>
+    <li><a href="/categories/rh-paie">RH &amp; Paie</a></li>
+    <li><a href="/categories/gestion-projet">Gestion de projet</a></li>
+  </ul>
+</PageLayout>

@@ -1,0 +1,48 @@
+---
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-20 border-t border-ink-200 bg-ink-50">
+  <div class="mx-auto max-w-wide px-4 py-12 md:px-6">
+    <div class="grid gap-8 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <p class="font-serif text-lg font-bold text-ink-900">{siteName}</p>
+        <p class="mt-2 max-w-sm text-sm text-ink-600">
+          Le média indépendant dédié aux outils SaaS pour les TPE et PME françaises.
+          Tests, comparatifs et avis tranchés — sans langue de bois.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-ink-900">Catégories</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600">
+          <li><a href="/categories/marketing-email" class="hover:text-accent">Marketing &amp; Email</a></li>
+          <li><a href="/categories/rh-paie" class="hover:text-accent">RH &amp; Paie</a></li>
+          <li><a href="/categories/gestion-projet" class="hover:text-accent">Gestion de projet</a></li>
+          <li><a href="/articles" class="hover:text-accent">Tous les articles</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-ink-900">Mentions légales</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600">
+          <li><a href="/a-propos" class="hover:text-accent">À propos</a></li>
+          <li><a href="/contact" class="hover:text-accent">Contact</a></li>
+          <li><a href="/mentions-legales" class="hover:text-accent">Mentions légales</a></li>
+          <li><a href="/politique-confidentialite" class="hover:text-accent">Confidentialité</a></li>
+          <li><a href="/divulgation-affiliation" class="hover:text-accent">Divulgation affiliation</a></li>
+          <li><a href="/rss.xml" class="hover:text-accent">Flux RSS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-ink-200 pt-6 text-xs text-ink-500">
+      <p>
+        © {year} {siteName}. Tous droits réservés.
+        Ce site contient des liens d'affiliation — voir la
+        <a href="/divulgation-affiliation" class="underline hover:text-accent">politique de divulgation</a>.
+      </p>
+    </div>
+  </div>
+</footer>

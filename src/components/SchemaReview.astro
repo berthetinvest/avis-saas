@@ -1,0 +1,48 @@
+---
+/**
+ * JSON-LD schema.org/Review imbriqué sur un Product.
+ * Pour les articles qui contiennent un verdict éditorial avec note.
+ */
+export interface Props {
+  productName: string;
+  productUrl: string;
+  rating: number; // 0-5
+  reviewBody: string;
+  author: string;
+  publishedAt: Date;
+}
+
+const { productName, productUrl, rating, reviewBody, author, publishedAt } = Astro.props;
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: {
+    '@type': 'SoftwareApplication',
+    name: productName,
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: productUrl,
+  },
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: rating,
+    bestRating: 5,
+    worstRating: 0,
+  },
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+  },
+  reviewBody,
+  datePublished: publishedAt.toISOString(),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

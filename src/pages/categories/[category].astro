@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = [
+    {
+      slug: 'marketing-email',
+      label: 'Marketing & Email',
+      description: 'Outils d\'emailing, marketing automation et CRM marketing. Nos tests approfondis de Brevo, Mailchimp, ActiveCampaign et leurs alternatives.',
+    },
+    {
+      slug: 'rh-paie',
+      label: 'RH & Paie',
+      description: 'Logiciels de paie, SIRH et gestion du personnel pour TPE et PME. PayFit, Lucca, Personio, Factorial — nos comparatifs et avis.',
+    },
+    {
+      slug: 'gestion-projet',
+      label: 'Gestion de projet',
+      description: 'Outils de gestion de projet, collaboration et productivité : Notion, ClickUp, Asana, Monday et alternatives françaises.',
+    },
+  ];
+
+  const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+
+  return categories.map((cat) => ({
+    params: { category: cat.slug },
+    props: {
+      category: cat,
+      articles: allArticles
+        .filter((a) => a.data.category === cat.slug)
+        .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()),
+    },
+  }));
+}
+
+const { category, articles } = Astro.props;
+---
+
+<BaseLayout
+  title={`${category.label} : comparatifs et avis`}
+  description={category.description}
+>
+  <section class="mx-auto max-w-wide px-4 py-12 md:px-6 md:py-16">
+    <header class="mb-8 max-w-article">
+      <p class="text-sm font-semibold uppercase tracking-wider text-accent">Catégorie</p>
+      <h1 class="mt-2 font-serif text-4xl font-bold text-ink-900 md:text-5xl">
+        {category.label}
+      </h1>
+      <p class="mt-4 text-lg text-ink-600">{category.description}</p>
+    </header>
+
+    <div class="max-w-article">
+      {articles.length > 0 ? (
+        articles.map((article) => <ArticleCard article={article} />)
+      ) : (
+        <p class="text-ink-500">
+          Pas encore d'article publié dans cette catégorie — les premiers arrivent.
+        </p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ArticleCard from '@components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+);
+
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+---
+
+<BaseLayout
+  title="Tous les articles : comparatifs et avis SaaS B2B"
+  description={`Tous les articles de ${siteName} : comparatifs, tests et avis sur les outils SaaS pour entreprises. Marketing, RH, gestion de projet et plus.`}
+>
+  <section class="mx-auto max-w-wide px-4 py-12 md:px-6 md:py-16">
+    <header class="mb-8 max-w-article">
+      <h1 class="font-serif text-4xl font-bold text-ink-900 md:text-5xl">
+        Tous les articles
+      </h1>
+      <p class="mt-4 text-lg text-ink-600">
+        Comparatifs, tests approfondis et avis éditoriaux sur les outils SaaS
+        que les TPE et PME françaises utilisent au quotidien.
+      </p>
+    </header>
+
+    <div class="max-w-article">
+      {articles.length > 0 ? (
+        articles.map((article) => <ArticleCard article={article} />)
+      ) : (
+        <p class="text-ink-500">Les premiers articles arrivent très bientôt.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

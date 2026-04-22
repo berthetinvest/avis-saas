@@ -1,0 +1,61 @@
+---
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+
+const navItems = [
+  { label: 'Articles', href: '/articles' },
+  { label: 'Marketing', href: '/categories/marketing-email' },
+  { label: 'RH & Paie', href: '/categories/rh-paie' },
+  { label: 'Gestion projet', href: '/categories/gestion-projet' },
+  { label: 'À propos', href: '/a-propos' },
+];
+---
+
+<header class="border-b border-ink-200 bg-white">
+  <div class="mx-auto flex max-w-wide items-center justify-between px-4 py-4 md:px-6">
+    <a
+      href="/"
+      class="font-serif text-xl font-bold tracking-tight text-ink-900 hover:text-accent"
+    >
+      {siteName}
+    </a>
+
+    <nav class="hidden md:block" aria-label="Navigation principale">
+      <ul class="flex items-center gap-6 text-sm font-medium text-ink-700">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="hover:text-accent transition-colors"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <details class="md:hidden">
+      <summary class="cursor-pointer list-none text-ink-700 [&::-webkit-details-marker]:hidden" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </summary>
+      <div class="absolute left-0 right-0 top-full z-10 border-b border-ink-200 bg-white shadow-sm">
+        <ul class="mx-auto max-w-wide px-4 py-3 md:px-6">
+          {navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="block py-2 text-ink-700 hover:text-accent"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </details>
+  </div>
+</header>

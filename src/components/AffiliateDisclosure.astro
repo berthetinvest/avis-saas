@@ -1,0 +1,32 @@
+---
+/**
+ * Bandeau de divulgation affiliation — à afficher en haut de chaque article monétisé.
+ * Obligation DGCCRF (art. L. 121-1 Code de la consommation) + ARPP + RGPD.
+ */
+export interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+{compact ? (
+  <p class="my-4 rounded border border-ink-200 bg-ink-50 px-4 py-2 text-xs text-ink-600">
+    <strong>Transparence :</strong> cet article contient des liens d'affiliation.
+    Si vous souscrivez à un outil via l'un d'eux, nous touchons une commission sans
+    surcoût pour vous. Cela ne modifie jamais notre avis éditorial.
+    <a href="/divulgation-affiliation" class="underline hover:text-accent">En savoir plus</a>.
+  </p>
+) : (
+  <div class="my-6 rounded-md border border-ink-200 bg-ink-50 p-4">
+    <p class="text-sm font-semibold text-ink-900">Divulgation affiliation</p>
+    <p class="mt-1 text-sm leading-relaxed text-ink-700">
+      Certains liens de cet article sont affiliés : si vous souscrivez à un outil
+      via l'un d'eux, nous touchons une commission de l'éditeur, sans surcoût
+      pour vous. Notre classement et nos avis restent totalement indépendants —
+      nous refusons tout article sponsorisé et nous ne faisons jamais remonter
+      un outil parce qu'il paie mieux.
+      <a href="/divulgation-affiliation" class="underline hover:text-accent">Notre politique complète</a>.
+    </p>
+  </div>
+)}

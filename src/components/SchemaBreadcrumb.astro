@@ -1,0 +1,26 @@
+---
+/**
+ * JSON-LD schema.org/BreadcrumbList.
+ * Affiche le fil d'ariane dans les résultats Google.
+ */
+export interface Props {
+  items: Array<{ name: string; url: string }>;
+}
+
+const { items } = Astro.props;
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://avis-saas.fr';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

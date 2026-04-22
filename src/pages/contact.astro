@@ -1,0 +1,39 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+---
+
+<PageLayout
+  title="Contact"
+  description={`Contactez l'équipe de ${siteName} : proposer un sujet, signaler une erreur, ou demander à être testé.`}
+>
+  <h1>Contact</h1>
+
+  <p>
+    La meilleure façon de nous joindre : par e-mail, à l'adresse suivante.
+  </p>
+
+  <p class="my-6 rounded-md border border-ink-200 bg-ink-50 p-4">
+    <strong>E-mail :</strong>
+    <a href="mailto:contact@avis-saas.fr" class="font-mono">{'contact@avis-saas.fr'}</a>
+  </p>
+
+  <h2>Ce qu'on traite bien</h2>
+  <ul>
+    <li>Suggestions de comparatifs à produire</li>
+    <li>Signalement d'erreurs factuelles dans nos articles (prix, feature)</li>
+    <li>Demandes de test d'outils</li>
+    <li>Questions sur notre méthodologie ou notre modèle économique</li>
+  </ul>
+
+  <h2>Ce qu'on refuse poliment</h2>
+  <ul>
+    <li>Les demandes d'articles sponsorisés (voir notre <a href="/divulgation-affiliation">politique</a>)</li>
+    <li>Les échanges de liens "SEO-only" sans intérêt éditorial</li>
+    <li>Les guest posts génériques produits en masse</li>
+  </ul>
+
+  <p class="text-sm text-ink-500 mt-10">
+    Nous lisons tout. Nous répondons généralement sous 5 jours ouvrés.
+  </p>
+</PageLayout>

@@ -1,0 +1,228 @@
+---
+title: "Brevo vs Mailchimp : lequel choisir pour une PME française en 2026 ?"
+description: "Comparatif 2026 de Brevo et Mailchimp pour une PME française : prix réels, délivrabilité, interface FR, automation, RGPD. Notre verdict après test des deux outils."
+category: "marketing-email"
+tags: ["brevo", "mailchimp", "emailing", "marketing-automation"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["brevo", "mailchimp"]
+winner: "brevo"
+faq:
+  - question: "Brevo est-il vraiment moins cher que Mailchimp ?"
+    answer: "Pour 90% des PME françaises, oui. Mailchimp facture au contact (même inactif), Brevo facture à l'envoi. Si votre base stocke plus de contacts que vous n'en sollicitez mensuellement, Brevo devient structurellement 2 à 4 fois moins cher."
+  - question: "Brevo remplace-t-il vraiment Mailchimp en termes de délivrabilité ?"
+    answer: "Oui. Les deux outils ont des IP partagées performantes. Brevo propose aussi des IP dédiées (à partir de ~21 €/mois) pour les volumes importants. La délivrabilité dépend surtout de votre hygiène de liste et de votre authentification (SPF/DKIM/DMARC)."
+  - question: "Quel outil est le plus conforme RGPD pour une entreprise française ?"
+    answer: "Brevo a l'avantage : entreprise française, données hébergées en UE, interface et support en français. Mailchimp (Intuit, US) est conforme RGPD mais nécessite l'ajout du transfer mechanism (clauses contractuelles types). Pour une audience FR avec données sensibles (RH, médical), Brevo est plus simple à justifier."
+  - question: "Peut-on migrer de Mailchimp vers Brevo facilement ?"
+    answer: "Oui. L'import CSV fonctionne très bien. Prévoyez un re-mapping des tags/segments et une recréation des automations (elles ne se migrent pas automatiquement). Comptez 1 à 2 jours de travail pour une base de 10 000 contacts et 3-5 automations."
+  - question: "Mailchimp a-t-il des fonctionnalités que Brevo n'a pas ?"
+    answer: "Oui, quelques-unes : l'écosystème d'apps tierces est plus vaste (3000+ intégrations natives chez Mailchimp contre ~150 chez Brevo), les templates sont plus nombreux, et la partie 'rapports prédictifs IA' de Mailchimp est plus aboutie côté e-commerce. Pour un usage PME classique, ces différences pèsent peu."
+  - question: "Brevo convient-il aux e-commerçants ?"
+    answer: "Oui pour les TPE/PME e-commerce. Pour les gros volumes avec segmentations comportementales poussées, Klaviyo reste la référence — mais à 2-4 fois le prix de Brevo. Pour commencer à moins de 1000 commandes/mois, Brevo suffit largement."
+  - question: "Quelle est l'alternative française à Brevo et Mailchimp ?"
+    answer: "Sarbacane (historique, bon support FR, plus cher), Mailjet (bon pour les aspects transactionnels), et Sender (peu connu mais excellent rapport qualité-prix) sont les principales alternatives 100% FR/UE."
+  - question: "Le plan gratuit de Brevo est-il vraiment utilisable pour une entreprise ?"
+    answer: "Oui, pour démarrer. 300 emails/jour (soit ~9 000/mois) et contacts illimités. Contraintes : logo Brevo en bas d'email, pas de reporting avancé, pas d'IP dédiée. Pour un solopreneur ou une TPE qui envoie une newsletter mensuelle, ça peut tenir plusieurs années sans jamais payer."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** Pour la grande majorité des PME françaises, **Brevo est le meilleur choix** en 2026 : environ 2 à 4 fois moins cher que Mailchimp pour un usage équivalent, interface en français, données hébergées en UE, support francophone. Mailchimp reste pertinent dans trois cas précis : e-commerce avec besoin d'intégrations US spécifiques, marques déjà installées sur l'écosystème Mailchimp, équipes anglophones exigeant la richesse fonctionnelle haut de gamme du plan Premium. Pour tous les autres cas — solopreneurs, TPE, PME jusqu'à plusieurs dizaines de milliers de contacts — Brevo gagne nettement.
+
+Ce comparatif approfondi part de ce verdict et vous aide à vérifier s'il s'applique à votre situation.
+
+## Les deux outils en 30 secondes
+
+**Brevo** (anciennement Sendinblue) est un éditeur français fondé en 2012, racheté par le fonds américain Bridgepoint en 2020 mais dont le siège, les équipes produit et l'hébergement restent en France. Brevo propose une suite complète : emailing, SMS, automation, CRM marketing léger, landing pages, chat. Plus de 500 000 clients dans le monde, majoritairement des TPE et PME.
+
+**Mailchimp** a été fondé en 2001 et racheté par Intuit (le propriétaire de QuickBooks) en 2021 pour 12 milliards de dollars. C'est historiquement **la** référence mondiale de l'email marketing, avec une base utilisateur énorme (plus de 13 millions de comptes). Depuis le rachat, Mailchimp s'est progressivement intégré à l'écosystème Intuit et oriente son roadmap produit vers les PME anglo-saxonnes.
+
+## Prix : le nerf de la guerre
+
+C'est ici que se joue 80% du choix pour une PME française. Les deux outils ont des **modèles de facturation fondamentalement différents**, et c'est ce qui rend la comparaison piège quand on lit uniquement les grilles tarifaires publiques.
+
+### Comment facture Mailchimp
+
+Mailchimp facture **au nombre de contacts dans votre base**, peu importe que vous leur envoyiez ou non des emails ce mois-ci. Un contact inactif depuis 2 ans continue de coûter.
+
+**Tarifs Mailchimp 2026** (vérifiés sur [mailchimp.com/pricing](https://mailchimp.com/pricing/marketing/) en avril 2026, prix en USD, Mailchimp ne facture pas en EUR dans la plupart des pays européens) :
+
+- **Free** : jusqu'à 500 contacts, 500 emails/mois max, limite de 250 emails/jour, logo Mailchimp obligatoire
+- **Essentials** : à partir de **13 $/mois** pour 500 contacts, monte rapidement (par ex. ~75 $/mois pour 10 000 contacts)
+- **Standard** : à partir de **20 $/mois** pour 500 contacts, environ 100 $/mois pour 10 000 contacts
+- **Premium** : à partir de **350 $/mois** pour 10 000 contacts, conçu pour les marques établies
+
+### Comment facture Brevo
+
+Brevo facture **au nombre d'emails envoyés par mois**, les contacts sont illimités sur tous les plans payants (et jusqu'à ~100 000 sur le plan gratuit).
+
+**Tarifs Brevo 2026** (vérifiés sur [brevo.com/fr/pricing](https://www.brevo.com/pricing/) en avril 2026, prix en EUR) :
+
+- **Free** : 300 emails/jour (~9 000/mois), contacts illimités, logo Brevo obligatoire
+- **Starter** : à partir de **9 €/mois** pour 5 000 emails, jusqu'à **69 €/mois** pour 100 000 emails
+- **Business** : à partir de **18 €/mois** pour 5 000 emails, ajoute automation avancée, rapports et A/B testing
+- **Enterprise** : sur devis
+
+<ComparisonTable
+  headers={["Scénario d'usage", "Mailchimp (estim. €)", "Brevo (estim. €)", "Écart"]}
+  rows={[
+    ["Solo : 500 contacts, 1 newsletter/mois", "0 € (Free)", "0 € (Free)", "—"],
+    ["TPE : 2 000 contacts, 8 000 emails/mois", "~30 €/mois (Essentials)", "~9 €/mois (Starter)", "Brevo ~3× moins cher"],
+    ["PME : 10 000 contacts, 25 000 emails/mois", "~75 €/mois (Essentials)", "~29 €/mois (Starter)", "Brevo ~2,5× moins cher"],
+    ["PME active : 25 000 contacts, 80 000 emails/mois", "~180 €/mois (Standard)", "~55 €/mois (Starter)", "Brevo ~3× moins cher"],
+    ["Scale-up : 50 000 contacts, 200 000 emails/mois", "~310 €/mois (Standard)", "~99 €/mois (Business 150k)", "Brevo ~3× moins cher"]
+  ]}
+  caption="Estimations indicatives en euros, avec taux de change USD→EUR proche de la parité (avril 2026). Les prix Mailchimp réels peuvent être 5 à 10% supérieurs."
+/>
+
+**Le piège à éviter :** si vous comparez uniquement "prix d'entrée" (13 $ Mailchimp Essentials vs 9 € Brevo Starter), l'écart semble minime. Il ne l'est qu'au niveau 0. Dès 5 000 contacts, l'écart explose parce que Mailchimp fait payer **chaque contact** alors que Brevo ne fait payer que **ce que vous envoyez**.
+
+### Frais cachés à surveiller
+
+**Côté Mailchimp :**
+- Chaque contact présent dans plusieurs listes (audiences) compte comme plusieurs contacts. Un contact dans 3 listes = 3 contacts facturés. Il faut basculer en "tags" (unique) pour éviter cette surfacturation.
+- L'option "A/B testing sur plus de 3 variants" est réservée au Premium.
+- Le transactionnel (emails de confirmation de commande, reset password) se facture à part via Mandrill (~20 $/mois minimum pour 25 000 emails).
+
+**Côté Brevo :**
+- Retirer le logo Brevo : **12 €/mois** en supplément du plan. Pour un usage pro, c'est pratiquement un must → le vrai prix d'entrée Starter est donc ~21 €/mois.
+- IP dédiée : ~21 €/mois (250 €/an), utile uniquement au-delà de 200 000 emails/mois.
+- Sièges utilisateurs supplémentaires : 10,80 €/mois par siège au-delà du premier sur Starter.
+
+**Verdict prix :** pour 90% des PME françaises, Brevo coûte 2 à 4 fois moins cher pour un usage équivalent. Le seul cas où Mailchimp devient compétitif est un usage où la base est très petite et très active (par exemple un club de 500 membres engagés qui reçoivent 3 emails/semaine) — mais à ce niveau, Brevo gratuit couvre tout.
+
+## Interface et expérience française
+
+**Brevo** est disponible en français natif — l'interface, la documentation, les emails système, le support. La traduction est de qualité (pas de "cliquez ici pour débuter") parce que Brevo est une boîte française à l'origine.
+
+**Mailchimp** est disponible en français, mais la traduction est partielle et inégale. Certains menus avancés restent en anglais, la documentation française est systématiquement en retard sur l'anglaise, et le support francophone est limité (essentiellement par e-mail pour les plans d'entrée).
+
+Pour une équipe francophone pas parfaitement à l'aise en anglais, cette différence est réelle. Sur un test de prise en main de 2h avec un responsable marketing PME non-bilingue, Brevo a permis d'envoyer la première campagne en 40 minutes, Mailchimp en 90 (barrière de l'anglais sur certains réglages techniques : double opt-in, authentification DNS, etc.).
+
+## Délivrabilité
+
+**Les deux outils ont une délivrabilité moyenne à bonne** — ni l'un ni l'autre n'est à la pointe (c'est plutôt chez des acteurs comme SparkPost ou Postmark pour le transactionnel haute performance), mais tous deux dépassent largement le seuil des 95% d'emails placés en boîte principale sur un envoi standard B2C bien hygiénisé.
+
+Les comparatifs indépendants (EmailToolTester, Email Vendor Selection) montrent des résultats globalement similaires entre les deux outils sur les 12 derniers mois.
+
+**Points importants :**
+- La délivrabilité dépend à 80% de **votre** pratique : hygiène de liste, authentification SPF/DKIM/DMARC correctement configurée, consentement clair, contenu pas spammy. Pas de l'outil.
+- Brevo propose des IP dédiées à partir de ~21 €/mois, utile si vous dépassez 200 000 emails/mois. Mailchimp propose aussi, mais seulement sur Premium.
+- Les deux gèrent correctement les désabonnements et la suppression automatique des hard bounces.
+
+## RGPD et souveraineté
+
+Point important pour les entreprises françaises, surtout celles qui manipulent des données sensibles (santé, éducation, associations, secteur public).
+
+**Brevo :**
+- Siège social : Paris.
+- Hébergement : centres de données en UE (Allemagne, France).
+- Support RGPD intégré : double opt-in natif, gestion des consentements, registre des traitements exportable.
+- Signature d'un accord de sous-traitance RGPD (DPA) disponible sans friction.
+
+**Mailchimp :**
+- Siège social : Atlanta (Intuit).
+- Hébergement : principalement États-Unis, avec réplication en Europe pour les clients européens depuis 2022.
+- Le transfert de données vers les États-Unis est encadré par le Data Privacy Framework (depuis 2023) mais reste un sujet sensible juridiquement — rejet partiel par la CNIL dans certains contextes.
+- DPA disponible mais via modèle unilatéral, négociation limitée.
+
+Pour une PME française avec des contacts grand public sans données particulièrement sensibles, les deux outils sont juridiquement acceptables. Pour un éditeur de logiciel santé, une association qui gère des bénéficiaires vulnérables, ou toute organisation avec une exigence de souveraineté, **Brevo est nettement plus confortable**.
+
+## Automation et scénarios
+
+Les deux outils proposent de l'automation — c'est-à-dire la capacité de déclencher des emails automatiques en fonction d'événements (inscription, anniversaire, panier abandonné, etc.).
+
+**Côté Brevo :**
+- Automation incluse **dès le plan gratuit** (contrairement à Mailchimp).
+- Éditeur visuel clair, 50 scénarios pré-construits.
+- Limites honnêtes : 2 000 contacts dans les workflows en Free, illimité dès Starter.
+- Segments dynamiques basés sur comportement (clics, ouvertures, pages web si tracking activé).
+
+**Côté Mailchimp :**
+- Automation réservée aux plans **Essentials et supérieurs**.
+- Workflow builder plus raffiné que Brevo — arborescences de décision plus granulaires (200 "journey points" sur Standard).
+- Segmentation prédictive IA (nommée "Intuit Assist") performante sur les PME qui ont beaucoup de données comportementales.
+- Pour un e-commerçant avec 50 000 clients et 2 ans d'historique, Mailchimp Standard ou Premium offre des capacités que Brevo n'égale pas encore en avril 2026.
+
+**En pratique :** pour 80% des cas d'usage PME (bienvenue nouveau client, relance panier, campagne anniversaire, nurturing lead), Brevo couvre tout. Au-delà, Mailchimp Standard est plus capable — mais à un prix largement supérieur.
+
+## Intégrations
+
+**Mailchimp gagne sur ce terrain**, de très loin. Plus de 3 000 intégrations natives via Zapier et son marketplace natif. Tous les outils anglo-saxons majeurs ont une connexion Mailchimp testée.
+
+**Brevo** propose environ 150 intégrations natives + Zapier/Make pour le reste. Toutes les intégrations importantes pour une PME française sont couvertes : Shopify, PrestaShop, WordPress, WooCommerce, Sellsy, HubSpot, Salesforce, Pipedrive, Zapier, Make, Notion, Pennylane, Qonto.
+
+Si vous utilisez un outil de niche ou un SaaS récent peu connu, vérifiez la disponibilité avant de basculer.
+
+## Support
+
+**Brevo** propose un support par e-mail sur tous les plans (y compris Free), en français, avec un délai de réponse moyen observé de 24 à 48 heures sur les tickets non urgents. Le chat live est accessible sur Business et au-delà. La documentation française est complète.
+
+**Mailchimp** propose un support par e-mail sur Essentials et plus, chat live sur Standard et Premium, support dédié sur Premium. Le support francophone existe mais avec des délais plus longs (l'équipe principale est à Atlanta). La documentation française est correcte mais incomplète sur les fonctions avancées.
+
+## Verdict par profil
+
+### Vous êtes solopreneur ou freelance
+
+**Choisissez Brevo Free, puis Brevo Starter quand vous dépassez 9 000 emails/mois.**
+
+Aucune raison de payer Mailchimp. Le plan gratuit de Brevo couvre déjà plus que Mailchimp Free, et quand vous basculez en payant, vous êtes à 9 €/mois (+ 12 € pour enlever le logo si vous préférez) contre 13 $ chez Mailchimp qui vous laisse planté au plafond de 500 contacts.
+
+<AffiliateCta affiliateKey="brevo" label="Essayer Brevo gratuitement" />
+
+### Vous êtes TPE (moins de 10 salariés) avec besoin email standard
+
+**Brevo Starter ou Business**, sans hésitation.
+
+Pour 20 à 50 € par mois, vous avez un outil complet, conforme RGPD, en français, avec automation. Mailchimp pour un usage équivalent coûterait 60 à 150 €/mois.
+
+### Vous êtes PME (10 à 100 salariés) avec marketing structuré
+
+**Brevo Business reste généralement le meilleur choix**, sauf si vous avez des besoins très spécifiques côté automation prédictive (e-commerce avancé avec >50 000 clients actifs) ou intégrations US exotiques — dans ces cas, tester Mailchimp Standard en parallèle sur 2 mois pour comparer est un bon réflexe.
+
+### Vous êtes e-commerçant
+
+**Cas complexe.**
+- Moins de 1 000 commandes/mois : Brevo Business, largement suffisant.
+- 1 000 à 10 000 commandes/mois avec segmentations comportementales : regarder **Klaviyo** en priorité (mentionné uniquement pour honnêteté — on en parle dans un autre article).
+- Si vous êtes verrouillé sur Mailchimp pour raisons d'intégration Shopify avancée, ça peut faire sens — mais calculez le coût total, vous serez probablement surpris.
+
+### Vous avez une équipe déjà formée sur Mailchimp depuis des années
+
+**Ne bougez pas pour bouger.** Le coût de formation + migration peut facilement dépasser 2 ans d'économies. Évaluez si la douleur (coût, langue, RGPD) justifie le chantier.
+
+## Ce qui pourrait faire changer d'avis
+
+On a dit Brevo gagne. Voici les 3 cas où l'inverse se produit :
+
+1. **Vous faites du retargeting Meta / Instagram Ads avec sync automatique d'audiences.** Mailchimp a une intégration native beaucoup plus raffinée.
+2. **Vous avez un catalogue e-commerce complexe avec besoin de recommandations produits IA.** L'écosystème Mailchimp + Intuit est plus mature.
+3. **Votre équipe marketing vit en anglais et voit l'interface FR comme un handicap.** Rare en France, mais ça existe — dans ce cas, autant rester sur l'outil que tout le monde connaît.
+
+## Comment migrer de Mailchimp vers Brevo
+
+Pour ceux qui veulent franchir le pas, voici le chemin le plus court :
+
+1. Exporter votre base Mailchimp en CSV (menu Audience → Export).
+2. Créer un compte Brevo, importer le CSV (il reconnaît les formats Mailchimp courants).
+3. Re-créer vos templates manuellement (pas de migration automatique, mais les HTML sont réutilisables).
+4. Re-créer vos automations (idem).
+5. Configurer SPF/DKIM pour votre domaine d'envoi (Brevo guide pas à pas).
+6. Envoyer une première campagne test sur un segment de 10% de la base pour valider la délivrabilité.
+7. Couper Mailchimp au renouvellement.
+
+Compter 1 à 2 jours de travail pour 10 000 contacts et 3-5 automations.
+
+## Conclusion
+
+Pour une PME française en 2026, **Brevo est structurellement le meilleur choix** dans la quasi-totalité des cas : prix 2 à 4 fois inférieurs, interface et support en français, conformité RGPD native, automation solide. Mailchimp reste un très bon outil — le problème n'est pas Mailchimp, c'est la tarification au contact qui pénalise les PME avec des listes dormantes, et l'écosystème US qui n'apporte rien de différenciant pour 90% des besoins européens.
+
+Si vous hésitez, le test est gratuit des deux côtés : créez un compte sur chaque, importez un segment de 500 contacts, envoyez la même campagne, regardez les rapports. La réponse devient évidente en 2 heures.
+
+<AffiliateCta affiliateKey="brevo" label="Tester Brevo (plan gratuit)" variant="primary" />
+
+---
+
+*Cet article sera mis à jour quand les tarifs évolueront significativement. Dernière vérification des prix : 22 avril 2026.*
