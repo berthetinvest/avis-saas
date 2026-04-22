@@ -1,0 +1,278 @@
+---
+title: "Logiciel de notes de frais : comparatif 2026 (Spendesk, Qonto, Pleo)"
+description: "Quel logiciel de notes de frais pour votre entreprise en 2026 ? Spendesk, Qonto, Pleo, N2F, Expensya comparés. Prix, fonctionnalités, verdict par taille."
+category: "rh-paie"
+tags: ["notes-de-frais", "spendesk", "qonto", "pleo", "depenses"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["payfit"]
+faq:
+  - question: "Quel est le meilleur logiciel de notes de frais en 2026 ?"
+    answer: "Pour une PME de 10 à 100 salariés : Spendesk reste la référence française (cartes prépayées + notes de frais + paiements fournisseurs unifiés). Pour les TPE et petites PME (2-15 salariés) qui ont déjà un compte pro Qonto, Qonto Business intègre nativement les notes de frais. Pour des équipes internationales : Pleo (Copenhague) ou Expensya (récemment rachetée par Medius). Le choix dépend de votre taille, votre stack bancaire, et votre budget."
+  - question: "Spendesk est-il plus cher que la concurrence ?"
+    answer: "Oui, Spendesk est positionné premium : ~8-12 €/utilisateur/mois selon le plan, soit ~80-120 €/mois pour 10 salariés. Pleo est moins cher (~7 €/user), Qonto Business l'inclut dans son abonnement bancaire (~30-50 €/mois tout inclus). En contrepartie, Spendesk propose la gestion la plus complète : cartes virtuelles illimitées, workflows de validation avancés, intégrations comptables profondes (Pennylane, Quadratus, Sage, Cegid)."
+  - question: "Faut-il un logiciel dédié ou les notes de frais dans PayFit/Factorial suffisent ?"
+    answer: "Pour moins de 10 salariés avec peu de notes de frais (5-10/mois), les modules intégrés PayFit ou Factorial suffisent largement. Au-delà de 20 salariés avec 50+ notes de frais/mois, un outil dédié (Spendesk, Qonto, Pleo) devient rentable : saisie automatisée par IA, cartes prépayées qui évitent les avances salariés, workflows de validation multi-niveaux, intégration comptable en 1 clic. Le gain de temps est significatif."
+  - question: "Qonto Business remplace-t-il vraiment un outil dédié aux notes de frais ?"
+    answer: "Partiellement. Qonto Business inclut la gestion des notes de frais avec cartes virtuelles, reçus à scanner, catégorisation. C'est largement suffisant pour une TPE ou petite PME (jusqu'à ~20 salariés). Au-delà, les limites apparaissent : workflows de validation basiques, pas de gestion fine des politiques dépenses, reportings limités. Pour 30+ salariés avec processus structurés, Spendesk ou Pleo sont supérieurs."
+  - question: "Pleo ou Spendesk : lequel choisir ?"
+    answer: "Pleo si vos équipes sont internationales ou anglophones (Pleo est danois, UX plus anglo-saxonne, multi-devises natif). Spendesk si vous êtes une entreprise française avec besoins comptables FR spécifiques (intégration Pennylane, Cegid, Quadratus). À fonctionnalités équivalentes, Spendesk coûte ~10% plus cher mais son support français est apprécié des équipes comptabilité françaises."
+  - question: "Les cartes prépayées sont-elles vraiment utiles ?"
+    answer: "Oui, c'est le principal gain versus une gestion traditionnelle. Une carte prépayée par salarié (physique ou virtuelle) élimine les avances de frais que les employés font sur leurs cartes perso puis se font rembourser. Gain de temps RH, satisfaction salarié (pas d'argent immobilisé), contrôle DAF (plafonds par carte, catégories autorisées, blocage auto). Les outils modernes (Spendesk, Pleo, Qonto) intègrent ça nativement."
+  - question: "Combien de temps fait gagner un logiciel de notes de frais ?"
+    answer: "Pour une PME de 20 salariés générant ~50 notes de frais/mois : 3 à 6 heures par mois économisées sur la saisie, validation, export comptable. Pour 50 salariés avec 150 NDF/mois : 10 à 15 heures économisées. Plus les salariés et les NDF sont nombreuses, plus l'outil est rentable. Dès 20 salariés actifs, un outil dédié se rembourse en productivité DAF/RH."
+  - question: "Les notes de frais sont-elles déductibles fiscalement en 2026 ?"
+    answer: "Oui, les frais professionnels justifiés sont déductibles du résultat fiscal de l'entreprise. Les règles restent strictes : justificatif obligatoire (ticket, facture), lien avec l'activité, justification du caractère professionnel. Certains plafonds s'appliquent (repas 20,20 € en 2026 pour repas en région hors foyer, hôtel à Paris plafonné, etc.). Un bon logiciel applique ces plafonds automatiquement et évite les contrôles fiscaux problématiques."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** En 2026, le marché des logiciels de notes de frais s'est structuré autour de trois approches distinctes. **Spendesk** (français) reste la référence PME/ETI avec son offre complète cartes + notes de frais + paiements fournisseurs. **Qonto Business** intègre les notes de frais dans son abonnement bancaire, redoutable pour les TPE/PME qui veulent tout chez le même opérateur. **Pleo** (danois) séduit les équipes internationales avec une UX épurée et le multi-devises natif. Pour les PME sans outil dédié, les modules intégrés dans PayFit ou Factorial suffisent jusqu'à ~15-20 salariés. Au-delà, un outil spécialisé devient rentable en gain de temps. Ce comparatif détaille chaque option avec prix réels et verdict par profil.
+
+## Pourquoi un logiciel dédié aux notes de frais ?
+
+Dans une PME qui grandit, la gestion des notes de frais passe typiquement par 4 étapes :
+
+1. **0-5 salariés** : tableur Excel + scan des tickets, remboursement mensuel en virement. Suffisant.
+2. **5-15 salariés** : module NDF intégré à PayFit/Factorial, application mobile pour scanner les tickets. OK.
+3. **15-30 salariés** : les limites apparaissent (saisie lente, validation manuelle, avances salariés nombreuses). Besoin d'automatisation.
+4. **30+ salariés** : outil dédié indispensable avec cartes prépayées, workflows, reportings.
+
+Un logiciel dédié apporte trois gains majeurs :
+
+**1. Les cartes prépayées.** Chaque salarié a une carte (physique ou virtuelle) avec plafonds et catégories autorisées. Fini les avances sur carte perso, les remboursements en décalé, les litiges.
+
+**2. La saisie automatisée.** L'OCR moderne (IA) lit le ticket, extrait date/montant/TVA/catégorie, propose la validation. 10 secondes au lieu de 2 minutes par NDF.
+
+**3. L'intégration comptable.** Les NDF validées partent automatiquement vers votre compta (Pennylane, Cegid, Sage, Quadratus) avec lettrage, écritures, TVA récupérée.
+
+## Les 5 options sérieuses en 2026
+
+<ComparisonTable
+  headers={["Outil", "Cible idéale", "Prix 20 users/mois", "Force principale"]}
+  rows={[
+    ["Spendesk", "PME/ETI FR structurées", "~180-240 €", "Le plus complet FR"],
+    ["Qonto Business", "TPE/PME déjà chez Qonto", "~80-150 € (banque + NDF)", "Tout-en-un banque + NDF"],
+    ["Pleo", "PME internationales", "~140-180 €", "UX moderne, multi-devises"],
+    ["N2F", "PME FR budget serré", "~80-120 €", "Prix bas, solide"],
+    ["Expensya (Medius)", "Grands comptes", "Devis", "Robuste enterprise"],
+  ]}
+/>
+
+### 1. Spendesk — la référence française
+
+**Prix :** plan Essentials ~8 €/user/mois + frais cartes, plan Scale ~10-12 €/user/mois, plan Premium sur devis.
+
+**Positionnement :** gestion des dépenses tout-en-un pour PME structurées (cartes + NDF + factures fournisseurs + abonnements SaaS).
+
+**Points forts :**
+
+- **Cartes virtuelles et physiques** illimitées avec plafonds personnalisés par carte.
+- **Saisie NDF par IA** très performante (OCR entraîné sur des millions de tickets FR).
+- **Workflows de validation** multi-niveaux (manager + DAF + finance).
+- **Intégrations comptables FR** profondes : Pennylane, Cegid, Sage, Quadratus, Axonaut.
+- **Analytics avancés** : budgets par département, équipe, projet.
+- **Gestion des abonnements SaaS** : vision claire sur tous les abonnements de l'entreprise, arrêts automatiques.
+- **Support français** de qualité (chat et email, équipe à Paris).
+
+**Points faibles :**
+
+- Prix plus élevé que la concurrence.
+- Courbe d'apprentissage initiale (1-2 jours pour le DAF).
+- Surdimensionné pour 5-10 salariés.
+
+**Pour qui :** PME françaises de 15-200 salariés avec DAF/comptabilité structurée qui veulent professionnaliser leur gestion des dépenses.
+
+### 2. Qonto Business — le tout-en-un banque + NDF
+
+**Prix :** inclus dans Qonto Business (à partir de 29 €/mois pour TPE, 59 €/mois Standard, 99 €/mois Enterprise). NDF illimitées.
+
+**Positionnement :** banque pro française avec gestion intégrée des notes de frais, cartes, paiements.
+
+**Points forts :**
+
+- **Tout au même endroit** : compte bancaire + cartes + NDF + facturation + virements SEPA.
+- **Prix imbattable** pour une TPE : ~30-50 €/mois tout inclus.
+- **Cartes virtuelles illimitées** sur les plans Standard et Enterprise.
+- **Saisie NDF avec OCR** correcte.
+- **Intégration comptable** avec Pennylane (en natif), Cegid, Sage via API.
+- **UX mobile remarquable**, top notes App Store et Play Store.
+- **Support français** 7j/7.
+
+**Points faibles :**
+
+- Workflows de validation basiques comparé à Spendesk (limite pour 30+ salariés).
+- Gestion budgets par département plus sommaire.
+- Lié à votre relation bancaire Qonto (complication si vous changez de banque).
+- Pas de module "paiements fournisseurs" aussi sophistiqué que Spendesk.
+
+**Pour qui :** TPE et petites PME (2-25 salariés) qui sont déjà sur Qonto ou prêtes à y basculer leur banque pro. Très bon rapport qualité/prix.
+
+### 3. Pleo — l'UX moderne internationale
+
+**Prix :** plan Essential ~7 €/user/mois, plan Advanced ~11 €/user/mois, plan Beyond sur devis.
+
+**Positionnement :** gestion des dépenses épurée pour équipes internationales et modernes.
+
+**Points forts :**
+
+- **UX moderne** et très agréable (Pleo a gagné plusieurs prix design).
+- **Multi-devises natif** : idéal si vous avez des équipes dans plusieurs pays.
+- **Cartes physiques et virtuelles** illimitées.
+- **Saisie NDF IA** performante.
+- **Intégrations comptables** : Quickbooks, Xero, Sage, Netsuite + intégrations européennes.
+- **Application mobile excellente**.
+- **API ouverte** pour intégrations sur mesure.
+
+**Points faibles :**
+
+- **Intégrations françaises moins profondes** que Spendesk (Pennylane pas natif, Cegid limité).
+- Support francophone existant mais moins fourni.
+- Moins adapté aux spécificités comptables françaises (TVA récupérable complexe, mentions obligatoires).
+
+**Pour qui :** PME avec équipes internationales ou multi-pays, entreprises tech/SaaS modernes, scale-ups avec filiales étrangères.
+
+### 4. N2F — l'option budget
+
+**Prix :** à partir de 4,50 €/user/mois (forfait minimum ~30 €/mois).
+
+**Positionnement :** notes de frais simples, accessible aux PME au budget serré.
+
+**Points forts :**
+
+- **Le moins cher** des outils dédiés sérieux en France.
+- Saisie OCR correcte.
+- Workflows de validation configurable.
+- Intégrations comptables standards.
+- Support français.
+
+**Points faibles :**
+
+- Pas de cartes prépayées (c'est un pur outil NDF, pas une suite dépenses).
+- UX moins moderne que Spendesk/Pleo.
+- Analytics plus basiques.
+- Moins d'automatisations avancées.
+
+**Pour qui :** PME 10-50 salariés avec budget serré, qui veulent automatiser les NDF sans aller jusqu'à une suite complète comme Spendesk.
+
+### 5. Expensya (Medius) — pour les grands comptes
+
+**Prix :** sur devis, typiquement 15-25 €/user/mois pour 100+ utilisateurs.
+
+**Positionnement :** gestion des NDF enterprise, conçue pour les ETI et grands comptes.
+
+**Points forts :**
+
+- **Conformité et audit** trails complets, adapté à l'audit légal.
+- **Politiques dépenses** très granulaires (par pays, par département, par catégorie).
+- **Multi-pays natif** avec conformité locale fiscale.
+- **Intégrations ERP** profondes (SAP, Oracle, Netsuite).
+- **Rachetée par Medius** en 2023, backing solide.
+
+**Points faibles :**
+
+- Trop gros et trop cher pour les PME.
+- Implémentation longue (2-3 mois pour un déploiement complet).
+- UX moins moderne que Spendesk ou Pleo.
+
+**Pour qui :** ETI 200-5 000 salariés, multinationales, entreprises avec audits annuels exigeants.
+
+## Comparaison détaillée
+
+<ComparisonTable
+  headers={["Critère", "Spendesk", "Qonto Business", "Pleo", "N2F"]}
+  rows={[
+    ["Prix PME 20 users", "~200 €/mois", "~80 €/mois (tout inclus)", "~160 €/mois", "~100 €/mois"],
+    ["Cartes prépayées", "✅ Illimitées", "✅ Selon plan", "✅ Illimitées", "❌ Non"],
+    ["OCR / saisie IA", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐", "⭐⭐⭐⭐"],
+    ["Workflows validation", "⭐⭐⭐⭐⭐ Avancés", "⭐⭐⭐ Basiques", "⭐⭐⭐⭐ Bons", "⭐⭐⭐⭐ Bons"],
+    ["Intégrations compta FR", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐⭐ Pennylane natif", "⭐⭐⭐ Limitées", "⭐⭐⭐⭐ Solides"],
+    ["Multi-devises", "⭐⭐⭐⭐ Bon", "⭐⭐⭐⭐ Bon (EUR/USD/GBP)", "⭐⭐⭐⭐⭐ Excellent", "⭐⭐⭐ Basique"],
+    ["UX mobile", "⭐⭐⭐⭐ Bonne", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐ Correcte"],
+    ["Support français", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐ OK", "⭐⭐⭐⭐ Bon"],
+    ["Gestion abonnements SaaS", "✅ Module dédié", "❌", "Partiel", "❌"],
+    ["Paiements fournisseurs", "✅ Intégré", "✅ Virement", "Partiel", "❌"],
+  ]}
+/>
+
+## Scénarios concrets
+
+### Scénario 1 : TPE tech 5 salariés, ~15 NDF/mois
+
+**Recommandation : Qonto Business Standard (~59 €/mois tout inclus).**
+
+La banque + les NDF + les virements dans le même outil. Le module NDF Qonto suffit à cette taille. Pas besoin d'outil dédié.
+
+### Scénario 2 : PME française 20 salariés, 50 NDF/mois, DAF interne
+
+**Recommandation : Spendesk (~180-200 €/mois) ou Qonto Business Enterprise (~99 €/mois).**
+
+Spendesk si vous voulez le premium avec cartes prépayées illimitées, workflows avancés, et gestion des abonnements SaaS. Qonto si budget limité et que le module NDF Qonto suffit à vos process.
+
+### Scénario 3 : Startup SaaS 15 salariés en 3 pays (France, Allemagne, Espagne)
+
+**Recommandation : Pleo (~100 €/mois).**
+
+Le multi-devises natif et l'UX internationale sont taillés pour ce profil. Plus simple qu'ouvrir Qonto France + Qonto Allemagne + Qonto Espagne.
+
+### Scénario 4 : PME industrielle 50 salariés, 150 NDF/mois
+
+**Recommandation : Spendesk ou Expensya selon exigences compta.**
+
+À cette taille, Spendesk est excellent et largement suffisant. Expensya si votre DAF exige des contrôles d'audit très poussés ou si vous êtes dans un secteur régulé.
+
+### Scénario 5 : Association 10 salariés + 20 bénévoles défrayés
+
+**Recommandation : N2F (~60 €/mois) ou module NDF PayFit/Factorial.**
+
+Pour une association avec beaucoup de NDF de petits montants (bénévoles en missions), N2F offre un bon rapport qualité/prix. Les modules PayFit ou Factorial NDF suffisent si vous êtes déjà sur ces SIRH.
+
+### Scénario 6 : E-commerce 30 salariés, 80 NDF/mois, compta Pennylane
+
+**Recommandation : Spendesk (intégration Pennylane native).**
+
+L'intégration profonde Spendesk ↔ Pennylane est un vrai gain pour votre compta. Justifie le léger surcoût vs Qonto.
+
+## Les bons réflexes 2026
+
+### 1. Cartes prépayées > remboursements a posteriori
+
+Chaque fois qu'un salarié avance de l'argent sur sa carte perso, c'est un irritant RH et une perte de temps. Basculez en cartes prépayées dès que possible (dès 5 salariés actifs avec frais pros réguliers).
+
+### 2. Politique dépenses écrite
+
+Avant de déployer n'importe quel outil, écrivez votre politique : plafonds repas, hôtels, transports, procédure de validation, pièces justificatives exigées. Un outil automatise les règles mais ne les invente pas.
+
+### 3. Intégration comptable dès le jour 1
+
+Ne déployez pas un outil NDF sans connecter votre compta. Sinon vous doublez le travail. Testez l'intégration Pennylane/Cegid/Sage avant de signer.
+
+### 4. Formation équipe 1h par nouveau salarié
+
+Les outils modernes sont intuitifs mais pas magiques. Prévoir 1h de formation à l'embauche (comment scanner un ticket, demander une carte virtuelle, justifier une dépense). Ça évite 80% des erreurs.
+
+### 5. Audit trimestriel
+
+Chaque trimestre, le DAF/RH vérifie : NDF non validées > 30 jours ? Plafonds dépassés sans justification ? Catégories suspectes ? Les outils fournissent des dashboards, utilisez-les.
+
+## Conclusion
+
+**Règle simple de choix 2026 :**
+
+- **Moins de 10 salariés, déjà chez Qonto :** Qonto Business. Simple, inclus, suffisant.
+- **10-25 salariés, PME française classique :** Qonto Business Enterprise ou Spendesk selon structuration.
+- **25-100 salariés, DAF interne, compta structurée :** Spendesk. Le plus complet.
+- **Équipe internationale ou multi-devises :** Pleo.
+- **Budget serré, besoin d'automatisation basique :** N2F.
+- **ETI 200+ salariés, audit légal exigeant :** Expensya.
+
+**Piège à éviter :** prendre Spendesk ou Pleo "trop tôt" (5 salariés) alors que le module NDF intégré à PayFit/Factorial ou Qonto Business suffit. Attendez la charge réelle (20+ salariés, 40+ NDF/mois) avant de passer au premium.
+
+**Gain à espérer :** une PME de 25 salariés qui automatise ses NDF avec Spendesk gagne 5-8 heures DAF/mois + 2-3 heures RH/mois + la paix sociale (salariés plus n'avancent plus leur argent). Sur 12 mois, c'est 100-150 heures récupérées pour un coût de ~2 500 €. ROI largement positif.
+
+## Pour aller plus loin
+
+- [Logiciel de paie pour 1 à 5 salariés : comparatif TPE](/articles/logiciel-paie-1-a-5-salaries-2026)
+- [PayFit vs Lucca : quelle solution pour votre PME ?](/articles/payfit-vs-lucca)
+- [Personio vs PayFit : le duel SIRH](/articles/personio-vs-payfit)

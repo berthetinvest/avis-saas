@@ -1,0 +1,279 @@
+---
+title: "Notion pour freelance : le setup minimal qui fait gagner 5h/semaine"
+description: "Setup Notion freelance 2026 : CRM prospects, facturation, suivi projets, templates prêts. Le système minimal pour gagner 5h par semaine, testé et affiné."
+category: "gestion-projet"
+tags: ["notion", "freelance", "setup", "template", "productivité"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["notion"]
+faq:
+  - question: "Notion est-il adapté à un freelance solo ?"
+    answer: "Oui, parfaitement. Le plan Free couvre les besoins d'un freelance solo : blocs illimités, bases de données illimitées, jusqu'à 10 invités en édition (utile pour vos prestataires ponctuels). Les limites (uploads 5 Mo par fichier, historique 7 jours) ne gênent pas l'usage freelance standard. Vous pouvez tenir des années gratuitement sur ce plan."
+  - question: "Combien de temps faut-il pour setup Notion de A à Z en freelance ?"
+    answer: "Pour un setup complet (CRM prospects + pipeline deals + tracker projets + suivi facturation + wiki process), comptez 4 à 8 heures de travail concentré sur un weekend. Vous pouvez gagner du temps en partant d'un template existant (templates gratuits sur notion.so/templates ou payants sur Gumroad : 15-50 €). Le vrai investissement, c'est ensuite l'adoption : il faut l'utiliser 2-3 semaines pour que ça devienne réflexe."
+  - question: "Quelle est la structure Notion idéale pour un freelance ?"
+    answer: "Quatre zones principales : 1) CRM (prospects + clients + pipeline de deals), 2) Projets (1 page par projet avec tâches, deliverables, deadlines), 3) Finance (tracker factures, revenus par mois, TVA, charges), 4) Wiki / process (vos procédures de travail réutilisables, templates de devis, briefs type). Une cinquième zone utile : le portfolio (page publique pour montrer votre travail). Tout doit tenir dans une seule team page pour la navigation rapide."
+  - question: "Notion remplace-t-il un vrai CRM ou un outil de facturation ?"
+    answer: "Partiellement. Notion remplace très bien un CRM freelance simple (liste de prospects, suivi des échanges, pipeline). Pour la facturation, Notion peut tracker vos factures émises/payées mais ne les génère pas légalement conformes (mentions obligatoires, numérotation séquentielle) — vous avez besoin d'un outil complémentaire (Henrri, Tiime, Freebe, Indy) pour éditer les factures. Notion centralise le pilotage, les outils dédiés gèrent la conformité."
+  - question: "Quels templates Notion gratuits recommander pour démarrer ?"
+    answer: "Trois recommandations solides : 1) le template 'Freelance OS' officiel Notion (gratuit, notion.so/templates), 2) les templates de Thomas Frank (simple, fonctionnel, gratuit), 3) le template 'Freelance Dashboard' sur Reddit r/Notion (gratuit, fréquent update). Évitez les templates gratuits surchargés qui vous perdent plus qu'ils ne vous aident. Simple et épuré, c'est mieux."
+  - question: "Notion AI vaut-il 10 $/mois en plus pour un freelance ?"
+    answer: "Rarement. Pour la majorité des freelances, les usages Notion AI (résumés de réunion, génération de briefs, réécriture de templates) sont mieux servis par un abonnement ChatGPT Plus ou Claude Pro à 20 $/mois utilisé avec un prompt collé dans Notion. Notion AI se justifie si vous avez déjà toute votre vie pro dans Notion et que vous faites beaucoup de recherche sémantique dans votre workspace (le Q&A sur votre contenu)."
+  - question: "Peut-on utiliser Notion pour la gestion de son temps (time tracking) ?"
+    answer: "Basiquement oui via une base 'Sessions' avec colonnes Projet/Date/Heures/Notes. Mais pour un vrai time tracking avec démarrage/arrêt de timer, rapport hebdo automatique, facturation à l'heure, un outil dédié (Toggl, Clockify, Harvest) reste bien plus ergonomique. Beaucoup de freelances tracking leur temps dans Toggl puis reportant dans Notion les totaux hebdomadaires."
+  - question: "Comment backup son workspace Notion ?"
+    answer: "Export complet possible via Settings → Settings & Members → Export Content. Formats : Markdown (+ fichiers), PDF (lisible), HTML. Recommandation : faire un export Markdown trimestriel et archiver dans un cloud (Google Drive, Dropbox). Pour les bases de données critiques (CRM, factures), exportez aussi en CSV pour pouvoir réimporter dans un autre outil en cas de besoin. Notion ne perd pas de données mais un backup propre évite la panique."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** Notion est un excellent outil pour centraliser toute votre activité freelance dans **un seul espace** : CRM prospects, suivi de projets, facturation, wiki process, portfolio. Bien paramétré, un setup Notion freelance fait gagner **5 à 8 heures par semaine** grâce à la fin des aller-retours entre Gmail, Excel, Trello, Google Docs. Le plan Free suffit dans 95% des cas. Ce guide vous donne **la structure exacte** que nous utilisons, testée sur 3 ans de freelance : 4 zones principales, 8 bases de données clés, 12 propriétés à ne pas oublier, et les templates concrets à copier-coller dans votre workspace. Temps de setup : 4 à 6 heures pour un résultat pro.
+
+## Pourquoi un setup Notion minimal plutôt qu'un setup complet ?
+
+La plupart des templates Notion freelance vendus sur Gumroad sont **surchargés**. Ils proposent 30 bases de données, 50 formules, 20 dashboards. Résultat : vous passez plus de temps à maintenir votre Notion qu'à travailler.
+
+Ce guide défend l'approche **minimal viable workspace** : la structure la plus simple qui couvre 95% des besoins d'un freelance. Si vous voulez plus, vous ajouterez plus tard. Commencer simple est la seule façon de faire adopter un système sur la durée.
+
+## La structure recommandée en 4 zones
+
+Créez une seule **Team Page** ("Mon espace freelance") avec 4 sous-pages :
+
+```
+📁 Mon espace freelance
+ ├── 🎯 CRM & Prospection
+ ├── 🚀 Projets en cours
+ ├── 💶 Finance
+ └── 📚 Wiki & Process
+```
+
+Cette structure tient sur un écran, se navigue en 2 clics, et couvre tout ce dont un freelance a besoin.
+
+### Zone 1 : CRM & Prospection
+
+**Objectif :** centraliser tous vos prospects, clients, échanges, et suivre votre pipeline commercial.
+
+**Bases de données dans cette zone :**
+
+1. **👥 Contacts** — vos prospects et clients
+   Propriétés :
+   - Nom (titre)
+   - Entreprise (texte)
+   - Email (email)
+   - Téléphone (téléphone)
+   - Type (select : Prospect / Client actif / Client dormant / Ancien client)
+   - Source (select : LinkedIn / Référencement / Recommandation / Appel à projet / Autre)
+   - Date premier contact (date)
+   - Notes (texte long)
+   - Projets liés (relation → base Projets)
+
+2. **🎯 Pipeline Deals** — opportunités commerciales en cours
+   Propriétés :
+   - Titre du deal (titre)
+   - Contact (relation → base Contacts)
+   - Étape (select : Découverte / Proposition envoyée / En négociation / Gagné / Perdu)
+   - Budget estimé (nombre en €)
+   - Probabilité (number %)
+   - Date prochaine action (date)
+   - Prochaine action (texte)
+   - Notes
+
+**Vue recommandée :** Kanban par étape pour Pipeline Deals (visualisation claire de votre pipeline).
+
+### Zone 2 : Projets en cours
+
+**Objectif :** un espace par projet avec tâches, deadlines, livrables, documentation client.
+
+**Base de données :** 🚀 Projets
+Propriétés :
+- Nom du projet (titre)
+- Client (relation → base Contacts)
+- Statut (select : En attente kickoff / En cours / En révision / Livré / Archivé)
+- Date début
+- Date fin prévue
+- Budget total (€)
+- Heures estimées
+- Heures réelles (optionnel)
+- Livrables (multi-select)
+
+**Sous-pages par projet :** chaque projet ouvert a sa propre page avec :
+- En-tête avec infos clés (client, deadline, budget)
+- Section "Brief" (copie du brief client)
+- Section "Tâches" (base de données tâches liée)
+- Section "Notes réunions"
+- Section "Livrables" (fichiers exportés, liens)
+- Section "Facturation" (bons à faire / factures envoyées / payées)
+
+**Template à dupliquer :** créez un template de page Projet vide que vous dupliquez pour chaque nouveau projet. Gain de temps énorme.
+
+### Zone 3 : Finance
+
+**Objectif :** tracker vos factures, revenus, charges, TVA, pour pilotage mensuel.
+
+**Bases de données :**
+
+1. **🧾 Factures émises**
+   Propriétés :
+   - Numéro facture (titre)
+   - Date émission
+   - Client (relation)
+   - Projet (relation)
+   - Montant HT (€)
+   - Montant TVA (€)
+   - Montant TTC (€)
+   - Statut (select : À envoyer / Envoyée / Payée / Retard / Litige)
+   - Date échéance
+   - Date paiement réel
+
+2. **💸 Charges**
+   Propriétés :
+   - Intitulé (titre)
+   - Catégorie (select : Outils SaaS / Hébergement / Formation / Matériel / Comptabilité / URSSAF / Autre)
+   - Montant (€)
+   - Date
+   - Récurrente (checkbox)
+   - Fréquence (select : Mensuel / Trimestriel / Annuel / Ponctuel)
+
+**Dashboards calculés automatiquement :**
+- CA mensuel (rollup sur Factures émises, filtre par mois)
+- CA annuel (rollup, filtre année en cours)
+- Charges mensuelles
+- Marge mensuelle (CA - charges)
+- Factures en retard (vue filtrée)
+
+**Important :** Notion ne génère pas vos factures légalement conformes. Utilisez un outil dédié (Henrri gratuit, Indy, Tiime, Freebe) pour émettre les PDFs légaux. Notion centralise le pilotage, pas la conformité.
+
+### Zone 4 : Wiki & Process
+
+**Objectif :** stocker vos procédures réutilisables pour ne plus réinventer la roue à chaque projet.
+
+**Pages recommandées :**
+
+1. **📝 Templates documents**
+   - Brief projet type
+   - Devis type
+   - CGV
+   - Email premier contact
+   - Email relance impayé
+   - Email fin de projet + demande de recommandation
+
+2. **🛠️ Process récurrents**
+   - "Comment je démarre un nouveau projet" (checklist de 15 étapes)
+   - "Comment je clôture un projet" (checklist facturation + archivage + demande avis)
+   - "Comment je relance un impayé" (3 emails timing J+7, J+14, J+30)
+   - "Comment je prépare un rendez-vous prospect" (questions à poser)
+
+3. **🎨 Portfolio**
+   - Projets marquants avec description publique, image, résultat
+   - Page partageable publiquement (URL publique Notion) pour envoyer aux prospects
+
+4. **📊 Tableau de bord personnel** (optionnel)
+   - Heures travaillées cette semaine
+   - Revenus du mois
+   - Prochaines deadlines
+   - Prospects à relancer
+
+## Les 5 erreurs à éviter en setup Notion freelance
+
+### 1. Créer trop de bases de données dès le départ
+
+Commencez avec les 5 bases essentielles : Contacts, Pipeline, Projets, Factures, Charges. C'est tout. Ajoutez des bases supplémentaires (Books lus, Sessions time tracking, Ideas for content) plus tard, seulement si un besoin réel émerge.
+
+**Principe :** une nouvelle base ne doit exister que si elle sera **alimentée au moins une fois par semaine**. Sinon, c'est du vide qui vous culpabilise.
+
+### 2. Copier un template Gumroad à 50 € surchargé
+
+Les templates payants que vous trouvez sur Gumroad sont souvent magnifiques mais conçus par des créateurs de contenu Notion qui passent 20h/semaine sur l'outil. Pour un freelance qui travaille 40h/semaine pour ses clients, c'est trop.
+
+**Recommandation :** partez du template officiel gratuit "Freelance OS" sur notion.so/templates, ou construisez votre setup de zéro en suivant ce guide. Vous saurez pourquoi chaque élément existe.
+
+### 3. Ne pas utiliser les relations entre bases
+
+L'intérêt de Notion vs Excel : les relations entre bases. Un Deal pointe vers un Contact, qui pointe vers un Projet, qui pointe vers des Factures. Cela permet de visualiser tout l'historique d'un client en un clic.
+
+**Paramétrez les relations dès le début.** Faire ça plus tard est pénible (il faut retaper les liens).
+
+### 4. Vouloir automatiser tout avec des formules complexes
+
+Notion permet des formules style Excel. Tentation : calculer automatiquement la TVA, le résultat net, le taux de conversion prospects→clients. Vite, vous passez 3 heures à débugger une formule qui marche mal.
+
+**Principe :** si une formule prend plus de 10 minutes à écrire, ne l'écrivez pas. Gardez le calcul manuel ou faites-le dans un outil dédié (Google Sheets).
+
+### 5. Oublier que Notion est un outil de pilotage, pas un outil de production
+
+Notion sert à **piloter** votre activité : vision d'ensemble, historique, suivi. Notion ne sert **pas** à rédiger des propositions commerciales complexes (Google Docs/Word mieux), ni à faire des calculs financiers complexes (Excel mieux), ni à faire du design (Figma).
+
+**Règle :** utilisez Notion comme cockpit, pas comme usine.
+
+## Workflow type d'une semaine
+
+Voici comment utiliser le setup au quotidien.
+
+**Lundi matin (15 min) :**
+- Ouvrir la page Pipeline Deals → vérifier les prochaines actions de la semaine
+- Ouvrir Factures émises vue "En retard" → envoyer relances si besoin
+- Planifier les 3 tâches prioritaires par projet en cours
+
+**Pendant la semaine :**
+- Nouveau prospect → 1 fiche dans Contacts
+- Devis envoyé → 1 entrée dans Pipeline Deals
+- Projet lancé → dupliquer le template Projet, remplir
+- Facture envoyée → 1 ligne dans Factures émises avec statut "Envoyée"
+- Paiement reçu → bascule en "Payée"
+
+**Vendredi soir (20 min) :**
+- Vue Pipeline : mettre à jour les probabilités
+- Vue Factures : relancer tous les impayés > 15 jours
+- Vue Projets : archiver les projets livrés
+- Écrire 3 lignes "rétro de la semaine" dans la page personnelle
+
+**Début de mois (30 min) :**
+- Vue CA du mois précédent → noter et comparer mois-1
+- Vue Charges du mois → noter pour déclaration URSSAF
+- Archiver factures payées dans dossier Drive dédié (pour compta)
+
+Ce workflow fait gagner **5 à 8h/semaine** en évitant les aller-retours entre Gmail, Excel, Trello, Google Drive. Tout est au même endroit.
+
+## Combien ça coûte au total ?
+
+**Notion Free :** 0 €. Suffisant.
+
+**Outils complémentaires recommandés :**
+- **Henrri (facturation)** : gratuit pour moins de 100 factures/an, ~10 €/mois ensuite.
+- **Toggl Free (time tracking)** : gratuit pour usage solo.
+- **Google Workspace** : 6 € HT/mois (pour email pro + Drive + Calendar + Meet).
+- **Comptable auto-entrepreneur** : ~60-100 €/trimestre pour les déclarations URSSAF/CFE/TVA simplifiées (facultatif mais recommandé).
+
+**Total coût outils :** ~15-25 €/mois hors comptable. Très raisonnable pour un freelance.
+
+<AffiliateCta
+  affiliateKey="notion"
+  label="Créer votre workspace Notion"
+  note="Plan Free sans limite de durée. Largement suffisant pour un freelance."
+/>
+
+## Template prêt à copier
+
+Pour démarrer immédiatement, voici la structure minimale à reproduire dans votre workspace :
+
+1. Créez une Team Page "Mon espace freelance".
+2. À l'intérieur, créez les 4 sous-pages (CRM, Projets, Finance, Wiki) avec les emojis recommandés.
+3. Dans chaque sous-page, créez les bases de données listées ci-dessus avec les propriétés indiquées.
+4. Dupliquez le template de page Projet (à créer à partir de la structure proposée).
+5. Créez 2-3 contacts et 1 projet fictifs pour tester le flux de relations.
+6. Utilisez pendant 2 semaines avant de modifier la structure. Les améliorations viendront avec l'usage.
+
+## Conclusion
+
+Un setup Notion freelance **minimal et efficace** est un des meilleurs investissements de temps pour un indépendant. Les 4 zones (CRM, Projets, Finance, Wiki) couvrent 95% des besoins. Le plan Free suffit. 4 à 6 heures de setup + 2 semaines d'adoption = **gain pérenne de 5-8h/semaine** sur le pilotage de votre activité.
+
+**Ne cherchez pas l'outil parfait** : Notion n'est pas parfait, mais sa combinaison bases de données + pages + relations + flexibilité est unique. Le temps que vous économisez vaut plus que la petite frustration sur les formules ou l'absence de vraie facturation conforme.
+
+**Règle finale :** commencez simple, améliorez au fil du temps en ajoutant **seulement** ce qui émerge d'un besoin réel. Les systèmes surchargés meurent. Les systèmes simples durent.
+
+## Pour aller plus loin
+
+- [Notion vs ClickUp : lequel pour votre équipe en 2026 ?](/articles/notion-vs-clickup)
+- [Notion prix : comment bien choisir son plan ?](/articles/notion-prix-plans-2026)
+- [Alternatives françaises à Notion](/articles/alternative-notion-francaise)

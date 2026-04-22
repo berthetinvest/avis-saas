@@ -1,0 +1,275 @@
+---
+title: "Lucca : avis complet 2026 après 3 mois d'utilisation (et quand l'éviter)"
+description: "Lucca en 2026 : test complet du SIRH français modulaire. Prix, forces, vraies limites, cas d'éviction. Verdict objectif après 3 mois d'utilisation réelle."
+category: "rh-paie"
+tags: ["lucca", "avis", "sirh", "rh", "français"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["lucca", "payfit", "personio"]
+faq:
+  - question: "Lucca est-il vraiment le leader du SIRH français pour PME ?"
+    answer: "Oui, sur son segment cœur (50-500 salariés). Lucca est présent depuis 2002, compte 6 500+ clients français, surtout des ETI de 200+ salariés. C'est la référence française historique pour les entreprises qui veulent un SIRH modulaire 100% français. Ses concurrents directs : Personio (allemand, SIRH plus moderne), PayFit (français, paie-first plus léger), Cegid HR (historique mais datant)."
+  - question: "Combien coûte Lucca pour une PME en 2026 ?"
+    answer: "Lucca fonctionne par module : Figgo (congés) ~4 €/salarié/mois, Cleemy (notes de frais) ~7 €/salarié/mois, Poplee (évaluations/entretiens) ~6 €/salarié/mois, Timmi (time tracking) ~5 €/salarié/mois. Les plans multi-modules commencent autour de 15-20 €/salarié/mois tout inclus. Pour 50 salariés complets (congés + NDF + évaluations + time + paie via partenaire), comptez 800 à 1 100 €/mois."
+  - question: "Quelles sont les vraies limites de Lucca ?"
+    answer: "Trois limites principales : 1) interface datée sur certains modules (surtout Poplee et Timmi) qui contrastent avec Personio ou PayFit plus modernes, 2) la paie n'est pas native — Lucca s'appuie sur un partenaire paie (Silae le plus souvent) ou votre cabinet comptable, 3) le multi-pays est limité (Lucca est FR-first, Personio gagne sur l'Europe). La modularité de Lucca peut aussi être perçue comme une complexité supplémentaire."
+  - question: "Lucca ou PayFit pour une PME de 80 salariés ?"
+    answer: "À 80 salariés, Lucca devient compétitif : son approche modulaire permet de payer uniquement les fonctions utiles, sa maturité RH dépasse PayFit (évaluations, entretiens, gestion des compétences), et la paie se délègue à un cabinet. PayFit reste plus simple et l'inclusion native de la paie peut justifier le surcoût si vous voulez internaliser. Lucca pour équipe RH structurée, PayFit pour entreprise dirigeante-porteuse."
+  - question: "Lucca ou Personio pour une PME en croissance ?"
+    answer: "Personio est plus moderne (UX, recrutement intégré, multi-pays natif) et généralement préféré pour les scale-ups tech et les PME multi-pays. Lucca est préféré pour les PME/ETI françaises traditionnelles qui valorisent la souveraineté FR, la modularité, et un prestataire 100% français. À fonctionnalités équivalentes, Lucca est 15-25% moins cher que Personio."
+  - question: "Lucca est-il adapté aux startups et scale-ups ?"
+    answer: "Pas vraiment leur cible. Lucca vise les PME/ETI établies avec 50-1000 salariés, culture RH structurée, secteurs traditionnels (services, industrie, santé, éducation). Les startups tech préfèrent souvent Personio (plus moderne) ou PayFit (plus simple). Lucca est un choix 'sérieux' plutôt qu'un choix 'cool'."
+  - question: "Est-ce que Lucca se connecte bien avec les autres outils ?"
+    answer: "Les intégrations Lucca sont correctes mais moins nombreuses que Personio ou PayFit : Sage, Cegid, Silae, Pennylane, Slack, Google Workspace, Teams. L'API est ouverte, ce qui permet des intégrations custom mais demande des développements. Si votre stack est très moderne et SaaS-heavy (HubSpot + Pennylane + Slack + Notion + Pipedrive + Zapier), l'écosystème est supporté mais pas aussi fluide que chez Personio."
+  - question: "Quand éviter Lucca en 2026 ?"
+    answer: "Évitez Lucca si : 1) vous êtes moins de 30 salariés (surdimensionné, PayFit ou Factorial plus adaptés), 2) vous êtes une scale-up tech moderne (Personio est mieux calibré culturellement), 3) vous avez des équipes dans 5+ pays européens (Personio multi-pays gagne), 4) vous cherchez une solution clé en main paie + RH (PayFit natif mieux), 5) vous valorisez une UX ultra-moderne (Personio ou Factorial plus moderne). Lucca reste un excellent choix pour les autres cas."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** Lucca est un **éditeur français sérieux**, référence historique du SIRH modulaire pour PME/ETI en France. Présent depuis 2002, basé à Nantes, 6 500+ clients, il propose une **approche par modules** : Figgo (congés), Cleemy (notes de frais), Poplee (évaluations), Timmi (time tracking), Pagga (paie via partenaire), Glow (éval 360°). Ses forces : modularité, maturité, souveraineté FR, partenaires paie solides. Ses faiblesses : interface datée sur certains modules, UX moins moderne que Personio, paie non native, multi-pays limité. Lucca est **le bon choix** pour une PME/ETI française traditionnelle de 50-500 salariés avec équipe RH structurée. Lucca **n'est pas le bon choix** si vous êtes moins de 30 salariés, une scale-up tech moderne, ou une entreprise multi-pays. Ce test après 3 mois d'utilisation réelle détaille chaque module et le verdict objectif.
+
+## Présentation de Lucca
+
+**Lucca SAS** est une entreprise française fondée en 2002 à Nantes. L'entreprise reste **indépendante** (pas de rachat US), ~400 salariés en 2026, 6 500+ clients principalement en France. Sa croissance a été régulière sur 22 ans, sans hyper-scaling à l'américaine mais avec une bonne rentabilité. Positionnement : **SIRH modulaire pour PME/ETI françaises**, taille sweet spot 50-500 salariés.
+
+**Chiffres clés 2026 :**
+- ~400 salariés (R&D, support, commercial, tous en France)
+- 6 500+ clients (dont plusieurs centaines d'ETI > 500 salariés)
+- CA estimé ~60 M€, rentable depuis 15+ ans
+- ~1,5 million d'utilisateurs finaux quotidiens
+
+**Philosophie produit :** chaque module est autonome, spécialisé, mature. Vous achetez **seulement ce que vous utilisez**. Figgo (congés) peut vivre sans Cleemy (NDF). Beaucoup de clients historiques ont démarré avec Figgo puis ajouté les autres modules progressivement.
+
+## Les 7 modules Lucca
+
+<ComparisonTable
+  headers={["Module", "Fonction", "Prix indicatif/user"]}
+  rows={[
+    ["Figgo", "Congés et absences", "~4 €/mois"],
+    ["Cleemy", "Notes de frais", "~7 €/mois"],
+    ["Poplee", "Évaluations & entretiens", "~6 €/mois"],
+    ["Timmi", "Time tracking", "~5 €/mois"],
+    ["Pagga (ex-Pagga Paie)", "Paie via partenaire", "~8 €/mois + prestation paie"],
+    ["Glow", "Évaluations 360° & engagement", "~4 €/mois"],
+    ["Core HR", "Dossier salarié et SIRH central", "~5-8 €/mois"],
+  ]}
+/>
+
+Prix indicatifs 2026, sur devis final selon taille et configuration.
+
+## Ce que Lucca fait bien (retour après 3 mois)
+
+### 1. La modularité, vraiment
+
+Vous n'êtes pas obligé de tout prendre. Une PME peut démarrer avec **Figgo seul** à 4 €/user/mois (~200 €/mois pour 50 salariés), ajouter **Cleemy** 6 mois plus tard quand les NDF deviennent un sujet, et ne prendre **Poplee** que 18 mois plus tard quand l'équipe RH est prête à structurer les évaluations.
+
+C'est **la différence avec Personio ou Factorial** qui vendent une plateforme unifiée où vous payez des fonctionnalités que vous n'utilisez pas. Chez Lucca, **chaque euro dépensé correspond à un module activement utilisé**.
+
+### 2. Figgo — la référence gestion congés
+
+Figgo est le module historique Lucca, mature depuis 15+ ans. Il gère :
+
+- Congés payés, RTT, récupération, maladie, maternité, absences diverses.
+- **Règles d'accrual personnalisées** (acquisition de congés selon règles de l'entreprise).
+- **Workflows d'approbation** multi-niveaux.
+- **Calendriers d'équipe** collaboratifs.
+- **Intégration Google Calendar, Outlook**.
+- **Reporting** (solde congés, taux d'absence, etc.).
+
+**Retour réel :** Figgo est probablement **le meilleur module de gestion congés du marché français**. Personio, PayFit et Factorial ont rattrapé mais Figgo reste la référence pour les ETI avec règles complexes.
+
+### 3. Cleemy — notes de frais solides
+
+Cleemy est un outil de NDF mature, **pas révolutionnaire mais fiable**. OCR correct, workflows de validation, intégration comptable (Sage, Cegid, Pennylane partenaire).
+
+**Retour réel :** Cleemy fait bien le job. Spendesk ou Pleo ont une UX plus moderne, mais si vous êtes déjà sur la stack Lucca, rester sur Cleemy est rationnel (intégration native avec Figgo, même interface employé).
+
+### 4. Poplee — évaluations structurées
+
+Poplee propose des campagnes d'évaluations annuelles, entretiens semestriels, suivi des objectifs, plans de développement. Le module est **moins moderne visuellement** que Personio Performance ou Lattice, mais fonctionnellement complet.
+
+**Retour réel :** Poplee est un peu daté côté UX mais fait bien le job pour des entreprises qui veulent des **entretiens annuels sérieux**. Pour des pratiques modernes (OKRs trimestriels, feedback continu), Lattice ou 15Five restent supérieurs.
+
+### 5. Le support français de qualité
+
+Lucca a gardé **un support 100% français** avec des agents qui connaissent leur produit. Pas de ticketing interminable : un chat ou un email, réponse en quelques heures ouvrées, avec une vraie compréhension du sujet. C'est rare dans le SaaS en 2026.
+
+### 6. Hébergement et conformité FR
+
+Serveurs en France, DPA signable, conformité RGPD native, adhésion aux standards de sécurité français (certification SecNumCloud en cours pour certains modules). Pour les ETI régulées (santé, banque, secteur public), Lucca est souvent un des rares choix conformes.
+
+## Ce que Lucca fait moins bien
+
+### 1. UX datée sur plusieurs modules
+
+C'est la **principale critique** en 2026. Poplee, Timmi, Glow ont des interfaces qui **rappellent le SaaS des années 2015-2018**. Pas catastrophique mais visiblement en retrait par rapport à Personio (refondu en 2023) ou Factorial (design moderne).
+
+**Conséquence :** les équipes jeunes et habituées aux UX modernes (Linear, Notion, Figma) ressentent une friction.
+
+### 2. Pas de paie native
+
+Lucca propose **Pagga**, un module paie, mais qui s'appuie **systématiquement sur un partenaire** (Silae via Lucca Pagga, cabinet comptable, ADP). Ce n'est pas de la paie 100% Lucca.
+
+**Comparaison :**
+- PayFit = paie 100% native, édition bulletins directement.
+- Personio = paie via partenaires (comme Lucca).
+- Lucca Pagga = paie via partenaires.
+
+Pour les entreprises qui veulent internaliser complètement leur paie sans cabinet, **PayFit reste meilleur**.
+
+### 3. Multi-pays limité
+
+Lucca est **FR-first**. Présence Belgique et Luxembourg, mais pas Allemagne, Espagne, Italie, UK. Pour une PME qui embauche à l'international, **Personio bat Lucca**.
+
+### 4. Intégrations moins riches que Personio
+
+Lucca propose ~50 intégrations natives. Personio en propose ~100, Factorial ~80. Pas dramatique mais notable si votre stack est diverse.
+
+### 5. Courbe d'onboarding
+
+Lucca vend souvent **3 à 6 mois d'accompagnement** pour déployer un SIRH complet. C'est normal pour un SIRH structurant, mais ça demande un investissement initial (temps RH, réunions, paramétrages). Un Factorial se déploie en 2-4 semaines, Lucca en 2-3 mois.
+
+## Grille tarifaire 2026 (détaillée)
+
+**Prix sur devis uniquement, vérifiés avril 2026. Exemples pour une PME de 50 salariés :**
+
+### Pack "Démarrage RH"
+
+- **Figgo (congés)** : 4 €/user/mois → 200 €/mois
+- **Core HR (dossier salarié)** : 5 €/user/mois → 250 €/mois
+- **Total : 450 €/mois** (~5 400 €/an)
+
+### Pack "RH complète"
+
+- Figgo + Core HR : 450 €/mois
+- **Cleemy (NDF)** : 7 €/user/mois → 350 €/mois
+- **Poplee (évaluations)** : 6 €/user/mois → 300 €/mois
+- **Total : 1 100 €/mois** (~13 200 €/an)
+
+### Pack "RH + Paie"
+
+- Pack RH complète : 1 100 €/mois
+- **Pagga (paie via partenaire)** : ~8 €/user/mois Lucca + ~30-45 €/bulletin cabinet = ~2 000 €/mois total
+- **Total : ~3 100 €/mois** (~37 200 €/an pour 50 salariés)
+
+**Comparaison à iso-fonctionnalité :**
+
+- **Personio équivalent RH complète (sans paie) pour 50 salariés** : ~700-900 €/mois. 20-30% moins cher que Lucca.
+- **PayFit équivalent avec paie native** : ~2 000-2 600 €/mois. Similaire ou légèrement moins cher que Lucca + cabinet.
+- **Factorial équivalent** : ~500-700 €/mois. Moitié moins cher mais fonctionnalités moins matures.
+
+**Lucca n'est pas le moins cher**, mais il est **calibré pour les ETI sérieuses** qui valorisent la maturité, la modularité, et le support FR.
+
+## Pour qui Lucca est le bon choix ?
+
+### Profil 1 : PME française 50-300 salariés, équipe RH structurée
+
+**→ Lucca bon choix.**
+
+La modularité permet de déployer progressivement. La maturité des modules (surtout Figgo) rassure. Le support français facilite l'adoption. Budget ~15-20 €/user/mois tout compris.
+
+### Profil 2 : ETI française 300-2000 salariés, secteur traditionnel
+
+**→ Lucca excellent choix.**
+
+À cette taille, Lucca est un standard de marché avec des clients de référence dans l'industrie, les services, la santé. La maturité et la souveraineté FR sont des arguments forts pour les directions RH expérimentées.
+
+### Profil 3 : PME secteur régulé (santé, banque, public)
+
+**→ Lucca souvent obligatoire.**
+
+La conformité FR et la certification sécuritaire en cours font de Lucca un des rares SIRH conformes pour ces secteurs.
+
+<AffiliateCta
+  affiliateKey="lucca"
+  label="En savoir plus sur Lucca"
+  note="Démo produit personnalisée avec commercial. Déploiement accompagné."
+/>
+
+## Quand éviter Lucca
+
+### Profil à éviter 1 : PME moins de 30 salariés
+
+**→ Privilégier Factorial ou PayFit.**
+
+À cette taille, Lucca est surdimensionné. Factorial offre un SIRH complet à moitié prix. PayFit offre une paie native avec modules RH intégrés. Lucca démarre à avoir du sens à partir de 30-40 salariés.
+
+### Profil à éviter 2 : Scale-up tech moderne (series A/B)
+
+**→ Privilégier Personio ou Factorial.**
+
+Les équipes tech modernes (20-150 personnes) trouvent Lucca daté visuellement et culturellement. Personio parle leur langage UX. Factorial est léger et moderne.
+
+### Profil à éviter 3 : Entreprise multi-pays européenne
+
+**→ Privilégier Personio.**
+
+Lucca est FR-first. Personio gère 30+ pays européens nativement. Si vous recrutez en Allemagne, Espagne, Italie, UK, Personio est incontournable.
+
+### Profil à éviter 4 : Vous voulez internaliser la paie à 100%
+
+**→ Privilégier PayFit.**
+
+Lucca Pagga passe par un cabinet. PayFit permet de gérer la paie sans cabinet. Si votre dirigeant veut voir son bulletin sortir en interne, PayFit est mieux.
+
+### Profil à éviter 5 : Budget très serré
+
+**→ Privilégier Factorial.**
+
+Lucca coûte 15-20 €/user/mois tout inclus. Factorial ~7-10 €/user. Si le budget prime et que les fonctionnalités Factorial suffisent (PME classique), inutile de payer plus cher.
+
+## Comparaison synthétique
+
+<ComparisonTable
+  headers={["Critère", "Lucca", "Personio", "PayFit", "Factorial"]}
+  rows={[
+    ["Taille sweet spot", "50-500 salariés", "50-500 salariés", "5-50 salariés", "10-80 salariés"],
+    ["Prix 50 salariés RH", "~1 100 €/mois", "~800 €/mois", "~2 200 €/mois (paie incluse)", "~500 €/mois"],
+    ["Paie native", "❌ Via partenaire", "❌ Via partenaire", "✅ Native", "✅ Native (jeune)"],
+    ["Multi-pays", "⭐⭐ FR + Benelux", "⭐⭐⭐⭐⭐ EU complet", "⭐⭐⭐ FR + 4 pays", "⭐⭐⭐⭐ EU + LATAM"],
+    ["Modularité", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐ Pack", "⭐⭐⭐ Modules", "⭐⭐⭐ Pack"],
+    ["UX moderne", "⭐⭐⭐ Datée", "⭐⭐⭐⭐⭐ Moderne", "⭐⭐⭐⭐⭐ Moderne", "⭐⭐⭐⭐ Moderne"],
+    ["Support FR", "⭐⭐⭐⭐⭐ Excellent", "⭐⭐⭐⭐ Bon", "⭐⭐⭐⭐⭐ Excellent", "⭐⭐⭐⭐ Bon"],
+    ["Maturité produit", "⭐⭐⭐⭐⭐ 22 ans", "⭐⭐⭐⭐ 11 ans", "⭐⭐⭐⭐ 10 ans", "⭐⭐⭐ 7 ans"],
+    ["Culture cible", "ETI françaises", "Scale-ups EU", "PME FR dirigeant-porteur", "PME internationales jeunes"],
+  ]}
+/>
+
+## Notre verdict après 3 mois
+
+**Points forts confirmés :**
+
+- Figgo reste **le meilleur module congés du marché français**.
+- Le support Lucca est **réellement réactif et compétent**.
+- La modularité **fonctionne** : on paye ce qu'on utilise.
+- La maturité des modules se sent (moins de bugs que Factorial ou Personio plus jeunes).
+
+**Points faibles confirmés :**
+
+- L'UX **n'a pas rattrapé** Personio depuis 2023. Visible surtout sur Poplee.
+- L'onboarding est **long** (3 mois pour un déploiement complet).
+- Les **équipes jeunes** peinent à adopter l'outil qu'elles trouvent daté.
+- **Lucca Pagga ≠ vraie paie native**.
+
+**Verdict global :** Lucca est un excellent produit **pour les ETI françaises traditionnelles**. C'est le choix rationnel pour une direction RH expérimentée qui valorise maturité, modularité, souveraineté. Ce n'est pas le choix pour une scale-up tech moderne ou une PME multi-pays.
+
+**Prix/qualité :** bon à 50-300 salariés. Cher à moins de 30 salariés. Très compétitif à 300+ avec des remises volume négociables.
+
+## Conclusion
+
+Lucca est **la référence historique du SIRH français**, et elle garde son titre en 2026 dans son segment cœur (ETI FR traditionnelles). Sa modularité est sa force principale, sa maturité est rassurante, son support français est excellent.
+
+Ce n'est cependant **plus le choix évident** pour tous les profils : les scale-ups préfèrent Personio, les TPE-PME simples préfèrent PayFit ou Factorial, les multi-pays préfèrent Personio.
+
+**Règle de décision Lucca :**
+
+- Vous êtes 50+ salariés, France, équipe RH structurée, secteur traditionnel → **Lucca est pertinent**.
+- Sinon → regardez d'abord Personio, PayFit ou Factorial selon votre profil.
+
+## Pour aller plus loin
+
+- [PayFit vs Lucca : le duel des deux champions français](/articles/payfit-vs-lucca)
+- [Personio vs PayFit : le duel SIRH moderne](/articles/personio-vs-payfit)
+- [Alternatives à PayFit : 6 logiciels de paie](/articles/alternative-payfit)

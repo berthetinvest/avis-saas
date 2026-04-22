@@ -103,6 +103,25 @@ export const affiliates: Record<string, AffiliateEntry> = {
     status: 'pending',
     notes: 'Spécifique e-commerce — programme sur invitation',
   },
+  hubspot: {
+    key: 'hubspot',
+    productName: 'HubSpot',
+    rawUrl: 'https://www.hubspot.com/fr/',
+    network: 'impact',
+    commission: '15-30% récurrent 12 mois',
+    cookieDuration: '90 jours',
+    status: 'pending',
+    notes: 'Solutions Partner Program — via Impact',
+  },
+  sarbacane: {
+    key: 'sarbacane',
+    productName: 'Sarbacane',
+    rawUrl: 'https://www.sarbacane.com/',
+    network: 'direct',
+    commission: 'à négocier — programme apporteur',
+    status: 'pending',
+    notes: 'Éditeur français historique — contact commercial',
+  },
 
   // ============================================================
   // RH & PAIE
@@ -224,7 +243,7 @@ export const affiliates: Record<string, AffiliateEntry> = {
  * Catégories reconnues pour grouper les liens
  */
 export const affiliateCategories: Record<string, string[]> = {
-  'marketing-email': ['brevo', 'mailchimp', 'activecampaign', 'mailerlite', 'getresponse', 'klaviyo'],
+  'marketing-email': ['brevo', 'mailchimp', 'activecampaign', 'mailerlite', 'getresponse', 'klaviyo', 'hubspot', 'sarbacane'],
   'rh-paie': ['payfit', 'lucca', 'personio', 'factorial', 'kelio', 'combohr'],
   'gestion-projet': ['notion', 'clickup', 'asana', 'monday', 'trello', 'airtable'],
 };

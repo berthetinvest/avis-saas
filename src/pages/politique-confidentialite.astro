@@ -1,6 +1,8 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || 'contact@avis-saas.fr';
+const lastUpdate = import.meta.env.PUBLIC_LEGAL_LAST_UPDATE || '22 avril 2026';
 ---
 
 <PageLayout
@@ -110,7 +112,7 @@ const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
     CNIL : <a href="https://www.cnil.fr" rel="noopener">www.cnil.fr</a></li>
   </ul>
   <p>
-    Pour exercer ces droits, écrivez à {'contact@avis-saas.fr'} en précisant votre
+    Pour exercer ces droits, écrivez à {contactEmail} en précisant votre
     demande. Nous vous répondrons dans un délai maximum d'un mois.
   </p>
 
@@ -123,6 +125,6 @@ const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
   </p>
 
   <p class="text-sm text-ink-500">
-    <em>Dernière mise à jour : à compléter lors du premier déploiement.</em>
+    <em>Dernière mise à jour : {lastUpdate}.</em>
   </p>
 </PageLayout>

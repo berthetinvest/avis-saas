@@ -1,6 +1,7 @@
 ---
 import PageLayout from '@layouts/PageLayout.astro';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
+const lastUpdate = import.meta.env.PUBLIC_LEGAL_LAST_UPDATE || '22 avril 2026';
 ---
 
 <PageLayout
@@ -88,6 +89,6 @@ const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
   </p>
 
   <p class="text-sm text-ink-500">
-    <em>Dernière mise à jour : à compléter lors du premier déploiement.</em>
+    <em>Dernière mise à jour : {lastUpdate}.</em>
   </p>
 </PageLayout>

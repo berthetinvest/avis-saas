@@ -1,0 +1,247 @@
+---
+title: "Airtable vs Excel : quand passer à Airtable (vraiment) ?"
+description: "Airtable ou Excel : quand migrer de la feuille de calcul vers la base no-code ? Comparatif 2026, cas d'usage, signaux de bascule, et pièges à éviter."
+publishDate: 2026-04-22
+author: "Mathieu Berthet"
+category: "gestion-projet"
+tags: ["airtable", "excel", "comparatif", "no-code", "base-de-données"]
+featured: false
+draft: false
+readingTime: 10
+faq:
+  - question: "Airtable remplace-t-il vraiment Excel ?"
+    answer: "Oui pour les usages collaboratifs structurés (contacts, catalogue, planning éditorial, inventaire, CRM léger). Non pour le calcul financier lourd (modélisation financière, analyse de données, macros VBA, fonctions XIRR/Goal Seek). Airtable est une base de données qui ressemble à Excel ; Excel est un tableur qui calcule. Beaucoup d'équipes utilisent les deux en parallèle."
+  - question: "Quelles sont les vraies forces d'Airtable par rapport à Excel ?"
+    answer: "Quatre forces majeures : (1) collaboration native sans conflits de version (contrairement à un Excel partagé par mail), (2) relations entre tables (un contact lié à une entreprise liée à plusieurs deals), (3) vues multiples de la même donnée (grille, kanban, calendrier, gallery), (4) API et automatisations natives pour connecter à votre stack. C'est ce qui transforme une feuille plate en vraie application."
+  - question: "Quelles sont les vraies forces d'Excel par rapport à Airtable ?"
+    answer: "Excel reste imbattable sur : (1) modélisation financière complexe (tableaux croisés dynamiques, Power Query, Power Pivot), (2) fonctions avancées et macros VBA, (3) manipulation de gros volumes (millions de lignes), (4) maîtrise des utilisateurs (tout le monde connaît Excel, formation quasi inutile), (5) travail offline complet, (6) prix (inclus dans Microsoft 365)."
+  - question: "Quand faut-il migrer d'Excel vers Airtable ?"
+    answer: "Quatre signaux déclencheurs : (1) vous avez plus de 3 personnes qui modifient la même feuille en même temps, (2) vos données devraient être reliées entre plusieurs tables mais vous faites des VLOOKUP chaotiques, (3) vous voulez des vues différentes selon le rôle (kanban pour la prod, calendrier pour les deadlines), (4) vous avez besoin d'automatisations ou d'API. Si aucun de ces 4 signaux ne résonne, restez sur Excel."
+  - question: "Combien coûte Airtable vs Excel ?"
+    answer: "Excel : inclus dans Microsoft 365 Business Basic à 6 €/user/mois (avec Outlook, Teams, OneDrive). Airtable Team : 24 $/user/mois. Airtable est donc 4x plus cher qu'Excel dans Microsoft 365. Mais Airtable Free existe (1 200 records par base, 5 users) — utilisable pour tester sérieusement un cas d'usage avant de payer."
+  - question: "Puis-je importer mon fichier Excel dans Airtable ?"
+    answer: "Oui, Airtable importe nativement les fichiers XLSX et CSV. Chaque feuille devient une table. Les formules Excel sont converties quand c'est possible (les fonctions simples oui, les formules complexes avec références croisées souvent non). Prévoyez du nettoyage manuel post-import, surtout sur les dates et les listes déroulantes."
+  - question: "Airtable est-il collaboratif comme Google Sheets ?"
+    answer: "Oui, et même mieux. Airtable gère : la co-édition en temps réel, les commentaires par cellule, les notifications, l'historique complet des modifications, les permissions granulaires (lecture seule, édition, création). Google Sheets est bon pour la co-édition basique ; Airtable va plus loin dès que la structure se complexifie."
+  - question: "Quelle est la meilleure alternative à Airtable pour ceux qui veulent du 100 % collaboratif ?"
+    answer: "Google Sheets reste le meilleur compromis pour du collaboratif simple. Pour du vraiment structuré no-code : Notion, Coda, Baserow (open-source, hébergeable EU), NocoDB (open-source). ClickUp, Monday et Asana proposent aussi des databases mais moins puissantes que Airtable pur. Pour Excel-like collaboratif : Microsoft 365 + OneDrive sont un choix sûr."
+seo:
+  canonical: "https://avis-saas.fr/articles/airtable-vs-excel"
+---
+
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+
+## En bref
+
+La question "Airtable ou Excel ?" est mal posée : **ce n'est pas le même outil**. Excel est un tableur de calcul ; Airtable est une base de données relationnelle avec un vernis tableur. Dans 80 % des cas, vous gardez Excel pour la partie financière/analytique, et vous migrez certaines feuilles précises vers Airtable (CRM, planning, inventaire, catalogue) quand la collaboration et la structure sortent du cadre d'Excel. Ce guide vous donne les 4 signaux qui déclenchent vraiment la bascule.
+
+## Les deux outils en une minute
+
+### Excel (Microsoft 365)
+
+Le tableur roi depuis 1985. **Excel est un outil de calcul** : lignes, colonnes, formules, tableaux croisés dynamiques, macros, Power Query, Power Pivot. Génial pour la modélisation financière, l'analyse de données, le reporting chiffré. Limité pour la collaboration temps réel multi-utilisateurs et pour structurer des relations entre jeux de données.
+
+### Airtable
+
+Lancé en 2012 à San Francisco. **Airtable est une base de données relationnelle** qui se présente comme un tableur. Tables, records, champs typés (texte, nombre, date, pièce jointe, lien vers autre table), vues multiples (grille, kanban, calendrier, gallery, Gantt), formules, API REST native, automatisations. Génial pour CRM léger, catalogue produit, planning éditorial, inventaire collaboratif.
+
+## Les 4 signaux qui disent de migrer d'Excel à Airtable
+
+### Signal #1 : "Je suis dans un enfer de VLOOKUP entre feuilles"
+
+Vous avez une feuille "Contacts", une feuille "Entreprises", une feuille "Deals". Chaque fois qu'un contact change d'entreprise, il faut mettre à jour 3 feuilles et 12 VLOOKUP. Vos données sont en réalité **relationnelles** — vous essayez de les gérer avec un outil non relationnel.
+
+→ **Airtable** résout ça en natif. Les relations (`link to another record`) sont une première classe, les lookups/rollups remontent les données automatiquement.
+
+### Signal #2 : "Plus de 3 personnes modifient la même feuille en simultané"
+
+Excel + SharePoint ou OneDrive permet la co-édition mais elle est capricieuse : conflits de version, cellules qui bougent, formules qui sautent. Au-delà de 3-4 contributeurs actifs, ça devient un risque.
+
+→ **Airtable** est né collaboratif. Chaque modification est attribuée, commentée, historisée. Les permissions par table / vue sont granulaires.
+
+### Signal #3 : "Je veux voir la même donnée de plusieurs façons"
+
+Votre équipe marketing veut un kanban "articles à produire". Votre DG veut une vue calendrier. Votre client veut une gallery. Sur Excel, vous dupliquez la feuille et perdez la cohérence.
+
+→ **Airtable** offre des vues multiples sur une même table. Chaque vue a ses propres filtres, tris, groupements. La donnée est unique, les représentations sont multiples.
+
+### Signal #4 : "J'ai besoin d'automatisations ou d'API"
+
+Dès que vous voulez :
+- Envoyer un email quand un record est créé.
+- Poster dans Slack quand un deal passe à "Won".
+- Alimenter votre site web depuis la base.
+- Synchroniser avec HubSpot, Notion, Calendly.
+
+Excel est insuffisant. Il faut du VBA ou Power Automate (courbe d'apprentissage raide, moins fiable).
+
+→ **Airtable** propose des **Automations natives** (déclencheur + actions en no-code) et une **API REST** de premier ordre. C'est l'outil idéal pour être une couche "opérationnelle" entre vos humains et votre stack.
+
+Si aucun de ces 4 signaux ne résonne : **restez sur Excel**. C'est moins cher, tout le monde connaît, et ça fait le job.
+
+## Tableau comparatif
+
+<ComparisonTable
+  tools={[
+    { name: "Excel (Microsoft 365 Business Basic)", plan: "Business Basic", pricePerMonth: "6 €", features: { collab: "Correct", relations: false, vues: "1 seule", api: "Limité", automation: "Power Automate (payant)", volumeMax: "1M lignes" } },
+    { name: "Airtable Team", plan: "Team", pricePerMonth: "24 $", features: { collab: "Excellent", relations: "Oui natif", vues: "Illimitées", api: "Excellent", automation: "25 000/mois natif", volumeMax: "50k records/base" } }
+  ]}
+  caption="Comparatif fonctionnel Excel vs Airtable, avril 2026."
+/>
+
+## Ce qu'Excel fait (nettement) mieux qu'Airtable
+
+### 1. Modélisation financière
+
+P&L, budget, cash flow, valorisation DCF, sensibilité, scénarios : Excel reste la référence mondiale. Les fonctions SUMPRODUCT, XIRR, PMT, Goal Seek, Solver, les tableaux croisés dynamiques, Power Query... Airtable est très loin derrière.
+
+### 2. Macros et automatisation VBA
+
+Les macros VBA permettent d'automatiser des process lourds sur Excel. Airtable Scripts existe mais est moins mature.
+
+### 3. Gros volumes
+
+Excel gère jusqu'à 1 048 576 lignes. Airtable plafonne à 50 000 records par base en plan Team (125 000 en Business). Pour une base clients 200 000 lignes : Excel gagne.
+
+### 4. Travail offline
+
+Excel est natif, installable, utilisable offline. Airtable est 100 % web, inutilisable sans connexion.
+
+### 5. Maîtrise par les utilisateurs
+
+N'importe qui (comptable, commercial, RH, CEO) sait utiliser Excel de base. Airtable demande 2-5 heures d'apprentissage sérieux.
+
+### 6. Prix
+
+Excel dans Microsoft 365 Business Basic = 6 €/user. Airtable Team = 24 $/user. Excel est **4x moins cher**.
+
+## Ce qu'Airtable fait (nettement) mieux qu'Excel
+
+### 1. Collaboration multi-utilisateurs
+
+Déjà dit mais : Airtable est **né** pour le collaboratif. Commentaires par cellule, historique par record, notifications, permissions granulaires.
+
+### 2. Relations entre tables
+
+Un contact peut être lié à une entreprise liée à 3 deals liés à 5 tâches. Formulaire standardisé. Pas de VLOOKUP chaotique.
+
+### 3. Vues multiples
+
+Une table → vue grille + vue kanban + vue calendrier + vue gallery + vue form + vue Gantt. La même donnée, 6 angles différents.
+
+### 4. Formulaires web intégrés
+
+Airtable permet de créer des formulaires publics qui alimentent une base. Utile pour : inscriptions, candidatures, feedback, inventaire terrain. Excel n'a pas d'équivalent natif (Microsoft Forms est séparé).
+
+### 5. Interfaces (mini-apps no-code)
+
+Airtable Interfaces permet de construire une mini-app avec dashboard, formulaires, graphs, listes — le tout sans code. C'est unique dans la catégorie.
+
+### 6. Intégrations no-code
+
+150+ intégrations Zapier / Make / n8n. API REST robuste. Webhooks natifs.
+
+<AffiliateCta
+  product="airtable"
+  ctaText="Tester Airtable gratuitement"
+  size="normal"
+/>
+
+## Cas d'usage : lequel pour quoi ?
+
+### Modélisation financière (P&L, budget, cash flow)
+→ **Excel** sans discussion.
+
+### Analyse de données chiffrées / reporting CFO
+→ **Excel** + Power BI pour la visualisation.
+
+### CRM léger (contacts + entreprises + deals)
+→ **Airtable**. Ou carrément un CRM dédié (HubSpot Free, Pipedrive).
+
+### Planning éditorial (content calendar)
+→ **Airtable**. Notion en alternative si vous voulez mélanger doc et planning.
+
+### Catalogue produit e-commerce
+→ **Airtable**. Vue gallery, API pour alimenter Shopify.
+
+### Inventaire collaboratif / stock
+→ **Airtable**. Formulaires terrain, scan QR code via app mobile.
+
+### Suivi de projet multi-équipes
+→ **Airtable** si database-driven, **Asana/Monday** si tâche-driven.
+
+### ATS (suivi candidatures)
+→ **Airtable** custom ou **Personio/Greenhouse** si enjeu.
+
+### Budget personnel / comptes
+→ **Excel** (YNAB si vous voulez une vraie méthodologie).
+
+### Base de connaissances interne
+→ **Notion** (ni Excel ni Airtable adaptés pour la doc).
+
+### Dashboard opérationnel
+→ **Airtable Interfaces** (si no-code) ou **Google Data Studio** (si analytics).
+
+## Le combo gagnant : Excel + Airtable en parallèle
+
+Beaucoup d'équipes matures utilisent les deux :
+
+- **Excel** = calcul, analyse, modélisation, finance. Ce que produit le CFO et l'analyste.
+- **Airtable** = opérations, collaboration, relations entre données, automations. Ce que produisent les équipes ops / marketing / RH.
+
+Vous exportez au besoin d'un outil à l'autre via CSV. Ou vous connectez via Zapier/Make. Les deux outils ne se concurrencent pas — ils se complètent.
+
+## Le piège à éviter : migrer par mimétisme
+
+Beaucoup d'équipes migrent de Excel vers Airtable par envie de moderniser, mais conservent leur **logique Excel** sur Airtable. Résultat : une base Airtable qui ressemble à un tableur plat, sans relations, sans vues, sans automations. Vous payez 4x plus cher pour la même valeur.
+
+**Bon réflexe** : avant de migrer une feuille, posez-vous la question → "Quelles seront mes 3 tables ? Quelles sont les relations ? Quelles vues je veux créer ?". Si la réponse est "une seule table plate", restez sur Excel.
+
+## Combien ça coûte vraiment ?
+
+### Excel seul (via Microsoft 365 Business Basic)
+
+- 6 €/user/mois = **72 €/user/an**
+- Inclus : Outlook, Teams, OneDrive, Word, Excel, PowerPoint, 1 To de stockage.
+
+Pour une équipe de 20 personnes : 1 440 €/an. Très raisonnable.
+
+### Airtable Team seul
+
+- 24 $/user/mois ≈ **270 $/user/an**
+- Inclus : bases illimitées, 50 000 records/base, 25 000 automations/mois.
+
+Pour une équipe de 20 personnes : 5 400 $/an soit ~5 000 €/an. **3x plus cher qu'Excel**.
+
+### Combo Excel + Airtable
+
+- 30 €/user/mois ≈ 350 €/user/an
+- Pour une équipe de 20 : ~7 000 €/an.
+
+À valider si le combo justifie le surcoût (gain en productivité, meilleure donnée, automatisations).
+
+## Verdict
+
+**Airtable vs Excel** n'est pas un duel mais une complémentarité.
+
+Restez sur **Excel** si :
+- Vous faites du calcul, de la finance, du reporting chiffré.
+- Vous êtes 1-3 utilisateurs actifs par feuille.
+- Vous gérez une table plate sans relations complexes.
+- Votre budget est serré.
+
+Passez à **Airtable** si :
+- Vous êtes dans un enfer de VLOOKUP multi-feuilles.
+- Vous êtes 4+ à éditer la même donnée chaque semaine.
+- Vous voulez kanban / calendrier / vues multiples.
+- Vous avez besoin d'automatisations ou d'API.
+
+Dans beaucoup d'équipes, la bonne réponse est **les deux**. L'un ne tue pas l'autre.
+
+## Pour aller plus loin
+
+- [Airtable vs Notion : quelle database ?](/articles/airtable-vs-notion)
+- [Alternative à ClickUp : 5 outils](/articles/alternative-clickup)
+- [Notion vs ClickUp : le match](/articles/notion-vs-clickup)
+- [Monday vs Asana : le duel du mass market](/articles/monday-vs-asana)

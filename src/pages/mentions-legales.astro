@@ -2,6 +2,12 @@
 import PageLayout from '@layouts/PageLayout.astro';
 const siteName = import.meta.env.PUBLIC_SITE_NAME || 'Avis SaaS';
 const domain = (import.meta.env.PUBLIC_SITE_URL || 'https://avis-saas.fr').replace(/^https?:\/\//, '');
+const publisher = import.meta.env.PUBLIC_LEGAL_PUBLISHER || 'Mathieu Berthet';
+const legalStatus = import.meta.env.PUBLIC_LEGAL_STATUS || 'Personne physique — édition non professionnelle';
+const legalCommune = import.meta.env.PUBLIC_LEGAL_COMMUNE || '[Commune à renseigner]';
+const legalSiret = import.meta.env.PUBLIC_LEGAL_SIRET || '';
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL || 'contact@avis-saas.fr';
+const lastUpdate = import.meta.env.PUBLIC_LEGAL_LAST_UPDATE || '22 avril 2026';
 ---
 
 <PageLayout
@@ -19,12 +25,12 @@ const domain = (import.meta.env.PUBLIC_SITE_URL || 'https://avis-saas.fr').repla
   <h2>Éditeur du site</h2>
   <p>
     <strong>Site :</strong> {siteName} ({domain})<br />
-    <strong>Éditeur :</strong> {'Mathieu Berthet'}<br />
-    <strong>Statut :</strong> {'Personne physique - édition non professionnelle'} <em>(ex. auto-entrepreneur, SAS, etc.)</em><br />
-    <strong>Adresse :</strong> {'[Votre commune, France - à compléter]'}<br />
-    <strong>SIRET :</strong> {'Non applicable (éditeur personne physique non professionnelle)'}<br />
-    <strong>E-mail :</strong> {'contact@avis-saas.fr'}<br />
-    <strong>Directeur de la publication :</strong> {'Mathieu Berthet'}
+    <strong>Éditeur :</strong> {publisher}<br />
+    <strong>Statut :</strong> {legalStatus}<br />
+    <strong>Adresse :</strong> {legalCommune}, France<br />
+    {legalSiret && (<span><strong>SIRET :</strong> {legalSiret}<br /></span>)}
+    <strong>E-mail :</strong> {contactEmail}<br />
+    <strong>Directeur de la publication :</strong> {publisher}
   </p>
 
   <h2>Hébergeur</h2>
@@ -74,10 +80,10 @@ const domain = (import.meta.env.PUBLIC_SITE_URL || 'https://avis-saas.fr').repla
   <h2>Contact</h2>
   <p>
     Pour toute question, utilisez la <a href="/contact">page contact</a> ou
-    écrivez directement à {'contact@avis-saas.fr'}.
+    écrivez directement à {contactEmail}.
   </p>
 
   <p class="text-sm text-ink-500">
-    <em>Dernière mise à jour : à compléter lors du premier déploiement.</em>
+    <em>Dernière mise à jour : {lastUpdate}.</em>
   </p>
 </PageLayout>

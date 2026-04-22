@@ -1,0 +1,258 @@
+---
+title: "Notion : prix, plans et conseils pour bien choisir en 2026"
+description: "Notion en 2026 : grille tarifaire Free, Plus, Business, Enterprise, pièges des sièges, coûts cachés de l'IA. Guide pragmatique pour choisir le bon plan."
+category: "gestion-projet"
+tags: ["notion", "prix", "tarif", "plans", "notion-ai"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["notion"]
+faq:
+  - question: "Combien coûte Notion par mois et par utilisateur ?"
+    answer: "Le plan Plus est à 10 $/utilisateur/mois (facturation annuelle) ou 12 $ en mensuel. Le plan Business est à 18 $/utilisateur/mois (annuel) ou 24 $ en mensuel. Notion AI s'ajoute à 10 $/utilisateur/mois et est inclus dans Business depuis la refonte 2025. Les prix sont en dollars mais Notion facture en euros à taux à peu près équivalent (1 $ ≈ 1 €) pour les clients européens."
+  - question: "Le plan gratuit Notion est-il suffisant pour un solopreneur ?"
+    answer: "Oui, largement dans la plupart des cas. Blocs illimités, 7 jours d'historique de versions, invités illimités en lecture, jusqu'à 10 invités en édition. Les vraies limites : uploads fichiers limités à 5 Mo, pas d'accès aux rôles avancés, pas de Notion AI. Un solopreneur qui gère son wiki, ses projets et ses docs client peut tenir des années sur le plan Free."
+  - question: "Notion AI est-il inclus dans les plans payants ?"
+    answer: "Depuis 2025, Notion AI est inclus dans le plan Business et le plan Enterprise. Sur les plans Free et Plus, Notion AI reste un add-on à 10 $/utilisateur/mois. Pour une équipe de 10 personnes, ça change tout : rester sur Plus + AI coûte 20 $/utilisateur soit 200 $/mois, passer sur Business à 18 $ inclus AI coûte 180 $/mois. Le Business devient plus avantageux dès que vous voulez l'IA pour tous."
+  - question: "Quel est le piège le plus courant avec la tarification Notion ?"
+    answer: "Le comptage des sièges. Notion facture chaque membre qui édite — y compris les comptes dormants. Les équipes qui laissent traîner d'anciens collaborateurs dans l'espace paient pour des sièges inutiles. Autre piège : quand vous invitez un prestataire en édition, il devient un siège facturé au bout de quelques jours. Auditez vos membres tous les trimestres."
+  - question: "Combien coûte Notion pour une équipe de 10 personnes ?"
+    answer: "Sur le plan Plus : 100 $/mois (~94 €/mois) en annuel, sans Notion AI. Avec Notion AI add-on : 200 $/mois (~188 €/mois). Sur le plan Business : 180 $/mois (~170 €/mois) incluant Notion AI. Pour 90% des équipes de 10 personnes qui veulent l'IA et les permissions avancées, le Business est le bon choix."
+  - question: "Peut-on passer de Notion Free à Plus sans perdre de données ?"
+    answer: "Oui, totalement transparent. Les blocs, pages, bases de données restent identiques. Ce que vous gagnez en passant au Plus : historique de versions 30 jours (au lieu de 7), uploads fichiers illimités, invités illimités en édition, thèmes personnalisés pour l'espace. Aucune perte de données, aucune migration technique nécessaire."
+  - question: "Notion Enterprise est-il nécessaire pour une PME ?"
+    answer: "Non, presque jamais. Enterprise (prix sur devis, environ 25-30 $/utilisateur/mois) ajoute le SSO SAML, les contrôles de sécurité avancés, un CSM dédié, des journaux d'audit poussés. Utile pour les grands comptes (500+ salariés) ou secteurs régulés (santé, finance). Pour une PME de 20 à 100 personnes, Business couvre tous les besoins courants."
+  - question: "Notion est-il vraiment moins cher que ses concurrents ?"
+    answer: "Oui, surtout dans sa catégorie 'wiki + docs + projets'. À fonctionnalités équivalentes, Confluence Atlassian est à 5,75 $/utilisateur mais nécessite Jira pour les projets (+8,15 $/utilisateur). Coda est à 10 $/utilisateur/mois mais facture les makers uniquement. ClickUp Unlimited est à 7 $ mais moins puissant côté docs. Notion reste le meilleur rapport qualité-prix pour les équipes qui veulent unifier docs + tâches."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** Notion en 2026 propose quatre plans : **Free, Plus (10 $/user/mois), Business (18 $/user/mois) et Enterprise (sur devis)**. Le Free est véritablement utilisable pour solopreneurs et très petites équipes. Le Plus couvre les équipes jusqu'à 10-15 personnes qui ne veulent pas l'IA. Le Business devient incontournable dès que vous voulez Notion AI pour tous les membres — il inclut l'IA et les contrôles administratifs. L'Enterprise est réservé aux grands comptes avec exigences de sécurité. Le vrai piège : le comptage des sièges, qui peut gonfler la facture si vous ne faites pas le ménage dans les comptes dormants. Ce guide détaille chaque plan, les vrais coûts cachés, et comment choisir celui qui colle à votre équipe sans payer pour rien.
+
+## Pourquoi un guide dédié aux prix de Notion ?
+
+Notion est connu pour son côté "tout-en-un" — docs, bases de données, projets, wiki. Moins connue : sa grille tarifaire qui a évolué **cinq fois** depuis 2021. En 2025, Notion a réorganisé les plans pour intégrer l'IA dans le Business, ce qui change l'équation pour la majorité des équipes.
+
+Ce guide répond à trois questions concrètes :
+- Quel plan pour quelle taille d'équipe ?
+- Où se cachent les vrais coûts (IA, sièges, uploads) ?
+- Comment éviter de payer pour des fonctionnalités que vous n'utiliserez jamais ?
+
+Les tarifs ont été vérifiés sur [notion.com/pricing](https://www.notion.so/fr-fr/pricing) en avril 2026.
+
+## Grille tarifaire complète (avril 2026)
+
+<ComparisonTable
+  headers={["Plan", "Prix annuel", "Prix mensuel", "Notion AI inclus ?"]}
+  rows={[
+    ["Free", "0 $", "0 $", "Non"],
+    ["Plus", "10 $/user/mois", "12 $/user/mois", "Non (add-on 10 $)"],
+    ["Business", "18 $/user/mois", "24 $/user/mois", "✅ Oui"],
+    ["Enterprise", "Sur devis (~25-30 $)", "Sur devis", "✅ Oui"],
+  ]}
+/>
+
+Les prix sont affichés en dollars américains sur notion.com. Pour les clients européens, la facturation se fait en euros avec un taux de conversion quasi 1:1 (selon la période, 10 $ peut être facturé 9,50 € à 10,50 €). La TVA s'ajoute si vous êtes particulier ; elle est récupérable si vous avez un numéro de TVA intracommunautaire valide.
+
+### Le plan Free : plus généreux qu'on ne le croit
+
+**Prix :** 0 €.
+
+**Ce qui est inclus :**
+- Blocs illimités (depuis 2022 — fin de la limite des 1 000 blocs)
+- Pages et bases de données illimitées
+- 7 jours d'historique de versions
+- 10 invités en édition (illimité en lecture seule)
+- Uploads fichiers limités à 5 Mo par fichier
+- Notion Calendar inclus
+- Notion AI non disponible (possibilité de tester avec un crédit)
+
+**Verdict :** le plan Free est véritablement un des meilleurs freemiums du marché SaaS. Un solopreneur, un étudiant, ou un consultant indépendant peut gérer sa vie pro et perso dessus pendant des années. Les limites ne se font sentir que dans deux cas : quand vous avez besoin d'uploader des vidéos, PDFs lourds, ou bases de données binaires au-delà de 5 Mo, ou quand vous voulez collaborer en édition avec plus de 10 personnes simultanément.
+
+### Le plan Plus : la brique collaborative de base
+
+**Prix :** 10 $/utilisateur/mois en facturation annuelle, 12 $/utilisateur/mois en mensuel.
+
+**Ce qui est ajouté par rapport au Free :**
+- Invités illimités en édition
+- 30 jours d'historique de versions
+- Uploads fichiers illimités (pas de plafond par fichier)
+- Thèmes et branding pour l'espace
+- Synchronisation avancée avec Google Drive, Slack, GitHub
+- Automatisations basiques dans les bases de données
+
+**Verdict :** le plan Plus est conçu pour les petites équipes (3 à 15 personnes) qui veulent collaborer sérieusement sans payer pour de l'administration avancée. Le rapport fonctionnalités/prix est excellent, à condition que vous n'ayez pas besoin de Notion AI. Si vous voulez l'IA, l'add-on à 10 $/user/mois double pratiquement la facture — auquel cas le passage au Business devient plus rationnel.
+
+### Le plan Business : l'IA intégrée et les contrôles admin
+
+**Prix :** 18 $/utilisateur/mois en annuel, 24 $/user/mois en mensuel.
+
+**Ce qui est ajouté par rapport au Plus :**
+- **Notion AI inclus** (recherche, rédaction, résumés, Q&A sur le workspace)
+- PDF exports illimités
+- Authentification à deux facteurs imposable à l'équipe
+- Permissions granulaires (pages privées, équipes)
+- Connexions privées (API personnalisées sécurisées)
+- 90 jours d'historique de versions
+- Espaces d'équipes (Teamspaces) avec gouvernance
+- Analytics avancées (usage, adoption)
+- Support prioritaire (réponse sous 24h ouvrées)
+
+**Verdict :** c'est le plan "sweet spot" pour toute équipe de 10+ personnes qui veut utiliser Notion AI sérieusement. Le calcul est simple : dès 10 utilisateurs actifs, inclure Notion AI directement dans le plan Business coûte moins cher que Plus + add-on AI. À l'échelle d'une PME de 30 à 50 personnes, la différence peut atteindre plusieurs centaines d'euros par mois.
+
+### Le plan Enterprise : pour les grands comptes uniquement
+
+**Prix :** sur devis. Comptez 25 à 35 $/utilisateur/mois en fonction du volume et des engagements négociés.
+
+**Ce qui est ajouté par rapport au Business :**
+- SSO SAML (Okta, Azure AD, Google Workspace entreprise)
+- Journaux d'audit détaillés exportables
+- SCIM provisioning (création/suppression automatique des comptes)
+- Contrôles de rétention et politiques de DLP
+- Support 24/7 avec SLA
+- CSM dédié
+- Politique de partage granulaire (restrictions par domaine, approbation forcée)
+
+**Verdict :** l'Enterprise n'est utile qu'à deux publics : les entreprises de 300+ salariés avec équipe IT structurée, et les organisations dans des secteurs régulés (santé, finance, juridique) qui ont besoin de traces d'audit détaillées. Pour 95% des PME, Business est largement suffisant et vous évitez un surcoût de 40 à 70% sans gains concrets.
+
+## Scénarios concrets : quel plan pour quelle taille ?
+
+<ComparisonTable
+  headers={["Profil", "Taille", "Plan recommandé", "Coût mensuel estimé"]}
+  rows={[
+    ["Solopreneur, étudiant", "1 personne", "Free", "0 $"],
+    ["Freelance + 2 prestataires", "3 personnes", "Plus", "30 $"],
+    ["Startup early-stage", "8 personnes", "Plus", "80 $"],
+    ["Agence en croissance", "15 personnes", "Business", "270 $"],
+    ["PME tech", "35 personnes", "Business", "630 $"],
+    ["ETI", "150 personnes", "Enterprise", "devis (~4 000-5 000 $)"],
+  ]}
+/>
+
+Ces estimations supposent une facturation annuelle (prix le plus bas). En facturation mensuelle, comptez 20% de plus.
+
+### Scénario 1 : solopreneur qui veut un espace pro propre
+
+Vous êtes indépendant. Vous voulez un wiki pour vos procédures, une CRM basique pour vos prospects, un tracker pour vos projets clients, un espace partagé avec 1 ou 2 prestataires occasionnels.
+
+**Plan recommandé : Free.**
+
+Vous pouvez inviter jusqu'à 10 collaborateurs en édition. Les 5 Mo par fichier sont une limite acceptable si vous stockez surtout du texte et des liens. Vous n'avez pas besoin de Notion AI en priorité — si un jour vous voulez tester, le crédit gratuit couvre quelques usages et vous pourrez activer Plus ponctuellement.
+
+**Coût annuel : 0 €.**
+
+### Scénario 2 : petite équipe de 8 en croissance
+
+Vous êtes une startup de 8 personnes. Vous voulez centraliser la documentation produit, les specs, la base de connaissance client. Vous n'êtes pas encore prêts à payer pour de l'IA premium à tous les niveaux.
+
+**Plan recommandé : Plus.**
+
+8 × 10 $ = **80 $/mois soit ~960 $/an** (~900 €). Vous bénéficiez de l'historique 30 jours, des uploads illimités, et des invités illimités. Si vous voulez tester Notion AI, ajoutez l'add-on juste pour les 2-3 personnes qui en ont vraiment besoin : 20-30 $/mois supplémentaires.
+
+### Scénario 3 : PME tech de 35 personnes
+
+Vous êtes une scale-up ou PME établie. Vous avez une politique de sécurité, des équipes produits/marketing/commerce distinctes, et vous voulez que tout le monde puisse utiliser l'IA pour accélérer la production de docs.
+
+**Plan recommandé : Business.**
+
+35 × 18 $ = **630 $/mois soit ~7 560 $/an** (~7 100 €). Vous avez Notion AI inclus pour tous, les Teamspaces pour cloisonner les équipes, les permissions avancées pour protéger les docs sensibles, et le support prioritaire.
+
+Comparaison : rester sur Plus + AI add-on pour les 35 coûterait 35 × 10 + 35 × 10 = 700 $/mois — **plus cher que Business et avec moins de fonctionnalités**.
+
+## Coûts cachés à connaître avant de signer
+
+Trois pièges à garder en tête.
+
+### 1. Les sièges dormants gonflent la facture silencieusement
+
+Notion compte tous les membres de l'espace, actifs ou non. Quand un salarié part, son compte reste facturé tant qu'il n'est pas explicitement retiré par un admin. Sur une année, une équipe qui a eu 3 départs sans nettoyage paie 3 × 10 × 12 = 360 $ en trop sur le Plus.
+
+**Recommandation :** audit trimestriel des membres + règle RH "quand un salarié part, sa désactivation Notion est dans la checklist de départ".
+
+### 2. Les prestataires invités deviennent des sièges
+
+C'est le piège le plus courant. Quand vous invitez un freelance ou un prestataire à éditer une page, Notion lui crée un rôle "invité". Si cet invité est ajouté à plus de X pages (variable selon les versions), il bascule automatiquement en "membre" facturé.
+
+**Recommandation :** soit gardez les prestataires en "invité" limité à quelques pages, soit créez un Teamspace dédié avec accès restreint. Sur Business, les contrôles admin permettent de verrouiller cette escalade.
+
+### 3. Notion AI : 10 $ de plus par personne, pas par usage
+
+Contrairement à ChatGPT Plus ou Claude Pro qui sont des abonnements personnels, Notion AI est facturé **par utilisateur dans l'espace**. Si vous avez 20 personnes et que vous activez l'add-on, c'est 200 $/mois même si seulement 3 personnes utilisent l'IA.
+
+**Recommandation :** avant d'activer Notion AI sur Plus, évaluez combien de personnes vont réellement l'utiliser. Si c'est 30% ou plus, basculez plutôt sur Business (où c'est inclus). Si c'est 10%, gardez l'AI désactivée et faites utiliser ChatGPT/Claude en externe aux rares utilisateurs concernés.
+
+## Comment réduire sa facture Notion (légalement)
+
+Quatre leviers activables immédiatement.
+
+**1. Facturation annuelle plutôt que mensuelle.** Vous économisez environ 20%. Sur Business à 35 utilisateurs, ça représente ~1 500 $/an.
+
+**2. Distinguer membres et invités.** Un invité externe en lecture seule ou édition limitée ne coûte rien. Un membre coûte un siège entier. Soyez stricts : tout le monde n'a pas besoin d'être membre.
+
+**3. Audit trimestriel des sièges.** Désactivez les comptes des anciens salariés, stagiaires partis, prestataires finis. Simple, gratuit, souvent négligé.
+
+**4. Éducation sur Notion AI.** Si vous êtes sur Plus + AI, documentez clairement quelles équipes ont besoin de l'IA. Désactivez l'add-on pour les autres. Réactivez ponctuellement si besoin.
+
+## Notion vs concurrents : où se situe le prix ?
+
+<ComparisonTable
+  headers={["Outil", "Plan entrée de gamme", "Plan pro typique", "IA incluse au niveau pro"]}
+  rows={[
+    ["Notion", "10 $/user (Plus)", "18 $/user (Business)", "✅ Oui"],
+    ["Confluence + Jira Atlassian", "5,75 + 8,15 = ~14 $/user", "~18 $/user", "❌ Add-on"],
+    ["Coda", "10 $/user (Pro, makers only)", "30 $/user (Team)", "❌ Add-on"],
+    ["ClickUp", "7 $/user (Unlimited)", "19 $/user (Business)", "❌ Add-on"],
+    ["Slite", "8 €/user (Standard)", "15 €/user (Premium)", "✅ Inclus au Premium"],
+  ]}
+/>
+
+**Lecture :** Notion n'est ni le moins cher ni le plus cher, mais il est **le seul acteur "docs + projets"** à inclure nativement l'IA dans son plan milieu de gamme (Business). Pour une équipe qui veut unifier documentation, bases de connaissance et gestion de tâches avec l'IA intégrée, c'est structurellement le plus avantageux en 2026.
+
+## Verdict par profil
+
+**Solopreneur, étudiant, freelance solo.** Plan Free, sans hésiter. Les 10 invités en édition suffisent pour la plupart des collaborations occasionnelles. Ne payez pas pour rien.
+
+**Petite équipe 3-10 personnes, budget serré.** Plan Plus. Si vous voulez tester Notion AI, activez l'add-on sur un ou deux comptes seulement. Rebasculez sur Business si l'équipe dépasse 12 et que l'IA s'avère indispensable.
+
+**PME 15-50 personnes avec besoins produits/data/docs.** Plan Business. Le calcul économique est clair dès que vous voulez l'IA pour tous : Business bat Plus + add-on. Les contrôles admin deviennent utiles à cette taille.
+
+**ETI ou grand compte 100+ personnes, exigences sécurité.** Plan Enterprise. Le coût supplémentaire se justifie par SSO SAML, SCIM, audit trail, et CSM dédié. Négociez le tarif à l'utilisateur — les écarts sont importants entre 150 et 500 sièges.
+
+**Secteurs régulés (santé, finance, juridique).** Enterprise obligatoire pour les traces d'audit et le contrôle du partage. À plus de 500 salariés, envisagez un hébergement régional si vos DPO l'exigent (Notion propose une résidence UE sous conditions Enterprise).
+
+## Est-ce le bon moment pour passer payant ?
+
+Trois signaux montrent qu'il est temps de quitter le Free :
+
+1. **Vous invitez régulièrement plus de 10 personnes en édition.** La limite du Free bloque.
+2. **Vous stockez des fichiers lourds** (PDFs, vidéos, images haute déf). La limite de 5 Mo gêne.
+3. **L'historique 7 jours ne suffit plus** pour retrouver une version supprimée. C'est souvent le déclencheur pour les équipes qui ont perdu du contenu par accident.
+
+Trois signaux pour passer de Plus à Business :
+
+1. **Vous voulez Notion AI pour plus de 10 utilisateurs.** Business devient moins cher.
+2. **Vous voulez cloisonner des équipes** (produit/marketing/finance) avec des Teamspaces et des permissions distinctes.
+3. **Vous ne pouvez plus gérer la sécurité à la main.** 2FA obligatoire, SSO partiel, audit des accès deviennent nécessaires.
+
+## Conclusion
+
+Notion propose l'une des grilles tarifaires **les plus lisibles du marché SaaS** pour un outil aussi polyvalent. Le Free est réellement utilisable, le Plus est honnête, le Business bat la concurrence dès qu'on intègre l'IA dans l'équation. Le piège à éviter : laisser traîner des sièges dormants et payer pour des fonctionnalités non utilisées.
+
+**Règle simple pour choisir :**
+- 1 à 3 personnes : Free.
+- 4 à 12 sans IA critique : Plus.
+- 10+ avec IA pour tous : Business.
+- 300+ avec sécurité avancée : Enterprise.
+
+<AffiliateCta
+  affiliateKey="notion"
+  label="Essayer Notion gratuitement"
+  note="Plan Free sans limite de durée. Vous pouvez upgrader à Plus ou Business à tout moment."
+/>
+
+## Pour aller plus loin
+
+- Comparatif [Notion vs ClickUp](/articles/notion-vs-clickup) : lequel choisir pour gestion de projet + wiki ?
+- [Alternatives françaises à Notion](/articles/alternative-notion-francaise) : Slite, AFFiNE et les options souveraines.
+- Retours terrain : quelles équipes PME regrettent d'avoir migré vers Notion, et pourquoi ?

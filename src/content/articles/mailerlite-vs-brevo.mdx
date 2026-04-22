@@ -1,0 +1,245 @@
+---
+title: "MailerLite vs Brevo : lequel choisir en 2026 ? (duel emailings abordables)"
+description: "MailerLite vs Brevo : prix, délivrabilité, automation, RGPD. Duel objectif des deux outils d'emailing pro à petit budget. Verdict par profil d'entreprise."
+category: "marketing-email"
+tags: ["mailerlite", "brevo", "emailing", "comparatif", "newsletter"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["mailerlite", "brevo"]
+winner: "brevo"
+faq:
+  - question: "MailerLite ou Brevo : lequel est le moins cher ?"
+    answer: "MailerLite est légèrement moins cher sur les petits volumes (jusqu'à 5 000 contacts avec envoi illimité : ~29 $/mois chez MailerLite vs ~29 €/mois Brevo à volume d'envoi équivalent). Mais Brevo propose un vrai plan gratuit exploitable (300 emails/jour, contacts illimités) alors que MailerLite limite à 1 000 contacts et 12 000 emails/mois sur le Free. Pour démarrer sans payer, Brevo gagne. Pour une petite base envoyée souvent, MailerLite l'emporte parfois."
+  - question: "Lequel a la meilleure délivrabilité : MailerLite ou Brevo ?"
+    answer: "Les benchmarks indépendants (EmailToolTester, Email Vendor Selection, Mailgun) placent les deux outils dans la moyenne haute : 93-96% d'arrivée en inbox principale sur campagnes B2C propres. MailerLite a souvent un léger avantage sur les campagnes créateurs/blogueurs US, Brevo sur les campagnes B2B européennes. La différence se joue surtout sur la qualité de votre liste et votre configuration SPF/DKIM/DMARC, pas sur l'outil."
+  - question: "MailerLite est-il disponible en français ?"
+    answer: "L'interface MailerLite est traduite en français mais certaines documentations et notifications restent en anglais. Le support est majoritairement anglophone (chat 24/7 sur plans payants). Brevo au contraire est 100% français — interface, docs, support client, articles de base de connaissance. Pour une PME française ou québécoise qui veut un support dans sa langue, Brevo a un avantage net."
+  - question: "Lequel propose la meilleure automation : MailerLite ou Brevo ?"
+    answer: "Brevo a une automation plus puissante (scénarios avancés, segmentation dynamique, conditions multicritères, CRM intégré) disponible dès le plan Starter. MailerLite propose une automation visuelle plus simple mais suffisante pour 80% des usages TPE/PME : séries de bienvenue, paniers abandonnés e-commerce, anniversaires. Pour l'automation marketing complexe, Brevo l'emporte. Pour les automations simples et rapides à configurer, MailerLite est plus intuitif."
+  - question: "Brevo ou MailerLite pour l'e-commerce ?"
+    answer: "Les deux intègrent nativement Shopify, WooCommerce et PrestaShop. Brevo propose en plus Magento et des scénarios automation e-commerce pré-configurés (panier abandonné, relance client inactif, fidélisation post-achat) dès le plan Starter. MailerLite propose ces scénarios au plan Advanced (supérieur). Pour un e-commerçant français sur Shopify, Brevo est généralement plus complet à prix équivalent."
+  - question: "Lequel est le plus conforme RGPD : MailerLite ou Brevo ?"
+    answer: "Les deux sont conformes RGPD mais Brevo est structurellement plus confortable pour une entreprise européenne : siège à Paris, centres de données en France et Allemagne, DPA signable en un clic, double opt-in natif. MailerLite est basé à Vilnius (Lituanie, donc UE aussi) avec serveurs aux Pays-Bas et aux USA. Conforme mais les transferts USA impliquent un suivi un peu plus technique."
+  - question: "Puis-je migrer facilement de MailerLite vers Brevo (ou inverse) ?"
+    answer: "Oui dans les deux sens. Export CSV des contacts, import dans l'autre outil. Les listes et segments basiques transfèrent bien. Les automations doivent être reconstruites manuellement car les outils utilisent des structures différentes. Budgétez une demi-journée à un jour pour une migration complète d'une base de 5 000 à 20 000 contacts avec automations."
+  - question: "Quel outil choisir si je débute totalement en emailing ?"
+    answer: "Pour un débutant total sans budget : Brevo Free (300 emails/jour, contacts illimités). Pour un débutant avec une petite base ciblée : MailerLite Growing Business (29 $/mois, 2 500 contacts, envois illimités). Brevo a une courbe d'apprentissage légèrement plus complexe (plus de fonctionnalités), MailerLite est plus épuré et rapide à prendre en main pour des newsletters simples."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** MailerLite et Brevo sont les deux outils d'emailing pro **les plus abordables du marché** en 2026, chacun avec sa personnalité. MailerLite est plus simple, plus élégant, idéal pour les créateurs, blogueurs et solopreneurs qui veulent une newsletter propre sans friction. Brevo est plus complet, 100% français, meilleur en automation B2B et en intégration e-commerce, avec un plan gratuit structurellement plus généreux. Pour une PME française typique, Brevo reste notre recommandation par défaut. Pour un créateur anglophone ou un solopreneur qui privilégie l'esthétique et la simplicité, MailerLite est un excellent choix. Ce comparatif détaille prix, délivrabilité, automation, intégrations, support pour vous aider à trancher en fonction de votre contexte.
+
+## Présentation rapide des deux outils
+
+**MailerLite** est un éditeur lituanien fondé en 2010, basé à Vilnius. L'entreprise est indépendante, profitable, et a construit sa réputation sur un positionnement clair : **l'emailing beau, simple et abordable** pour créateurs, solopreneurs et petites équipes marketing. Plus de 1 million d'utilisateurs dans le monde, environ 200 salariés.
+
+**Brevo** (ex-Sendinblue) est un éditeur français fondé en 2012, siège à Paris. Renommé en 2023. Environ 700 salariés, plus de 500 000 clients dans 180 pays. Positionnement : **suite marketing complète tout-en-un** (emailing + SMS + automation + CRM + chat) pour TPE/PME.
+
+**La différence philosophique :** MailerLite veut que vous envoyiez **de beaux emails simples** rapidement. Brevo veut que vous gériez **toute votre communication marketing** dans un seul outil.
+
+## Prix 2026 : le match chiffré
+
+Prix vérifiés sur [mailerlite.com/pricing](https://www.mailerlite.com/pricing) et [brevo.com/fr/pricing](https://www.brevo.com/pricing/) en avril 2026.
+
+### Le plan gratuit
+
+<ComparisonTable
+  headers={["Critère", "MailerLite Free", "Brevo Free"]}
+  rows={[
+    ["Contacts", "1 000", "Illimités"],
+    ["Emails par mois", "12 000", "9 000 (300/jour)"],
+    ["Automation", "Basique (1 trigger)", "Basique (scénarios simples)"],
+    ["Logo obligatoire", "✅ MailerLite dans le pied", "✅ Brevo dans le pied"],
+    ["Landing pages", "1 seule", "Illimitées (Brevo branding)"],
+    ["Utilisateurs inclus", "1", "1"],
+    ["Support", "30 premiers jours chat", "Email uniquement"],
+  ]}
+/>
+
+**Verdict gratuit :**
+- Si vous avez **moins de 1 000 contacts** et envoyez fréquemment (2-4 campagnes/mois) : MailerLite Free gagne (12 000 emails/mois est très généreux).
+- Si vous avez **plus de 1 000 contacts** mais envoyez peu (1 campagne/mois ou quelques transactionnels) : Brevo Free gagne (contacts illimités, limite quotidienne acceptable).
+
+### Le plan d'entrée payant
+
+<ComparisonTable
+  headers={["Critère", "MailerLite Growing Business", "Brevo Starter"]}
+  rows={[
+    ["Prix de départ", "10 $/mois (500 contacts)", "9 €/mois (5 000 emails)"],
+    ["À 5 000 contacts / 20 000 emails", "39 $/mois", "19 €/mois"],
+    ["À 10 000 contacts / 40 000 emails", "73 $/mois", "29 €/mois"],
+    ["À 25 000 contacts / 100 000 emails", "169 $/mois", "69 €/mois"],
+    ["Envois illimités", "✅ Oui", "❌ Facturation à l'envoi"],
+    ["A/B testing", "Avancé", "Basique"],
+    ["Automation", "Illimitée (simple)", "Illimitée (Brevo : scénarios plus avancés)"],
+    ["Logo retiré", "✅ Inclus", "❌ Add-on +12 €/mois"],
+  ]}
+/>
+
+**Lecture clé :** la **structure de facturation est fondamentalement différente**.
+
+MailerLite facture **au nombre de contacts** avec envois illimités. Vous payez plus si vous avez beaucoup de contacts, peu importe combien vous envoyez.
+
+Brevo facture **au nombre d'emails envoyés** avec contacts illimités. Vous payez plus si vous envoyez beaucoup, peu importe votre taille de liste.
+
+### Quel modèle est le plus avantageux ?
+
+**MailerLite est plus avantageux si :**
+- Vous avez une petite base (500 à 5 000 contacts) que vous sollicitez souvent (plusieurs envois/semaine).
+- Vous êtes créateur, blogueur ou média avec newsletter hebdo et des emails automation de bienvenue fréquents.
+- Vos emails sont essentiellement informationnels, pas transactionnels.
+
+**Brevo est plus avantageux si :**
+- Vous avez une grosse base peu sollicitée (10 000+ contacts, 1-2 envois/mois).
+- Vous envoyez beaucoup de transactionnels (confirmations, notifications, factures) — Brevo les compte dans le même quota.
+- Vous faites du SMS ou du WhatsApp en plus de l'email — Brevo inclut tout dans la même plateforme.
+
+## Fonctionnalités : le duel point par point
+
+### Design et templates
+
+**MailerLite gagne clairement.** Les templates sont nettement plus modernes, plus esthétiques, avec un éditeur drag-and-drop particulièrement fluide. Les créateurs et marques lifestyle préfèrent majoritairement l'UX MailerLite.
+
+**Brevo** propose des templates fonctionnels mais plus datés visuellement. L'éditeur fait le job mais manque de finesse sur les micro-animations et les composants modernes.
+
+### Délivrabilité
+
+**Match nul.** Les deux outils sont dans la moyenne haute (93-96% d'arrivée en inbox principale sur campagnes propres). MailerLite a une légère avance sur les campagnes créateurs US. Brevo a une légère avance sur les campagnes B2B européennes avec authentification SPF/DKIM/DMARC bien configurée.
+
+La délivrabilité se joue à 80% sur la qualité de votre liste et votre configuration DNS, pas sur l'outil.
+
+### Automation
+
+**Brevo gagne.** L'automation Brevo propose des scénarios avec conditions multiples, branchements, filtres dynamiques, et surtout une intégration native avec le CRM Brevo (segmentation comportementale).
+
+**MailerLite** propose une automation plus simple : triggers (inscription, clic, date), actions (envoi, attribution de tag, attente). Suffisant pour 80% des usages mais limité pour les scénarios complexes B2B (lead scoring, nurture multi-étapes, réengagement segmenté).
+
+### E-commerce
+
+**Brevo gagne légèrement.** Intégration native Shopify, WooCommerce, PrestaShop, Magento. Scénarios automation e-commerce pré-configurés dès le plan Starter (panier abandonné, relance inactifs, fidélisation post-achat).
+
+**MailerLite** intègre Shopify et WooCommerce mais les scénarios automation e-commerce avancés sont réservés au plan Advanced (supérieur en prix).
+
+### Segmentation
+
+**Brevo gagne.** Segmentation dynamique basée sur attributs, comportements, CRM, dates, interactions email, données transactionnelles. Très puissant pour le B2B.
+
+**MailerLite** propose des segments classiques (par tag, par intérêt, par date d'inscription) suffisants pour la plupart des usages mais moins profonds côté comportemental.
+
+### Landing pages et forms
+
+**MailerLite gagne.** Les landing pages et formulaires MailerLite sont nettement plus jolis et plus rapides à créer. Éditeur intuitif, templates modernes.
+
+**Brevo** propose des landing pages fonctionnelles mais l'éditeur est moins agréable et les templates plus génériques.
+
+### SMS / WhatsApp / Chat
+
+**Brevo gagne largement.** Brevo inclut SMS, WhatsApp marketing et un chat web dans ses plans. Tout est unifié dans la même interface, avec les mêmes contacts, la même segmentation.
+
+**MailerLite** ne propose **ni SMS ni WhatsApp ni chat**. C'est un outil email-first pur. Si vous voulez une suite multicanal, il faut un autre outil.
+
+### Support client
+
+**Brevo gagne pour les francophones.** Support 100% français, chat et email, base de connaissance traduite.
+
+**MailerLite** : support majoritairement anglophone (chat 24/7 sur plans payants), qualité reconnue mais pas de francophone dédié.
+
+## Comparaison globale
+
+<ComparisonTable
+  headers={["Critère", "MailerLite", "Brevo"]}
+  rows={[
+    ["Design/UX éditeur", "⭐⭐⭐⭐⭐ Excellent", "⭐⭐⭐ Fonctionnel"],
+    ["Plan gratuit utile", "⭐⭐⭐ OK (1 000 contacts)", "⭐⭐⭐⭐⭐ Très généreux"],
+    ["Prix petite base active", "⭐⭐⭐⭐⭐ Imbattable", "⭐⭐⭐ Correct"],
+    ["Prix grosse base peu active", "⭐⭐ Cher", "⭐⭐⭐⭐⭐ Imbattable"],
+    ["Automation", "⭐⭐⭐ Simple", "⭐⭐⭐⭐ Avancée"],
+    ["E-commerce", "⭐⭐⭐ Shopify + WC", "⭐⭐⭐⭐ + Magento + scénarios"],
+    ["Segmentation", "⭐⭐⭐ Basique", "⭐⭐⭐⭐⭐ Dynamique"],
+    ["Landing pages", "⭐⭐⭐⭐⭐ Jolies", "⭐⭐⭐ Fonctionnelles"],
+    ["SMS / WhatsApp", "❌ Absents", "✅ Inclus"],
+    ["Support francophone", "❌ Anglophone", "✅ Français natif"],
+    ["RGPD / hébergement UE", "⭐⭐⭐⭐ Vilnius + Pays-Bas", "⭐⭐⭐⭐⭐ France + Allemagne"],
+  ]}
+/>
+
+## Verdict par profil
+
+### Créateur, blogueur, solopreneur lifestyle
+
+**→ MailerLite.**
+
+Vous faites de belles newsletters, vous tenez à l'esthétique, vous avez une base qui grossit progressivement et vous envoyez régulièrement. MailerLite est fait pour vous. L'éditeur et les templates sont un vrai plaisir, les landing pages sont propres, et le prix reste très doux jusqu'à 5 000-10 000 contacts actifs.
+
+### PME française B2B (10-50 salariés)
+
+**→ Brevo.**
+
+Vous avez besoin d'automation plus avancée, de CRM intégré, d'un support en français, et potentiellement de SMS en complément. Brevo couvre toute votre communication marketing dans un seul outil et c'est la meilleure option tout-en-un pour une PME française classique.
+
+<AffiliateCta
+  affiliateKey="brevo"
+  label="Tester Brevo gratuitement"
+  note="Plan Free 300 emails/jour, contacts illimités. Idéal pour démarrer."
+/>
+
+### E-commerce Shopify jusqu'à 10 000 commandes/an
+
+**→ Brevo.**
+
+Les scénarios automation e-commerce intégrés dès le plan Starter, la segmentation comportementale, l'intégration multi-plateformes, et le SMS transactionnel incluent vous donnent tout ce dont un e-commerçant a besoin. MailerLite est viable mais moins complet.
+
+### Média, créateur de contenus payants, newsletter premium
+
+**→ MailerLite.**
+
+Design soigné, templates modernes, fluidité d'envoi, intégrations paywalls type Stripe/Memberstack, interface légère. Pour un média qui vit de sa newsletter, l'expérience MailerLite est supérieure. Les prix restent compétitifs tant que votre base reste sous 10 000 contacts.
+
+### Grosse association ou ONG avec 50 000+ contacts peu sollicités
+
+**→ Brevo.**
+
+À ce volume, le modèle "contacts illimités + paiement à l'envoi" de Brevo est structurellement moins cher que MailerLite. Vous envoyez 2 à 4 campagnes par an, vous avez 60 000 contacts : Brevo Starter à 39 €/mois vs MailerLite à plusieurs centaines de dollars par mois.
+
+### Agence digitale qui gère plusieurs clients
+
+**→ MailerLite.**
+
+MailerLite propose des comptes agence avec gestion multi-clients plus ergonomique que Brevo. L'UX plus moderne plaît aux clients finaux quand vous leur présentez les dashboards.
+
+## Migration : comment basculer de l'un à l'autre ?
+
+Les deux outils permettent l'export CSV complet de vos contacts avec tags et attributs personnalisés. L'import dans l'autre outil est standard.
+
+**Ce qui migre bien :**
+- Contacts et listes
+- Tags et segments statiques basés sur attributs
+- Templates HTML basiques
+
+**Ce qui doit être reconstruit :**
+- Workflows d'automation (structures différentes)
+- Landing pages (les builders ne sont pas interopérables)
+- Formulaires embarqués sur votre site (nouveaux scripts à intégrer)
+- Segments dynamiques basés sur comportement
+
+**Budget migration pour une base de 10 000 contacts avec 5 automations :** une demi-journée à une journée pour un utilisateur expérimenté, 2 à 3 jours pour un débutant.
+
+## Conclusion : notre recommandation
+
+Pour la majorité des cas d'usage, **Brevo reste notre recommandation par défaut en 2026** pour les PME et TPE françaises : plan gratuit très utile, automation solide, SMS et WhatsApp inclus, support francophone, hébergement UE natif. C'est l'outil qui couvre le plus de cas sans forcer à changer d'outil quand votre activité grandit.
+
+**MailerLite garde un avantage incontestable sur un segment précis** : les créateurs, solopreneurs, médias et marques lifestyle qui privilégient l'esthétique, la simplicité et un prix doux sur une petite base très active. Sur ce profil, MailerLite n'a pas d'équivalent.
+
+**Règle simple pour trancher :**
+- Vous êtes créateur, média, blogueur, boutique e-commerce boutique avec petite base très active → **MailerLite**.
+- Vous êtes PME française, B2B, e-commerce établi, ou vous voulez une suite marketing tout-en-un → **Brevo**.
+
+Dans tous les cas, testez les deux plans gratuits pendant 2 à 4 semaines avant de vous engager. L'interface compte plus que vous ne pensez dans un outil que vous utiliserez toutes les semaines.
+
+## Pour aller plus loin
+
+- [Brevo vs Mailchimp : pourquoi Brevo gagne en France](/articles/brevo-vs-mailchimp-2026)
+- [Alternatives françaises à Mailchimp](/articles/alternative-mailchimp-francaise) : 7 options souveraines
+- [Brevo : prix, forfaits et avis 2026](/articles/brevo-prix-avis-2026) : guide complet d'usage

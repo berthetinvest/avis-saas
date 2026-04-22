@@ -1,0 +1,270 @@
+---
+title: "Alternative à Trello : 5 outils kanban plus puissants (dont gratuits)"
+description: "Alternative à Trello en 2026 : 5 outils kanban testés, dont 2 gratuits. ClickUp, Notion, Asana, Monday, Jira comparés. Lequel choisir selon votre équipe ?"
+category: "gestion-projet"
+tags: ["trello", "alternative", "kanban", "gestion-projet", "gratuit"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["notion", "clickup", "asana", "monday", "trello"]
+faq:
+  - question: "Pourquoi chercher une alternative à Trello en 2026 ?"
+    answer: "Trois raisons reviennent : 1) Trello Free a durci ses limites (10 tableaux max depuis 2022), 2) les fonctionnalités restent basiques (kanban + checklists, pas de vrai gantt, pas de bases de données relationnelles, automations limitées), 3) le rachat par Atlassian a orienté Trello vers les gros comptes, laissant les petites équipes avec l'impression que l'outil n'évolue plus. Pour des équipes qui ont grandi au-delà du kanban simple, d'autres outils sont plus puissants."
+  - question: "Quelle alternative gratuite à Trello est la meilleure ?"
+    answer: "Deux choix sérieux : 1) Notion gratuit (blocs illimités, bases de données puissantes, vues kanban + tableau + calendrier, invités illimités en lecture), 2) ClickUp gratuit (fonctionnalités de gestion de projet complètes, tâches illimitées, 5 utilisateurs). Pour un usage strictement kanban, Notion est plus simple. Pour un usage gestion de projet plus poussé, ClickUp gratuit est plus riche."
+  - question: "ClickUp est-il vraiment mieux que Trello ?"
+    answer: "Plus puissant oui, plus adapté ça dépend. ClickUp propose : vues kanban + liste + gantt + calendrier + tableau de bord + documents + chat intégré, automation avancée, time tracking. Mais cette richesse a un coût : courbe d'apprentissage plus élevée (2-5 jours pour une équipe). Si vous cherchez la simplicité brute de Trello, ClickUp peut sembler surchargé. Si vous voulez scaler vos process, ClickUp bat Trello."
+  - question: "Notion peut-il remplacer Trello ?"
+    answer: "Oui largement. Notion propose des bases de données avec vue kanban équivalente à Trello, mais avec bien plus de puissance (relations entre bases, formules, plusieurs vues sur les mêmes données, propriétés personnalisées). L'avantage : vous pouvez intégrer documentation, wiki, meeting notes dans le même outil. La limite : Notion est moins rapide que Trello pour une pure gestion de tâches (quelques millisecondes de latence en plus sur le drag-and-drop)."
+  - question: "Asana ou Monday : lequel pour remplacer Trello ?"
+    answer: "Asana est gratuit jusqu'à 15 utilisateurs avec fonctionnalités kanban + liste + timeline. Monday est plus visuel, plus coloré, avec un plan gratuit limité à 2 utilisateurs. Pour une équipe de 3-10 personnes qui cherche un vrai gestionnaire de projet, Asana gratuit bat Monday gratuit. Pour une équipe qui valorise l'UX colorée et les tableaux de bord visuels, Monday payant (plan Basic à ~9 €/user/mois) est souvent préféré."
+  - question: "Jira est-il trop complexe pour remplacer Trello ?"
+    answer: "Pour une équipe non-technique, oui. Jira est conçu pour le développement logiciel (tickets, sprints, backlog, release). Une équipe marketing ou opérationnelle y perdra du temps. Jira Free existe (jusqu'à 10 utilisateurs) mais la simplicité n'est pas sa force. Notez que Jira et Trello sont tous deux chez Atlassian depuis 2017 — ils se complètent plutôt qu'ils ne se remplacent (Trello pour les équipes business, Jira pour le tech)."
+  - question: "Peut-on migrer facilement de Trello vers une alternative ?"
+    answer: "Oui dans la plupart des cas. Trello permet l'export en JSON et CSV de chaque tableau. Les cartes (titres, descriptions, checklists, dates, pièces jointes) se réimportent dans Notion (via csv + manipulation), ClickUp (via import natif depuis Trello), Asana (via import natif), Monday (via import CSV). Comptez 2 à 4 heures pour migrer 5-10 tableaux avec 500 cartes. Les automations Trello (Butler) doivent être reconstruites."
+  - question: "Combien coûtent les alternatives à Trello pour une équipe de 10 personnes ?"
+    answer: "Pour 10 utilisateurs : Notion Plus ~100 $/mois, ClickUp Unlimited ~70 $/mois, Asana Starter ~110 $/mois, Monday Basic ~90 €/mois, Jira Standard ~80 $/mois. Trello Premium coûte ~100 $/mois pour la même taille. À prix équivalent, vous gagnez souvent des fonctionnalités avancées (gantt, dashboards, time tracking) que Trello ne propose pas. C'est la vraie proposition de valeur des alternatives."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** Trello reste un excellent outil pour le kanban simple, mais ses limites apparaissent dès qu'une équipe veut **scaler ses process** : pas de gantt, pas de bases de données relationnelles, automations bridées, évolution produit ralentie depuis le rachat par Atlassian. En 2026, cinq alternatives sérieuses couvrent mieux les besoins d'une équipe qui grandit : **Notion** pour qui veut tout centraliser (docs + projets), **ClickUp** pour qui veut la gestion de projet la plus complète à prix doux, **Asana** pour qui cherche l'équilibre puissance/simplicité, **Monday** pour qui privilégie l'UX visuelle, **Jira** pour les équipes tech. Ce guide classe chaque option par cas d'usage, avec prix réels et verdict. Deux de ces alternatives ont un plan gratuit plus puissant que Trello Free.
+
+## Pourquoi Trello atteint ses limites
+
+Trello a révolutionné le kanban en 2011 avec sa simplicité radicale : un tableau, des colonnes, des cartes. C'était parfait pour 80% des cas d'usage.
+
+**En 2026, trois frustrations reviennent dans les retours utilisateurs :**
+
+1. **Les limites du plan Free** : 10 tableaux max depuis 2022, automations bridées, pas de vue calendrier, pas de tableau de bord.
+2. **Fonctionnalités avancées limitées** : pas de vue Gantt native (il faut un Power-Up payant), pas de relations entre cartes, pas de formules.
+3. **Évolution produit ralentie** depuis le rachat Atlassian (2017). Les nouvelles fonctionnalités arrivent sur Jira, pas sur Trello.
+
+Résultat : les équipes qui dépassent 10 personnes ou qui veulent structurer leurs process cherchent ailleurs.
+
+## Les 5 alternatives sérieuses en 2026
+
+<ComparisonTable
+  headers={["Outil", "Plan gratuit", "Prix entrée payant", "Force principale"]}
+  rows={[
+    ["Notion", "⭐⭐⭐⭐⭐ Excellent", "10 $/user/mois", "Tout-en-un (docs + projets)"],
+    ["ClickUp", "⭐⭐⭐⭐⭐ Excellent", "7 $/user/mois", "Le + complet fonctionnellement"],
+    ["Asana", "⭐⭐⭐⭐ Correct (15 users)", "10,99 $/user/mois", "Équilibre puissance/simplicité"],
+    ["Monday", "⭐⭐ Limité (2 users)", "9 €/user/mois", "UX visuelle, coloré"],
+    ["Jira", "⭐⭐⭐⭐ Bon (10 users)", "7,53 $/user/mois", "Spécialisé équipes dev"],
+  ]}
+/>
+
+### 1. Notion — le tout-en-un qui change la donne
+
+**Prix :** Free (très généreux) / Plus 10 $/user/mois / Business 18 $/user/mois.
+
+**Positionnement :** outil "tout-en-un" qui combine wiki, docs, bases de données, gestion de projet.
+
+**Ce que Notion fait mieux que Trello :**
+
+- **Bases de données** avec plusieurs vues sur les mêmes données : kanban, liste, calendrier, tableau, galerie. Vous basculez entre vues en un clic.
+- **Relations entre bases** : un projet lié à des tâches, à des personnes, à des deliverables.
+- **Propriétés personnalisées** illimitées : statut, priorité, tags, formules, rollups.
+- **Documentation intégrée** : chaque carte peut contenir une vraie page avec rich text, images, tableaux, embeds.
+- **Plan gratuit très généreux** : blocs illimités, jusqu'à 10 invités en édition.
+
+**Ce que Trello fait mieux :**
+
+- Rapidité pure du drag-and-drop (léger retard perceptible dans Notion).
+- Courbe d'apprentissage plus douce (Trello se comprend en 5 minutes).
+
+**Pour qui :** équipes de 3 à 30 personnes qui veulent unifier documentation + gestion de projet dans un outil. Particulièrement adapté aux agences, startups, consultants, équipes produit.
+
+<AffiliateCta
+  affiliateKey="notion"
+  label="Essayer Notion gratuitement"
+  note="Plan Free sans limite de durée. Largement supérieur à Trello Free."
+/>
+
+### 2. ClickUp — le plus complet fonctionnellement
+
+**Prix :** Free / Unlimited 7 $/user/mois / Business 12 $/user/mois.
+
+**Positionnement :** "one app to replace them all" — ClickUp veut remplacer votre gestion de projet + docs + chat + time tracking + wiki + CRM.
+
+**Ce que ClickUp fait mieux que Trello :**
+
+- **Vues multiples** : kanban + liste + Gantt + calendrier + tableau de bord + mind map + timeline.
+- **Hiérarchie flexible** : Espaces > Dossiers > Listes > Tâches > Sous-tâches > Checklists.
+- **Automations avancées** incluses dès le plan gratuit.
+- **Time tracking natif**.
+- **Dashboards personnalisables** pour piloter.
+- **ClickUp Brain (IA)** intégré pour résumés, génération de contenu, Q&A.
+
+**Ce que Trello fait mieux :**
+
+- Simplicité visuelle (ClickUp est parfois perçu comme surchargé).
+- Démarrage ultra-rapide.
+
+**Pour qui :** équipes qui veulent la gestion de projet la plus complète à prix doux. Startups en croissance, agences multi-projets, équipes produit/dev avec besoins variés.
+
+<AffiliateCta
+  affiliateKey="clickup"
+  label="Essayer ClickUp"
+  note="Plan Free illimité en tâches. Très au-dessus de Trello Free."
+/>
+
+### 3. Asana — l'équilibre puissance/simplicité
+
+**Prix :** Free (15 users) / Starter 10,99 $/user/mois / Advanced 24,99 $/user/mois.
+
+**Positionnement :** gestion de projet "grand public" pour équipes marketing, opérations, RH. Moins technique que Jira, plus structuré que Trello.
+
+**Ce qu'Asana fait mieux que Trello :**
+
+- **Timeline (Gantt)** incluse dès le plan Starter.
+- **Vue liste + kanban + timeline + calendrier** sur les mêmes données.
+- **Dépendances entre tâches** (une tâche bloquante jusqu'à qu'une autre soit terminée).
+- **Sections et sous-sections** : structure plus fine qu'un tableau Trello.
+- **Portfolios** pour piloter plusieurs projets en parallèle.
+- **Goals (OKRs)** liés aux projets.
+
+**Ce que Trello fait mieux :**
+
+- Prix plus doux en plan payant (Trello Standard à 5 $/user vs Asana Starter à 10,99 $).
+- Plus flexible pour les non-pros (Asana impose une structure projet + tâche).
+
+**Pour qui :** équipes marketing, opérations, RH, agences qui gèrent beaucoup de projets en parallèle avec des processus structurés. Particulièrement adapté aux équipes de 10-50 personnes.
+
+### 4. Monday.com — l'UX visuelle
+
+**Prix :** Free (2 users, très limité) / Basic 9 €/user/mois / Standard 12 €/user/mois.
+
+**Positionnement :** "Work OS" coloré et visuel. Tableaux très design, dashboards attrayants, grande personnalisation visuelle.
+
+**Ce que Monday fait mieux que Trello :**
+
+- **Esthétique premium** : tableaux très colorés, statuts visuels clairs.
+- **Vues multiples** : kanban + tableau + timeline + calendrier + charts + map.
+- **Automation no-code** avancée via recettes préconfigurées.
+- **Dashboards visuels** avec KPIs et graphiques.
+- **Templates par métier** nombreux.
+- **Intégrations riches** (CRM, email, slack, forms natifs).
+
+**Ce que Trello fait mieux :**
+
+- Plan gratuit vraiment utilisable (Monday Free est trop limité avec 2 users).
+- Courbe d'apprentissage plus douce.
+
+**Pour qui :** équipes qui valorisent l'UX visuelle et les dashboards attrayants. Agences, équipes créatives, managers qui veulent "vendre" la visibilité projet à la direction.
+
+### 5. Jira — pour les équipes tech uniquement
+
+**Prix :** Free (10 users) / Standard 7,53 $/user/mois / Premium 13,53 $/user/mois.
+
+**Positionnement :** gestion de projet pour équipes de développement logiciel. Sprints, backlog, releases, bugs, tickets, workflows custom.
+
+**Ce que Jira fait mieux que Trello :**
+
+- **Spécialisé dev** : sprints agile, story points, burndown charts, release planning.
+- **Workflows custom** très fins (états de tickets, validations, sous-équipes).
+- **Intégrations dev** profondes (Bitbucket, GitHub, GitLab, CI/CD, Slack, Zendesk).
+- **Reporting projet** avancé (velocity, cumulative flow, cycle time).
+
+**Ce que Trello fait mieux :**
+
+- Accessible aux non-tech (Jira est violent pour une équipe marketing ou RH).
+- Simplicité : Trello se comprend en 5 min, Jira en 5 jours.
+
+**Pour qui :** équipes de développement logiciel (5 à 50 devs) avec pratiques agiles (Scrum, Kanban structuré). Absolument pas pour des équipes business généralistes.
+
+## Comparaison des plans gratuits (le vrai sujet)
+
+<ComparisonTable
+  headers={["Critère", "Trello Free", "Notion Free", "ClickUp Free", "Asana Free"]}
+  rows={[
+    ["Utilisateurs illimités", "✅", "✅ (10 invités édition)", "✅ (5 users)", "✅ (15 users)"],
+    ["Tableaux/projets", "10 max", "Illimités", "Illimités", "Illimités"],
+    ["Tâches", "Illimitées", "Illimitées", "Illimitées", "Illimitées"],
+    ["Vues disponibles", "Kanban + liste", "Kanban + tableau + calendrier + galerie", "Kanban + liste + gantt + calendrier", "Kanban + liste + calendrier"],
+    ["Automations", "250/mois (équipe)", "Basiques", "100 exécutions/mois", "5 règles max"],
+    ["Stockage fichiers", "10 Mo/fichier", "5 Mo/fichier", "100 Mo total", "100 Mo/fichier"],
+    ["Intégrations", "1 power-up/board", "Standards", "100+", "Principales"],
+  ]}
+/>
+
+**Verdict plan gratuit :** Notion et ClickUp gratuits sont significativement plus puissants que Trello Free. Si vous êtes sur Trello Free et que vous atteignez les 10 tableaux, **basculez sur Notion gratuit** (pour cas simple) ou **ClickUp gratuit** (pour cas complexe) plutôt que de payer Trello Standard à 5 $/user/mois.
+
+## Verdict par profil
+
+### Solopreneur, freelance, petite équipe 2-5 personnes
+
+**→ Notion gratuit.**
+
+Plan Free ultra-généreux, vues multiples, documentation + projets unifiés. Vous ne paierez probablement jamais à cette taille.
+
+### Équipe marketing/ops 5-15 personnes
+
+**→ ClickUp ou Asana.**
+
+ClickUp si vous voulez le maximum de fonctionnalités à prix doux (Unlimited 7 $/user). Asana si vous voulez l'équilibre puissance/simplicité (Starter 10,99 $/user). Les deux battent Trello.
+
+### Équipe produit/dev 10-30 personnes
+
+**→ Jira (si pur dev) ou Linear (non listé ici, autre bonne option moderne).**
+
+Trello n'est pas conçu pour du dev structuré. Jira est la référence. Linear est une alternative moderne plus légère, à considérer.
+
+### Agence créative 10-30 personnes
+
+**→ Notion ou Monday.**
+
+Notion si vous voulez unifier client, projets, deliverables, wiki. Monday si vous valorisez l'UX visuelle pour impressionner vos clients lors des démos projet.
+
+### Équipe distribuée 30+ personnes
+
+**→ ClickUp, Asana ou Notion Business.**
+
+À cette taille, les plans payants sont nécessaires mais restent raisonnables (7-18 $/user/mois). Évitez Trello qui peine à structurer une grosse équipe.
+
+### Startup scale-up avec pratiques agiles
+
+**→ Linear (moderne) ou ClickUp.**
+
+Linear est très apprécié des scale-ups modernes (UX épurée, rapide, orientée dev). ClickUp est plus polyvalent si vous avez des équipes non-dev aussi.
+
+## Migration Trello → alternative : combien de temps ?
+
+**Effort selon la complexité :**
+
+- Migration simple (5 tableaux, 200 cartes) : 2-3 heures.
+- Migration moyenne (15 tableaux, 1 000 cartes, quelques automations Butler) : 1-2 jours.
+- Migration complexe (30+ tableaux, 5 000+ cartes, nombreuses automations) : 3-5 jours.
+
+**Outils facilitant la migration :**
+
+- **ClickUp** : import natif depuis Trello en 2 clics. Récupère tableaux, listes, cartes, checklists, commentaires, dates, pièces jointes.
+- **Asana** : import natif depuis Trello, bon niveau de fidélité.
+- **Notion** : pas d'import natif. Export CSV de Trello puis import dans une base de données Notion. Reconstruction manuelle de la structure.
+- **Monday** : import CSV uniquement. Reconstruction manuelle des automations.
+- **Jira** : import via Atlassian Cloud Migration Assistant (les deux sont chez Atlassian, donc fluide).
+
+**Conseil :** migrez d'abord 1-2 tableaux pilotes pour tester l'UX, puis déployez à l'équipe. Évitez le "big bang" sur 30 tableaux d'un coup.
+
+## Conclusion
+
+**Trello reste un bon outil** pour le kanban simple, mais il est dépassé dès qu'une équipe veut scaler ses process ou unifier plusieurs activités.
+
+**Règle simple pour choisir :**
+
+- Solo ou petite équipe, usage simple → **Notion gratuit** (imbattable).
+- Équipe structurée qui veut la gestion de projet la plus complète → **ClickUp**.
+- Équipe marketing/ops équilibrée → **Asana**.
+- UX visuelle premium et dashboards → **Monday**.
+- Équipe dev uniquement → **Jira** (ou **Linear**, plus moderne).
+
+**Le cas où Trello reste le bon choix :** vous êtes 3-5 personnes, usage basique (checklists de tâches), aucun besoin d'évolution. Dans ce cas, Trello Free continue de faire le job correctement.
+
+Pour tous les autres cas, les alternatives gagnent en 2026.
+
+## Pour aller plus loin
+
+- [Notion vs ClickUp : lequel pour votre équipe ?](/articles/notion-vs-clickup)
+- [Alternatives françaises à Notion : 6 outils](/articles/alternative-notion-francaise)
+- [Notion pour freelance : le setup minimal](/articles/notion-pour-freelance-setup-minimal)

@@ -1,0 +1,261 @@
+---
+title: "Logiciel de paie pour 1 à 5 salariés : comparatif 2026 (TPE)"
+description: "Quel logiciel de paie choisir quand vous avez 1 à 5 salariés ? Comparatif 2026 : PayFit, Silae, Combo, Factorial, Pennylane. Prix réels, verdict par profil."
+category: "rh-paie"
+tags: ["paie", "tpe", "petit-effectif", "comparatif", "logiciel-paie"]
+publishedAt: 2026-04-22
+author: "Mathieu Berthet"
+draft: false
+toolsCompared: ["payfit", "combohr", "factorial"]
+faq:
+  - question: "Quel est le logiciel de paie le moins cher pour 1 salarié ?"
+    answer: "Pour un seul salarié, les options les moins chères en 2026 sont : Sage Paie TPE (~20 €/mois), Combo pour CHR (~24 €/mois), ou PayFit TPE (~39 €/mois par salarié avec forfait minimum). En dessous de 30 €/mois, vous trouvez des solutions type tableur + déclarations manuelles, mais vous perdez l'automatisation des charges sociales — très risqué."
+  - question: "Un expert-comptable ne suffit-il pas pour 1 à 5 salariés ?"
+    answer: "Si, pour beaucoup de TPE. Un expert-comptable facture typiquement 25 à 50 € par bulletin, soit 25 à 250 €/mois pour 1 à 5 salariés. C'est souvent plus économique que PayFit ou Silae complet pour cette taille. Le logiciel devient intéressant si vous voulez reprendre la main : éditer les bulletins vous-même, gérer les variables mensuelles (heures sup, primes) sans faire de multiples allers-retours avec le comptable."
+  - question: "PayFit est-il trop cher pour une TPE de 3 salariés ?"
+    answer: "Oui, objectivement. Le tarif PayFit 2026 démarre autour de 39 €/bulletin avec un forfait minimum de ~99 €/mois. Pour 3 salariés, ça fait 100 à 120 €/mois soit 1 200 à 1 440 €/an. Pour cette taille, un comptable traditionnel (~120-150 €/mois pour 3 bulletins) est souvent plus avantageux, surtout si vous n'avez pas besoin des fonctionnalités RH bonus (congés, notes de frais)."
+  - question: "Quel logiciel de paie choisir pour un restaurant de 3 salariés ?"
+    answer: "Combo est généralement le meilleur choix pour la restauration. Il gère les spécificités CHR (heures de nuit, majorations dimanche/férié, coupures, conventions collectives restauration) nativement, ce que PayFit et Factorial ne font pas aussi bien. Prix : ~25 €/mois/salarié pour le plan Paie, soit ~75 €/mois pour 3 salariés."
+  - question: "Peut-on gérer la paie soi-même quand on a 1 ou 2 salariés ?"
+    answer: "C'est possible mais risqué sans expérience. Les charges sociales françaises sont complexes (URSSAF, retraite, prévoyance, DSN mensuelle obligatoire depuis 2017). Un logiciel automatise ces calculs mais vous restez responsable des erreurs. Pour éviter les mauvaises surprises : soit un logiciel avec support juridique inclus (PayFit, Combo), soit un expert-comptable. Le pur DIY sur tableur n'est plus viable depuis l'obligation DSN."
+  - question: "Factorial est-il adapté à une TPE de 5 salariés ?"
+    answer: "Oui, si vous voulez plus qu'un simple outil de paie. Factorial à 5 salariés tourne autour de 40-50 €/mois avec le module paie, ce qui couvre : édition des bulletins, DSN, congés, absences, notes de frais, évaluations. C'est une solution RH complète plus qu'un logiciel paie pur. Moins optimisé que PayFit sur la partie paie stricte mais bien plus riche en RH."
+  - question: "Quelles sont les obligations paie pour une TPE en France ?"
+    answer: "Toute entreprise avec au moins 1 salarié doit : établir un bulletin de paie mensuel conforme (clarifié 2018), déclarer la DSN mensuelle via net-entreprises.fr, verser les cotisations URSSAF/retraite/mutuelle, tenir un registre unique du personnel, respecter la convention collective applicable. Le bulletin papier n'est plus obligatoire (dématérialisation autorisée). Pas de seuil d'exonération : même 1 salarié = toutes les obligations."
+  - question: "Combien coûte réellement la paie d'une TPE tout compris ?"
+    answer: "Pour 3 salariés, comptez 100 à 200 €/mois tout compris : logiciel ou expert-comptable (80-150 €), éventuel abonnement mutuelle obligatoire (inclus dans le bulletin mais géré en amont), temps de traitement interne (1 à 3h/mois pour valider les variables). Soit environ 1 500 à 2 500 €/an pour 3 salariés. Cet investissement évite les pénalités URSSAF (~10% de majoration + 0,4%/mois de retard en cas d'erreur DSN)."
+---
+import AffiliateCta from '@components/AffiliateCta.astro';
+import ComparisonTable from '@components/ComparisonTable.astro';
+
+**En bref.** Pour une TPE de 1 à 5 salariés en 2026, le bon choix de logiciel de paie dépend de trois critères : votre secteur (CHR a des besoins spécifiques), votre budget (comptez 80 à 200 €/mois tout compris), et votre appétit pour la gestion interne (êtes-vous prêt à valider les variables chaque mois ou préférez-vous tout déléguer ?). **PayFit** reste la référence fluide mais devient chère sous 5 salariés (~100 €/mois minimum). **Combo** est imbattable en restauration/retail (25 €/salarié). **Factorial** brille quand vous voulez un SIRH complet (paie + RH) autour de 40 €/mois. **L'expert-comptable traditionnel** (25-50 €/bulletin) reste compétitif sous 3 salariés. Ce guide détaille chaque option, les prix réels, les pièges et notre recommandation selon votre profil exact.
+
+## Pourquoi cet article existe
+
+La plupart des comparatifs logiciels paie ciblent les PME de 10 à 50 salariés. Pour les TPE de **1 à 5 salariés**, les recommandations sont souvent mal calibrées : on vous vend PayFit à 100 €/mois alors qu'un comptable coûterait 80 €, ou on vous oriente vers un tableur alors que la DSN est obligatoire depuis 2017.
+
+Ce guide a un objectif : vous éviter **de surpayer** ou **de mal dimensionner** votre solution paie en 2026.
+
+Les tarifs ont été vérifiés en avril 2026 sur les sites officiels de chaque éditeur.
+
+## Les 6 options pour une TPE de 1 à 5 salariés
+
+<ComparisonTable
+  headers={["Solution", "Prix 3 salariés/mois", "Force principale", "Cible idéale"]}
+  rows={[
+    ["Expert-comptable classique", "80-150 €", "Zéro effort", "Dirigeant qui veut déléguer"],
+    ["PayFit TPE", "~100-120 €", "UX moderne", "TPE tech, services"],
+    ["Combo", "~75 €", "Spécialiste CHR", "Restaurant, retail"],
+    ["Factorial", "~40-50 €", "SIRH complet", "TPE qui veut RH intégré"],
+    ["Silae (via comptable)", "~80-120 €", "Standard marché", "TPE via cabinet comptable"],
+    ["Pennylane + comptable", "~100-150 €", "Compta + paie liée", "TPE déjà sur Pennylane"],
+  ]}
+/>
+
+### Option 1 : L'expert-comptable traditionnel
+
+**Prix :** 25 à 50 €/bulletin/mois (soit 25-150 €/mois pour 1 à 5 salariés).
+
+**Fonctionnement :** vous envoyez chaque mois par email les variables (heures sup, primes, absences). Le cabinet édite les bulletins, fait la DSN, vous envoie les PDFs à transmettre aux salariés.
+
+**Points forts :**
+- Zéro effort : vous ne touchez à rien.
+- Sécurité juridique : le cabinet est responsable en cas d'erreur.
+- Conseils RH inclus (généralement) : rupture conventionnelle, avenant, convention collective.
+- Réseau : votre comptable connaît souvent des experts fiscaux, juridiques, sociaux.
+
+**Points faibles :**
+- Friction d'information : aller-retours emails à chaque variable.
+- Délai : les corrections en dernière minute sont pénibles.
+- Pas d'espace salarié (vos salariés n'ont pas accès à leurs bulletins en auto).
+- Pas de gestion des congés : vous tenez ça sur un tableur.
+
+**Pour qui :** dirigeant TPE qui n'a ni le temps ni l'envie de manipuler un logiciel, et qui préfère payer pour que quelqu'un d'autre s'en occupe. Particulièrement pertinent **sous 3 salariés**.
+
+### Option 2 : PayFit TPE
+
+**Prix :** ~39 €/bulletin + forfait minimum ~99 €/mois → pour 3 salariés, comptez **100-120 €/mois**.
+
+**Fonctionnement :** vous gérez la paie dans une interface moderne, PayFit calcule automatiquement, génère les bulletins, fait la DSN, et vos salariés ont un espace personnel.
+
+**Points forts :**
+- UX excellente : saisie rapide des variables, validation en 2 clics.
+- Espace salarié natif : vos employés voient leurs bulletins, posent leurs congés.
+- Support français avec juristes inclus.
+- Intégrations modernes (Slack, Google Workspace, banques).
+
+**Points faibles :**
+- **Cher pour très petites structures** : le forfait minimum plombe les TPE de 1-2 salariés.
+- Courbe d'apprentissage initiale (1 à 2 jours pour maîtriser).
+- Conventions collectives très spécifiques (CHR, BTP) moins bien gérées.
+
+**Pour qui :** TPE tech, services, agence de 3-5 salariés qui veut une UX moderne et est prête à payer 100 €/mois pour l'autonomie. Pas pertinent pour 1-2 salariés (un comptable est moins cher).
+
+<AffiliateCta
+  affiliateKey="payfit"
+  label="Essayer PayFit"
+  note="Démo gratuite. Tarif sur devis selon votre taille et votre convention collective."
+/>
+
+### Option 3 : Combo (spécialiste CHR et retail)
+
+**Prix :** ~24-29 €/mois/salarié sur le plan Paie → pour 3 salariés, **~75-90 €/mois**.
+
+**Fonctionnement :** outil spécialisé restaurant, bar, retail. Gère les plannings avec pointage intégré, les heures de nuit, les majorations conventionnelles CHR, puis génère la paie automatiquement.
+
+**Points forts :**
+- **Natif CHR** : convention collective restauration intégrée, heures de nuit calculées auto, coupures gérées.
+- Planning et paie liés : les heures pointées remontent directement dans le bulletin.
+- Moins cher que PayFit sur la partie paie.
+- Interface simple pour restaurateurs non tech.
+
+**Points faibles :**
+- Peu adapté hors CHR et retail.
+- Moins de fonctionnalités RH bonus (évaluations, formation).
+- Support limité comparé à PayFit (équipe plus petite).
+
+**Pour qui :** restaurants, bars, boutiques, petites chaînes retail avec 2 à 10 salariés. Dans ce segment, **Combo est imbattable** sur le rapport qualité/prix.
+
+### Option 4 : Factorial
+
+**Prix :** ~10-12 €/mois/salarié avec module paie activé → pour 3 salariés, **~40-50 €/mois**.
+
+**Fonctionnement :** SIRH complet (gestion salariés, congés, absences, notes de frais, évaluations) avec un module paie optionnel qui génère les bulletins et la DSN.
+
+**Points forts :**
+- **Le moins cher** des outils modernes à fonctionnalités équivalentes.
+- SIRH intégré : congés, notes de frais, organigramme, compétences inclus.
+- Plateforme multi-pays utile si vous avez des salariés en Espagne/Portugal/Italie.
+- Bon rapport fonctionnalités/prix pour les 3-10 salariés.
+
+**Points faibles :**
+- Partie paie française moins mature que PayFit (quelques conventions collectives mal gérées).
+- Support francophone mais moins réactif que PayFit.
+- Quelques bugs d'interface occasionnels.
+
+**Pour qui :** TPE de 3-5 salariés qui veut une solution RH **plus large que la paie** sans exploser le budget. Surtout pertinent si vous avez besoin de gestion des congés + notes de frais + paie dans le même outil.
+
+### Option 5 : Silae (via cabinet d'expertise comptable)
+
+**Prix :** variable selon le cabinet, typiquement **80-120 €/mois** pour 3 salariés (inclus dans la prestation comptable).
+
+**Fonctionnement :** Silae est le logiciel professionnel de paie le plus utilisé par les experts-comptables français. Votre cabinet l'opère pour vous. Vous avez un accès "entreprise" en lecture pour consulter les bulletins, parfois saisir les variables.
+
+**Points forts :**
+- Standard du marché français : ultra-robuste, toutes les conventions collectives gérées.
+- Délégation complète à un professionnel.
+- Conseils juridiques et sociaux du cabinet inclus.
+- Évolutif : suit sans douleur quand vous passez de 3 à 30 salariés.
+
+**Points faibles :**
+- Interface datée si vous y accédez directement.
+- Pas d'espace salarié aussi fluide que PayFit.
+- Dépendance forte à votre cabinet (changer de cabinet = petite migration).
+
+**Pour qui :** TPE qui a déjà un expert-comptable de confiance et veut déléguer la paie sans changer ses habitudes. Particulièrement pertinent **sous 5 salariés**.
+
+### Option 6 : Pennylane + cabinet comptable
+
+**Prix :** Pennylane à partir de 29 €/mois + prestation paie cabinet (60-100 €/mois) → **~100-130 €/mois**.
+
+**Fonctionnement :** Pennylane centralise votre comptabilité, facturation, note de frais. Votre expert-comptable partenaire opère la paie (souvent sur Silae) avec remontée des données vers Pennylane.
+
+**Points forts :**
+- Comptabilité + paie unifiées dans le même tableau de bord.
+- Expert-comptable obligatoire mais intégré.
+- Tableau de bord financier moderne.
+- Pertinent si vous êtes déjà sur Pennylane.
+
+**Points faibles :**
+- Ne remplace pas l'expert-comptable (c'est un outil partagé, pas un logiciel autonome).
+- Coût cumulé logiciel + prestation.
+- L'avantage s'évanouit si vous n'avez pas besoin de la partie comptabilité.
+
+**Pour qui :** TPE modernes, agences, start-ups early-stage déjà sur Pennylane pour la compta. Moins pertinent si vous n'utilisez pas Pennylane.
+
+## Scénarios concrets : quelle option pour votre situation ?
+
+### Scénario 1 : restaurant indépendant, 3 salariés CDI + extras
+
+**Recommandation : Combo (~75 €/mois).**
+
+Raison : la convention collective CHR et les heures de nuit / majorations dimanche sont calculées automatiquement. Planning + pointage + paie dans le même outil. PayFit est possible mais moins optimisé et plus cher.
+
+### Scénario 2 : agence web, 4 salariés cadres au forfait jours
+
+**Recommandation : PayFit (~120 €/mois) ou Factorial (~50 €/mois).**
+
+Raison : convention Syntec bien gérée par les deux, forfait jours géré correctement. PayFit si vous voulez l'UX premium et l'espace salarié élégant. Factorial si le budget compte et que vous voulez RH + paie intégrés.
+
+### Scénario 3 : consultant + 1 assistante
+
+**Recommandation : expert-comptable traditionnel (~70-100 €/mois).**
+
+Raison : pour 1 salariée seule, un logiciel est surdimensionné. Un comptable gère le bulletin mensuel + la DSN pour ~50-70 €/bulletin. Total plus bas, effort zéro. Passez sur logiciel quand vous arrivez à 3-4 salariés.
+
+### Scénario 4 : boutique retail, 2 salariées CDI 35h
+
+**Recommandation : Combo (~50-60 €/mois) ou Factorial (~25-30 €/mois).**
+
+Raison : Combo si vous voulez gérer les plannings et la paie dans un même outil (retail avec horaires variables). Factorial si les plannings sont stables et que vous voulez un SIRH global pas cher.
+
+### Scénario 5 : artisan BTP, 1 apprenti + 1 ouvrier
+
+**Recommandation : expert-comptable avec logiciel BTP (~80-120 €/mois).**
+
+Raison : la convention BTP est complexe (indemnités de déplacement, paniers repas, intempéries). Les logiciels grand public la gèrent mal. Un comptable spécialisé BTP avec un outil adapté (Batappli, EBP BTP, etc.) est plus sûr.
+
+## Comparatif final
+
+<ComparisonTable
+  headers={["Critère", "Expert-comptable", "PayFit", "Combo", "Factorial"]}
+  rows={[
+    ["Prix 3 salariés/mois", "80-150 €", "100-120 €", "75-90 €", "40-50 €"],
+    ["UX & autonomie", "⭐⭐ Faible", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐⭐ Bon", "⭐⭐⭐⭐ Bon"],
+    ["Spécialisation CHR", "Variable", "Partielle", "⭐⭐⭐⭐⭐ Native", "Partielle"],
+    ["Convention Syntec", "⭐⭐⭐⭐ OK", "⭐⭐⭐⭐⭐ Optimale", "⭐⭐ Limitée", "⭐⭐⭐⭐ Bonne"],
+    ["Gestion congés", "Hors paie", "✅ Incluse", "✅ Incluse", "✅ Incluse"],
+    ["Notes de frais", "Non", "✅ Basique", "Non", "✅ Complète"],
+    ["Courbe apprentissage", "Aucune", "2 jours", "1 jour", "1-2 jours"],
+    ["Sécurité juridique", "⭐⭐⭐⭐⭐ Top", "⭐⭐⭐⭐ Bonne", "⭐⭐⭐⭐ Bonne", "⭐⭐⭐ Correcte"],
+  ]}
+/>
+
+## Verdict par profil
+
+**1 à 2 salariés, aucun secteur spécialisé.** Expert-comptable traditionnel. Les logiciels sont surdimensionnés, un cabinet à 50-70 €/bulletin reste imbattable.
+
+**3 à 5 salariés, secteur services / tech / agence.** PayFit si budget premium, Factorial si budget modéré. Les deux sont bien adaptés à Syntec et aux cadres au forfait.
+
+**2 à 5 salariés, restauration ou retail.** Combo sans hésiter. La spécialisation CHR compense largement le prix.
+
+**3 à 5 salariés, BTP / artisanat.** Expert-comptable spécialisé BTP avec logiciel dédié. Les outils grand public ne gèrent pas bien la convention BTP.
+
+**TPE tech déjà sur Pennylane.** Pennylane + cabinet partenaire. L'intégration compta-paie vaut le surcoût.
+
+## Trois pièges à éviter en 2026
+
+**1. Ne sous-estimez pas la DSN mensuelle.** Obligatoire depuis 2017, elle ne se fait pas à la main. Toute solution retenue doit la gérer automatiquement. Une DSN manquée = pénalité URSSAF.
+
+**2. Attention aux conventions collectives mal gérées.** Les logiciels génériques prétendent couvrir toutes les CC. Dans les faits, CHR, BTP, transport, santé ont des subtilités mal implémentées. Testez toujours avec un bulletin réel de votre CC avant de souscrire.
+
+**3. N'oubliez pas la mutuelle obligatoire.** Depuis 2016, toute entreprise privée doit proposer une mutuelle santé collective. Votre logiciel paie doit savoir gérer les cotisations mutuelle + prévoyance. Vérifiez avant d'acheter.
+
+## Conclusion
+
+Pour une TPE de 1 à 5 salariés en 2026, il n'y a **pas une seule bonne réponse** : la meilleure solution dépend de votre secteur, de votre taille exacte et de votre appétit pour la gestion interne.
+
+**Règle de décision simple :**
+- **1-2 salariés, pas de besoin RH étendu → expert-comptable.**
+- **3-5 salariés services/tech, budget confortable → PayFit.**
+- **3-5 salariés services/tech, budget serré → Factorial.**
+- **CHR / retail 2-10 salariés → Combo.**
+- **BTP/artisan → cabinet spécialisé.**
+
+Le bon réflexe : testez 2 options en démo gratuite avant de signer, saisissez un bulletin réel de votre convention collective, et vérifiez que l'outil le sort correctement. Les erreurs de paie coûtent cher (URSSAF, contentieux prud'hommes), la bonne solution se choisit sérieusement.
+
+## Pour aller plus loin
+
+- [PayFit vs Lucca : quelle solution de paie pour votre PME ?](/articles/payfit-vs-lucca)
+- [PayFit : prix détaillé et avis 2026](/articles/payfit-prix-avis-2026)
+- [Alternatives à PayFit : 6 logiciels moins chers ou plus flexibles](/articles/alternative-payfit)

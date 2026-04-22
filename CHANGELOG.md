@@ -60,3 +60,15 @@ Toutes les modifications notables du projet — format inspiré de [Keep a Chang
 **Premiers articles**
 
 - 2 articles complets rédigés avec prix vérifiés (`src/content/articles/`)
+
+### 2026-04-22 — Mise en ligne
+
+- Domaine `avis-saas.fr` acheté chez Gandi (+ AFNIC validation en attente)
+- DNS configuré : A @ → 216.198.79.1, CNAME www → cb2d1e3bbed5424d.vercel-dns-017.com
+- Déploiement Vercel connecté au repo `github.com/berthetinvest/avis-saas`
+- Custom domain + www redirect 308 vers l'apex configuré sur Vercel
+- Certificat SSL Let's Encrypt auto-provisionné
+- Site LIVE sur https://avis-saas.fr avec HTTPS valide
+- `package.json` : Node pin `22.x` (au lieu de `>=20.0.0`) pour retirer warning Vercel
+- Pages `/mentions-legales`, `/politique-confidentialite`, `/divulgation-affiliation` refactorées pour utiliser des variables d'environnement (`PUBLIC_LEGAL_COMMUNE`, `PUBLIC_LEGAL_STATUS`, `PUBLIC_LEGAL_SIRET`, `PUBLIC_CONTACT_EMAIL`, `PUBLIC_LEGAL_LAST_UPDATE`)
+- `.env.example` mis à jour avec les nouvelles variables légales

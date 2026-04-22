@@ -1,0 +1,243 @@
+---
+title: "Logiciel RH pour startup : 5 outils qui scalent sans exploser le budget"
+description: "Quel logiciel RH choisir pour une startup en 2026 ? Comparatif de 5 solutions (PayFit, Factorial, Personio, Lucca, BambooHR) avec prix, forces et usage type."
+publishDate: 2026-04-22
+author: "Mathieu Berthet"
+category: "rh-paie"
+tags: ["startup", "sirh", "rh", "logiciel", "comparatif", "scale-up"]
+featured: false
+draft: false
+readingTime: 11
+faq:
+  - question: "Quand une startup doit-elle investir dans un logiciel RH ?"
+    answer: "Trois seuils déclencheurs : (1) vous passez 10 salariés et les feuilles de paie Excel + demandes congés par email deviennent ingérables ; (2) vous embauchez plus de 2 personnes par mois et l'onboarding manuel consomme votre temps ; (3) vous entrez en levée de fonds ou due diligence et il faut de la donnée RH propre. En pratique, la plupart des startups basculent sur un SIRH entre 8 et 15 salariés."
+  - question: "Quel est le meilleur logiciel RH pour une startup française ?"
+    answer: "PayFit si votre priorité est la paie (automatisation complète, conformité française, idéal jusqu'à ~80 salariés). Factorial si vous voulez le SIRH complet à prix serré (paie, congés, onboarding, notes de frais). Lucca si vous venez d'un contexte Big Four et voulez un SIRH robuste par module. Le choix dépend de votre priorité : paie-first ou SIRH-first."
+  - question: "Combien coûte un logiciel RH pour une startup de 20 salariés ?"
+    answer: "Comptez 200 à 500 €/mois HT pour une vingtaine de salariés. Factorial ~5-8 €/salarié/mois (soit 100-160 €), PayFit ~15-25 €/salarié/mois (300-500 €), Personio ~10-15 €/salarié/mois (200-300 €), Lucca en modulaire (Timmi Congés seul ~2,5 €/salarié/mois). Ajoutez les frais de setup (0 à 500 €) la première année."
+  - question: "Quel logiciel RH scale le mieux de 10 à 100 salariés ?"
+    answer: "Personio et Lucca sont les deux SIRH pensés pour cette tranche. Personio est plus complet out of the box (recrutement, onboarding, KPI RH). Lucca est plus modulaire (vous ajoutez les modules nécessaires). PayFit scale bien côté paie mais devient moins adapté au-delà de 100 salariés (il vise les TPE-PME). Factorial est un bon pari croissance de 5 à 80 salariés."
+  - question: "Faut-il prendre un SIRH avec paie intégrée ou séparée ?"
+    answer: "Cela dépend. Paie intégrée (PayFit, Factorial) = simplicité, moins d'intégrations à gérer, données centralisées. Paie séparée (Silae, Sage, via expert-comptable) + SIRH dédié (Lucca, Personio) = plus de flexibilité, paie robuste sur les cas complexes, mais double abonnement et besoin de synchroniser. Pour une startup 10-50 salariés, l'intégré l'emporte à 80 %."
+  - question: "Existe-t-il des logiciels RH gratuits pour startups ?"
+    answer: "Rien de sérieux à 100 % gratuit. Factorial propose un plan d'essai généreux (14 à 30 jours), BambooHR propose un essai. Quelques outils niches gratuits pour des besoins isolés : Notion pour un mini-SIRH DIY, Clockify pour le time tracking, Google Forms pour l'onboarding. Mais pour une startup sérieuse qui scale, le ROI d'un vrai SIRH payant est clair dès 10 salariés."
+  - question: "Quel logiciel RH pour une startup distribuée internationale ?"
+    answer: "Personio (basée à Munich) et Factorial (basée à Barcelone) sont les deux plus adaptés à une équipe multi-pays européenne : interface multilingue, gestion des calendriers légaux, devises multiples, conformité RGPD. BambooHR est plus adapté aux contextes US. PayFit est franco-centré (bien que présent en Allemagne, Espagne, UK)."
+  - question: "Comment choisir entre PayFit et Factorial pour une startup ?"
+    answer: "Startup 5-20 salariés avec priorité paie française et automatisations DSN complètes → PayFit. Startup 10-50 salariés avec priorité SIRH global (onboarding, congés, notes de frais, performance) et budget serré → Factorial. Le prix Factorial est 2 à 3x moins cher que PayFit à fonctionnalités SIRH équivalentes, mais la paie PayFit est plus avancée sur le marché français."
+seo:
+  canonical: "https://avis-saas.fr/articles/logiciel-rh-startup-2026"
+---
+
+import AffiliateCta from '../../components/AffiliateCta.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+
+## En bref
+
+Une startup qui passe le cap des 10 salariés découvre que Google Sheets, Notion et les demandes de congés par WhatsApp ne scalent pas. Ce comparatif détaille les **5 logiciels RH qui accompagnent réellement la croissance** d'une startup de 10 à 100+ salariés, avec leurs forces, leurs limites et le budget à prévoir. Spoiler : le "meilleur SIRH" dépend largement de votre priorité (paie, onboarding, conformité, recrutement).
+
+## Pourquoi un SIRH dès 10 salariés ?
+
+Le coût caché de l'absence d'outil RH dans une startup se lit en trois dimensions :
+
+- **Temps manager** : 3 à 6h/semaine perdues à courser des signatures, relancer sur les congés, corriger les paies.
+- **Erreur paie** : 1 erreur par trimestre minimum quand la paie est manuelle. Chaque erreur coûte 1-3h de correction + explication salarié.
+- **Risque légal** : non-respect du droit du travail (heures sup, repos, DUERP, RGPD) = risque URSSAF ou prud'hommes dès la première anicroche.
+
+**Bonne nouvelle** : le marché s'est consolidé. Les 5 outils présentés ci-dessous couvrent 90 % des besoins d'une startup française.
+
+## Tableau comparatif des 5 SIRH startup
+
+<ComparisonTable
+  tools={[
+    { name: "PayFit", plan: "Base", pricePerMonth: "~18 €/salarié", features: { paie: "Excellent", conges: true, onboarding: true, recrutement: "Plus", conformiteFR: "Best" } },
+    { name: "Factorial", plan: "Business", pricePerMonth: "~8 €/salarié", features: { paie: "France/Espagne", conges: true, onboarding: true, recrutement: true, conformiteFR: "Bon" } },
+    { name: "Personio", plan: "Essential", pricePerMonth: "~10 €/salarié", features: { paie: "via partenaire", conges: true, onboarding: true, recrutement: "Excellent", conformiteFR: "Correct" } },
+    { name: "Lucca", plan: "modulaire", pricePerMonth: "2,5-6 €/module/salarié", features: { paie: "non (intégré Silae)", conges: true, onboarding: true, recrutement: true, conformiteFR: "Best" } },
+    { name: "BambooHR", plan: "Core", pricePerMonth: "~9 $/salarié", features: { paie: "US uniquement", conges: true, onboarding: "Excellent", recrutement: true, conformiteFR: "Faible" } }
+  ]}
+  caption="Prix indicatifs 2026 pour une startup 20 salariés. Les vrais devis peuvent varier ±30 %."
+/>
+
+## SIRH #1 : PayFit — le roi de la paie française
+
+**Idéal pour** : startup 5 à 80 salariés, française, où la paie doit rouler sans friction.
+
+### Ce que PayFit fait mieux
+
+- **Paie 100 % automatisée** : bulletins générés en un clic, DSN envoyée automatiquement, ajustements auto (mutuelle, prévoyance, tickets resto, primes).
+- **Conformité française immédiate** : conventions collectives à jour, taxes, plafonds Sécu, DSN mensuelle. Rien à configurer.
+- **Congés et absences** intégrés avec la paie (pas de double saisie).
+- **App mobile** : les salariés demandent leurs congés, consultent leur bulletin, uploadent une note de frais en 30 secondes.
+- **Support francophone** réactif et expert paie.
+
+### Ce que PayFit fait moins bien
+
+- **Prix** : 15-25 €/salarié/mois. Pour une startup de 40 personnes, c'est 600-1000 €/mois.
+- **Module recrutement** limité (plan Plus uniquement, et moins puissant que Personio).
+- **Fonctionnalités SIRH "soft"** (évaluations, objectifs, 1-to-1) arrivent en retard.
+- **Scalabilité > 100 salariés** : ça passe, mais vous sentez que l'outil vise les TPE/PME.
+
+<AffiliateCta
+  product="payfit"
+  ctaText="Demander une démo PayFit"
+  size="normal"
+/>
+
+Pour creuser : [PayFit : prix détaillé et avis 2026](/articles/payfit-prix-avis-2026) et [Alternative à PayFit : 6 logiciels](/articles/alternative-payfit).
+
+## SIRH #2 : Factorial — le SIRH tout-en-un abordable
+
+**Idéal pour** : startup 10 à 80 salariés, qui veut un SIRH complet à prix serré.
+
+### Ce que Factorial fait mieux
+
+- **Prix** : 5-10 €/salarié/mois selon module. 2 à 3x moins cher que PayFit en configuration équivalente.
+- **SIRH global** : paie (FR/ES/DE), onboarding, congés, notes de frais, performance, recrutement, time tracking, documents.
+- **Interface moderne** : l'UX est une des plus agréables du marché SIRH.
+- **Plan d'essai** généreux pour valider.
+- **Multi-pays** : utile dès que la startup embauche à l'étranger (Espagne, Portugal, Italie).
+
+### Ce que Factorial fait moins bien
+
+- **Paie française moins mature** que PayFit (mais ça s'améliore chaque année).
+- **Support français** parfois moins expert que celui de PayFit ou Lucca sur les cas complexes.
+- **Automatisations** moins profondes que Personio sur le recrutement.
+
+<AffiliateCta
+  product="factorial"
+  ctaText="Tester Factorial 14 jours gratuits"
+  size="normal"
+/>
+
+Pour creuser : [Factorial vs Personio : comparatif SIRH](/articles/factorial-vs-personio).
+
+## SIRH #3 : Personio — le scale-up SIRH européen
+
+**Idéal pour** : startup 30 à 300 salariés, avec équipe distribuée en Europe.
+
+### Ce que Personio fait mieux
+
+- **SIRH complet et scalable** : pensé dès le départ pour des équipes 30-500. À l'aise de 15 à 5 000 salariés.
+- **Recrutement (ATS) natif** : suivi candidat, pipeline par poste, integrations LinkedIn/Welcome to the Jungle, scoring collaborateur.
+- **Onboarding sophistiqué** : parcours personnalisé par poste, checklists, documents, signatures.
+- **Reporting RH** : dashboards prêts à l'emploi (turnover, absentéisme, diversity, compensation).
+- **Multi-pays, multi-devise, multi-langue**.
+
+### Ce que Personio fait moins bien
+
+- **Pas de paie native française** : il faut un partenaire (Silae, Cegid, expert-comptable). Bon si vous le gérez déjà à part, contraignant sinon.
+- **Prix plus élevé** que Factorial à équipe équivalente.
+- **Lourdeur admin** : la richesse Personio a un coût en config et maintenance.
+- **Onboarding éditeur** : setup complet peut prendre 2-4 semaines.
+
+<AffiliateCta
+  product="personio"
+  ctaText="Demander une démo Personio"
+  size="normal"
+/>
+
+## SIRH #4 : Lucca — le modulaire à la française
+
+**Idéal pour** : scale-up 30-500 salariés, qui veut assembler son SIRH à la carte.
+
+### Ce que Lucca fait mieux
+
+- **Modules dédiés** : Timmi Congés, Timmi Temps, Figgo, Pagga (paie), Cleemy (notes de frais), Poplee (évaluation, cœur RH). Vous payez ce que vous utilisez.
+- **Qualité de chaque module** : Lucca fait partie des meilleurs sur chaque brique individuellement. Lucca Timmi est la référence française sur la gestion des congés.
+- **Connecteurs avec Silae** : si votre paie est déjà externalisée, Lucca se branche dessus sans friction.
+- **Conformité française au top** : Lucca est hébergé en France, certifié HDS sur demande.
+- **Pensé pour la scale-up** : 50-500 salariés.
+
+### Ce que Lucca fait moins bien
+
+- **Prix cumulé** : chaque module est 2-6 €/salarié/mois. À 5-6 modules, on arrive à 15-25 €/salarié/mois (niveau PayFit mais sans paie intégrée).
+- **Pas idéal pour une startup early-stage** (< 15 salariés). L'outil brille en scale-up.
+- **UX datée** sur certains modules (améliorations en cours).
+- **Pas d'offre tout-en-un packagée** — à vous de choisir les modules.
+
+Pour creuser : [Lucca : avis complet 2026](/articles/lucca-avis-2026) et [PayFit vs Lucca](/articles/payfit-vs-lucca).
+
+## SIRH #5 : BambooHR — la référence US, utile en contexte international
+
+**Idéal pour** : startup avec une présence US, ou dont les fondateurs viennent d'un environnement américain.
+
+### Ce que BambooHR fait bien
+
+- **Onboarding et employee experience** très soignés : parcours d'arrivée, sondages, reconnaissance entre pairs.
+- **Interface simple** : prise en main en 1-2 heures par un nouveau RH.
+- **Integrations US** nombreuses (Slack, 15Five, Lattice, Gusto, ADP, Greenhouse).
+- **Support 24/5** en anglais, réactif.
+
+### Ce que BambooHR fait moins bien
+
+- **Paie française inexistante** (paie US uniquement — BambooHR Payroll).
+- **Conformité française limitée** : pas de DSN, pas de conventions collectives intégrées.
+- **Prix opaque** : facturation annuelle, pas de grille publique. Comptez 8-12 $/salarié/mois.
+- **Support en français** inexistant.
+
+BambooHR n'a pas de programme d'affiliation grand public en 2026 ; visitez directement [bamboohr.com](https://www.bamboohr.com/).
+
+## Comment choisir : arbres de décision
+
+### Vous êtes une startup 5-15 salariés française, paie-first
+→ **PayFit**. La paie roule seule, vous récupérez 5-10h/mois. Si budget serré : **Factorial**.
+
+### Vous êtes une startup 15-50 salariés, croissance rapide, budget maîtrisé
+→ **Factorial**. Rapport qualité/prix imbattable, SIRH global, paie FR décente.
+
+### Vous êtes une scale-up 30-100 salariés, enjeux recrutement massifs
+→ **Personio**. L'ATS et le reporting recrutement valent à eux seuls l'abonnement.
+
+### Vous êtes une scale-up 50-300 salariés, équipe RH interne
+→ **Lucca** en modulaire. Vous choisissez votre stack. Adapté si vous avez déjà Silae en paie.
+
+### Vous êtes une startup US/international avec HQ parisien
+→ **Personio** (Europe) ou **BambooHR** (US-centric).
+
+### Vous êtes une startup < 10 salariés
+→ Pas de SIRH complet. **PayFit starter** pour la paie + **Notion ou Google Workspace** pour le reste. Vous basculerez sur Factorial ou Personio à 15 salariés.
+
+## Setup type : le SIRH d'une startup 25 salariés
+
+Voici une stack SIRH réaliste pour une startup française de 25 salariés :
+
+- **Factorial** (SIRH tout-en-un) : 180 €/mois
+- **Slack** (communication) : 180 €/mois (8 $/user)
+- **Notion** (wiki interne) : 150 €/mois (10 €/user)
+- **Google Workspace Business Standard** : 360 €/mois (14 €/user)
+
+Total : ~870 €/mois pour la couche productive RH + communication + doc. C'est l'équivalent d'un mi-temps RH interne automatisé.
+
+Alternative plus robuste si paie française critique :
+
+- **PayFit** (paie + congés + onboarding) : 500 €/mois
+- **Personio** (SIRH et recrutement) : 250 €/mois
+- Total : ~750 €/mois, setup plus complexe mais robuste jusqu'à 100 salariés.
+
+## Ce que je vous déconseille de faire
+
+- **Utiliser Excel / Google Sheets** pour la paie au-delà de 5 salariés. Le risque d'erreur coûte plus cher que l'abonnement PayFit.
+- **Cumuler 5 outils RH** non intégrés : l'overhead de maintenance dépasse le bénéfice.
+- **Payer pour des fonctionnalités aspirationnelles** (OKR, 360 feedback) si personne ne les utilise. Achetez ce que vous utilisez demain matin.
+- **Signer un engagement 24 mois** dès la démo. Négociez 12 mois avec clause de sortie.
+
+## Verdict
+
+Pour 9 startups françaises sur 10 entre 10 et 80 salariés, le bon choix est :
+
+1. **PayFit** si la paie est votre priorité (et votre budget le permet).
+2. **Factorial** si vous voulez un SIRH global à prix serré.
+3. **Personio** si vous scale vite et recrutez beaucoup.
+4. **Lucca** si vous êtes 50+ et voulez construire modulairement.
+
+La vraie erreur n'est pas le choix d'outil — c'est d'**attendre trop longtemps**. Chaque mois sans SIRH à partir de 10 salariés coûte 5-10h de temps manager et un risque de conformité. Faites une démo ce mois-ci, signez le trimestre prochain.
+
+## Pour aller plus loin
+
+- [PayFit vs Lucca : paie et SIRH, lequel choisir ?](/articles/payfit-vs-lucca)
+- [PayFit : prix détaillé et avis 2026](/articles/payfit-prix-avis-2026)
+- [Alternative à PayFit : 6 logiciels](/articles/alternative-payfit)
+- [Factorial vs Personio](/articles/factorial-vs-personio)
+- [Lucca : avis complet 2026](/articles/lucca-avis-2026)
+- [Logiciel de paie 1 à 5 salariés](/articles/logiciel-paie-1-a-5-salaries-2026)
